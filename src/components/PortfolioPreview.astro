@@ -25,7 +25,6 @@ const { data, id } = Astro.props.project;
 		box-shadow: var(--shadow-sm);
 		text-decoration: none;
 		font-family: var(--font-brand);
-		font-size: var(--text-lg);
 		font-weight: 500;
 		transition: box-shadow var(--theme-transition);
 	}
@@ -38,11 +37,11 @@ const { data, id } = Astro.props.project;
 		grid-area: 1 / 1 / 2 / 2;
 		z-index: 1;
 		margin: 0.5rem;
-		padding: 0.5rem 1rem;
+		padding: 0.25rem 0.75rem;
 		background: var(--gray-999);
 		color: var(--gray-200);
 		border-radius: 0.375rem;
-		font-size: var(--text-base); /* <-- ADD THIS LINE FOR MOBILE */
+		font-size: var(--text-sm);
 	}
 
 	img {
@@ -61,8 +60,8 @@ const { data, id } = Astro.props.project;
 
 		.title {
 			border-radius: 0.9375rem;
-            /* On larger screens, this font-size will be used instead */
-			font-size: var(--text-lg); 
+			font-size: var(--text-lg);
+			padding: 0.5rem 1rem;
 		}
 	}
 </style>
