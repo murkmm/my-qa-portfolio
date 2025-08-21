@@ -1,37 +1,137 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import ContactCTA from '../components/ContactCTA.astro';
-import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
+
+// Group projects by year with correct TypeScript types
+const groupedProjects = projects.reduce<Record<string, CollectionEntry<'work'>[]>>((acc, project) => {
+	const year = new Date(project.data.publishDate).getFullYear();
+	if (!acc[year]) {
+		acc[year] = [];
+	}
+	acc[year].push(project);
+	return acc;
+}, {});
+
+// Get the years and sort them correctly as numbers
+const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Number(a));
 ---
 
 <BaseLayout
-	title="My Work | Jeanine White"
-	description="Learn about Jeanine White's most recent projects"
+	title="Project Case Studies | Mark McManus"
+	description="A timeline of my projects and contributions throughout my career."
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
+				title="Project Case Studies"
+				tagline="A detailed look at the projects I've worked on. Here you'll find case studies outlining the challenges, my specific contributions, and the impact I had on the final product."
 				align="start"
 			/>
-			<Grid variant="offset">
+
+			<div class="timeline-container">
 				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
+					sortedYears.map((year) => (
+						<div class="timeline-item">
+							<div class="timeline-year-marker">
+								<div class="year-text">{year}</div>
+							</div>
+							<ul class="timeline-projects">
+								{groupedProjects[year].map((project) => (
+									<li>
+										<PortfolioPreview project={project} />
+									</li>
+								))}
+							</ul>
+						</div>
 					))
 				}
-			</Grid>
-		</main>
+			</div>
+			</main>
 		<ContactCTA />
 	</div>
 </BaseLayout>
+
+<style>
+	.timeline-container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 4rem; /* Space between year sections */
+		padding: 2rem 0;
+	}
+
+	/* The central vertical line */
+	.timeline-container::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 2px;
+		height: 100%;
+		background-color: var(--gray-800); /* Uses your site's color variables */
+	}
+
+	.timeline-item {
+		position: relative;
+		display: grid;
+		/* Creates 3 columns: left projects | center year | right projects */
+		grid-template-columns: 1fr auto 1fr;
+		align-items: start;
+		gap: 2rem;
+	}
+
+	.timeline-year-marker {
+		grid-column: 2; /* Puts the year marker in the middle column */
+		background-color: var(--gray-999); /* Background of the page to hide the line */
+		padding: 0.5rem;
+		z-index: 1; /* Sits on top of the line */
+	}
+	
+	.year-text {
+		background-color: var(--accent-dark); /* Uses your site's accent color */
+		color: var(--gray-999);
+		border-radius: 999px;
+		width: 5rem;
+		height: 5rem;
+		display: grid;
+		place-items: center;
+		font-weight: bold;
+		font-size: 1.25rem;
+	}
+
+	.timeline-projects {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem; /* Space between projects in the same year */
+	}
+	
+	/* Alternating layout for the project tiles */
+	.timeline-item:nth-child(odd) .timeline-projects {
+		grid-column: 3; /* Projects on the right */
+	}
+
+	.timeline-item:nth-child(even) .timeline-projects {
+		grid-column: 1; /* Projects on the left */
+	}
+
+	/* This is a placeholder to keep the grid balanced on either side */
+	.timeline-item:nth-child(odd)::before,
+	.timeline-item:nth-child(even)::before {
+		content: '';
+		grid-column: 1;
+	}
+	.timeline-item:nth-child(even)::before {
+		grid-column: 3;
+	}
+</style>

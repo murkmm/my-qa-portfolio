@@ -27,22 +27,22 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hello, my name is Mark McManus"
+					tagline="I am a Senior QA Tester in the games industry."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="bug" size="1.33em" /> Bug Hunter</Pill>
+						<Pill><Icon icon="clipboard-text" size="1.33em" /> Test Designer</Pill>
+						<Pill><Icon icon="strategy-path" size="1.33em" /> QA Strategist</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="A Placeholder image of Mark McManus"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/Placeholder potrait .jpg"
 				/>
 			</header>
 
@@ -52,8 +52,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Selected Projects</h3>
+					<p>Follow my career journey through a selection of projects I've helped bring to life.</p>
 				</header>
 
 				<div class="gallery">
@@ -78,17 +78,16 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h3>Companies I've Worked With</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						I've had the privilege of contributing to projects at these fantastic companies throughout my career.
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							['List', 'Companies', 'Here', 'With', 'Logos'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
