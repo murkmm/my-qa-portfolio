@@ -53,50 +53,50 @@ const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Numb
 					))
 				}
 			</div>
-			</main>
+		</main>
 		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
+	/* --- MOBILE FIRST STYLES --- */
 	.timeline-container {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: 4rem; /* Space between year sections */
+		gap: 2rem;
 		padding: 2rem 0;
 	}
 
-	/* The central vertical line */
+	/* The vertical line on mobile (on the left side) */
 	.timeline-container::before {
 		content: '';
 		position: absolute;
 		top: 0;
-		left: 50%;
+		left: 2.5rem; /* Aligns with the center of the year marker */
 		transform: translateX(-50%);
 		width: 2px;
 		height: 100%;
-		background-color: var(--gray-800); /* Uses your site's color variables */
+		background-color: var(--gray-800);
 	}
 
+	/* On mobile, use a 2-column grid for the marker and the content */
 	.timeline-item {
 		position: relative;
 		display: grid;
-		/* Creates 3 columns: left projects | center year | right projects */
-		grid-template-columns: 1fr auto 1fr;
+		grid-template-columns: auto 1fr;
 		align-items: start;
-		gap: 2rem;
+		gap: 1.5rem;
 	}
 
 	.timeline-year-marker {
-		grid-column: 2; /* Puts the year marker in the middle column */
-		background-color: var(--gray-999); /* Background of the page to hide the line */
-		padding: 0.5rem;
-		z-index: 1; /* Sits on top of the line */
+		grid-column: 1; /* Year marker in the first column */
+		padding: 0; /* Adjusted for mobile alignment */
+		z-index: 1;
 	}
 	
 	.year-text {
-		background-color: var(--accent-dark); /* Uses your site's accent color */
+		background-color: var(--accent-dark);
 		color: var(--gray-999);
 		border-radius: 999px;
 		width: 5rem;
@@ -108,30 +108,58 @@ const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Numb
 	}
 
 	.timeline-projects {
+		grid-column: 2; /* Project tiles in the second column */
 		list-style: none;
-		padding: 0;
+		padding: 0.75rem 0 0 0; /* Add padding to align with year text */
 		margin: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem; /* Space between projects in the same year */
+		gap: 1.5rem;
 	}
 	
-	/* Alternating layout for the project tiles */
-	.timeline-item:nth-child(odd) .timeline-projects {
-		grid-column: 3; /* Projects on the right */
-	}
+	/* --- DESKTOP TIMELINE STYLES --- */
+	@media (min-width: 50em) {
+		.timeline-container {
+			gap: 4rem; /* Increase gap for desktop */
+		}
+		
+		/* Move the line back to the center on desktop */
+		.timeline-container::before {
+			left: 50%;
+		}
 
-	.timeline-item:nth-child(even) .timeline-projects {
-		grid-column: 1; /* Projects on the left */
-	}
+		/* Restore the 3-column grid for the alternating layout */
+		.timeline-item {
+			grid-template-columns: 1fr auto 1fr;
+			gap: 2rem;
+		}
 
-	/* This is a placeholder to keep the grid balanced on either side */
-	.timeline-item:nth-child(odd)::before,
-	.timeline-item:nth-child(even)::before {
-		content: '';
-		grid-column: 1;
-	}
-	.timeline-item:nth-child(even)::before {
-		grid-column: 3;
+		.timeline-year-marker {
+			grid-column: 2; /* Put the year marker back in the middle */
+			padding: 0.5rem;
+		}
+
+		.timeline-projects {
+			padding-top: 0; /* Reset mobile padding */
+		}
+
+		/* Restore the alternating layout for project tiles */
+		.timeline-item:nth-child(odd) .timeline-projects {
+			grid-column: 3;
+		}
+
+		.timeline-item:nth-child(even) .timeline-projects {
+			grid-column: 1;
+		}
+
+		/* This placeholder is needed to keep the grid balanced */
+		.timeline-item:nth-child(odd)::before,
+		.timeline-item:nth-child(even)::before {
+			content: '';
+			grid-column: 1;
+		}
+		.timeline-item:nth-child(even)::before {
+			grid-column: 3;
+		}
 	}
 </style>
