@@ -10,7 +10,13 @@ tags:
   - 'Game Testing'
   - 'Jira'
   - 'Nintendo Switch'
+  # V-- Corrected Indentation --V
+summary:
+  - 'Led daily test coverage plans for the massive open-world hub.'
+  - 'Rigorously tested the new two-player co-op mode from start to finish.'
+  - 'Identified and verified the removal of legacy Wii U content to prevent legal issues.'
 ---
+
 
 **Company:** T.T. Games
 

@@ -10,6 +10,11 @@ tags:
   - 'Game Testing'
   - 'Jira'
   - 'Multiplayer'
+# V-- Corrected Indentation --V
+summary:
+  - 'Authored 200+ bug reports for the multiplayer Battle Arenas.'
+  - 'Discovered a critical AI pathing bug affecting niche characters.'
+  - 'Ensured stability for three major DLC packs, including Sonic & Fantastic Beasts.'
 ---
 
 **Company:** T.T. Games

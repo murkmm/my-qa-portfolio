@@ -11,6 +11,11 @@ tags:
   - 'PlayLink'
   - 'Unreal Engine 4'
   - 'Multiplayer'
+  # V-- Corrected Indentation --V
+summary:
+  - 'Mastered a new testing ecosystem using mobile devices as controllers.'
+  - 'Tested complex multiplayer modes with branching narratives for up to six players.'
+  - 'Discovered and isolated a critical, save-data bug that protected the crucial E3 demo.'
 ---
 
 **Company:** Supermassive Games / Sony Interactive Entertainment
