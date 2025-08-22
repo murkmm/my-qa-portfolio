@@ -29,7 +29,7 @@ const allCompanies = [
 	{ name: 'Merge Games', logo: '/assets/logos/Merge Games Logo.png', url: 'https://www.mergegames.com/' },
 	{ name: 'The Breach Studios', logo: '/assets/logos/thebreachlogo.png', url: 'https://www.thebreachstudios.com/' },
 	{ name: 'Unity', logo: '/assets/logos/Unity_Technologies_logo.png', url: 'https://unity.com/' },
-	{ name: 'KI10 Games', logo: '/assets/logos/KI10 logo.png', isCurrent: true, url: 'https://ki10games.com/' }, // Using '#' as a placeholder link
+	{ name: 'KI10 Games', logo: '/assets/logos/KI10 logo.png', isCurrent: true, url: '#' }, // Using '#' as a placeholder link
 ];
 
 // Sort the list to make sure the current company is always first
@@ -49,6 +49,7 @@ const sortedCompanies = allCompanies.sort((a, b) => (b.isCurrent ? 1 : -1));
 						<Pill><Icon icon="bug" size="1.33em" /> Bug Hunter</Pill>
 						<Pill><Icon icon="clipboard-text" size="1.33em" /> Test Designer</Pill>
 						<Pill><Icon icon="strategy-path" size="1.33em" /> QA Strategist</Pill>
+						<Pill><Icon icon="game-controller" size="1.33em" /> Game Designer</Pill>
 					</div>
 				</Hero>
 
@@ -150,12 +151,16 @@ const sortedCompanies = allCompanies.sort((a, b) => (b.isCurrent ? 1 : -1));
 			grid-template-columns: 6fr 4fr;
 			padding-inline: 2.5rem;
 			gap: 3.75rem;
+			align-items: center;
 		}
 
 		.roles {
 			margin-top: 0.5rem;
 			display: flex;
-			gap: 0.5rem;
+			flex-wrap: wrap; /* Allows pills to wrap */
+			gap: 0.75rem; /* Increased gap slightly for better spacing */
+			justify-content: flex-start; /* Aligns items to the start */
+			align-items: center; /* Aligns items vertically */
 		}
 
 		.hero img {
