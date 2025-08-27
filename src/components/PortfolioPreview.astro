@@ -67,8 +67,8 @@ const { data, id } = Astro.props.project;
 
 <style>
 	.card {
-		position: relative; /* This is crucial for the overlay positioning */
-		display: block; /* Simpler than grid for this layout */
+		position: relative;
+		display: block;
 		height: 11rem;
 		border-radius: 0.75rem;
 		overflow: hidden;
@@ -89,25 +89,25 @@ const { data, id } = Astro.props.project;
 		transition: transform 0.4s ease-out;
 	}
 
-	/* --- NEW OVERLAY STYLES --- */
 	.text-overlay {
 		position: absolute;
-		inset: 0; /* Cover the entire card */
+		inset: 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end; /* Push all content to the bottom */
+		justify-content: flex-end;
 		padding: 1rem;
-		color: white; /* Always use white text on the overlay */
-		background: linear-gradient(to top, rgba(9, 11, 17, 0.95) 20%, rgba(9, 11, 17, 0.7) 50%, transparent);
 		z-index: 1;
+		/* CHANGED: This gradient is now more subtle and covers less of the image */
+		background: linear-gradient(to top, rgba(9, 11, 17, 0.95) 10%, rgba(9, 11, 17, 0.7) 40%, transparent);
 	}
 
 	.title {
 		font-family: var(--font-brand);
 		font-size: var(--text-lg);
 		font-weight: 500;
-		color: var(--gray-0);
+		color: var(--accent-text-over);
 		margin: 0;
+		padding-bottom: 0.5rem;
 	}
 
 	.summary {
@@ -115,10 +115,11 @@ const { data, id } = Astro.props.project;
 		padding: 0;
 		margin: 0;
 		font-size: var(--text-sm);
-		color: var(--gray-300);
-		opacity: 0; /* Hidden by default */
-		max-height: 0; /* Hidden by default */
+		color: var(--accent-text-over);
+		opacity: 0.9;
+		max-height: 0;
 		transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+		overflow: hidden;
 	}
 
 	.summary li {
@@ -133,11 +134,10 @@ const { data, id } = Astro.props.project;
 		transform: scale(1.1);
 	}
 
-	/* Show the summary on hover or when active */
 	.card:hover .summary,
 	.card.is-active .summary {
-		opacity: 1;
-		max-height: 10em; /* Give it space to expand */
+		opacity: 0.9;
+		max-height: 10em;
 		margin-top: 0.5rem;
 	}
 
