@@ -59,7 +59,7 @@ const { data, id } = Astro.props.project;
 <style>
 	.card {
 		position: relative;
-		display: flex; /* Use flexbox for the card itself */
+		display: flex;
 		min-height: 11rem;
 		border-radius: 0.75rem;
 		overflow: hidden;
@@ -84,11 +84,11 @@ const { data, id } = Astro.props.project;
 	}
 
 	.text-overlay {
-		position: relative; /* Let it sit naturally in the flex flow */
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		flex-grow: 1; /* Allow this element to grow */
+		flex-grow: 1;
 		padding: 1rem;
 		z-index: 1;
 		background: linear-gradient(to top, rgba(9, 11, 17, 0.98) 30%, rgba(9, 11, 17, 0.8) 60%, transparent);
@@ -129,7 +129,7 @@ const { data, id } = Astro.props.project;
 	.card:hover .summary,
 	.card.is-active .summary {
 		opacity: 0.9;
-		max-height: 10em;
+		max-height: 12em; /* CHANGED: Increased from 10em to 12em */
 		margin-top: 0.5rem;
 	}
 
