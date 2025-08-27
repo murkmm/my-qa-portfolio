@@ -30,36 +30,27 @@ const { data, id } = Astro.props.project;
 <script>
 	// This script runs for all project cards on the page
 	document.addEventListener('DOMContentLoaded', () => {
-		// CHANGED: We've told TypeScript these are specifically Anchor (<a>) elements
 		const cards = document.querySelectorAll<HTMLAnchorElement>('.card');
 
 		cards.forEach(card => {
 			card.addEventListener('click', function (event) {
-				// We only run this logic on touch-enabled devices
 				const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 				if (!isTouchDevice) {
 					return;
 				}
-
-				// If this card is already active, let the link work normally
 				if (this.classList.contains('is-active')) {
 					return;
 				}
-
-				// If any other card is active, remove its active state
 				cards.forEach(c => {
 					if (c !== this) {
 						c.classList.remove('is-active');
 					}
 				});
-
-				// It's the first tap: prevent the link, and make this card active
 				event.preventDefault();
 				this.classList.add('is-active');
 			});
 		});
 
-		// Optional: if a user taps outside of any card, close all of them
 		document.addEventListener('click', function(event) {
 			if (!(event.target as HTMLElement).closest('.card')) {
 				cards.forEach(card => card.classList.remove('is-active'));
@@ -91,7 +82,7 @@ const { data, id } = Astro.props.project;
 	
 	.title-container {
 		grid-area: 1 / 1 / 2 / 2;
-		z-index: 2;
+		z-index: 2; 
 	}
 
 	.title {
@@ -134,6 +125,25 @@ const { data, id } = Astro.props.project;
 	.card.is-active .summary-overlay {
 		opacity: 1;
 	}
+	
+	/* NEW: Added a background gradient to the title container */
+	.title-container {
+		grid-area: 1 / 1 / 2 / 2;
+		z-index: 2;
+		/* This gradient makes the top of the card darker, so the title is always readable */
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+		padding: 0.5rem;
+	}
+
+	/* CHANGED: Removed margin from the title itself */
+	.title {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		background: var(--gray-999);
+		color: var(--gray-200);
+		border-radius: 0.375rem;
+		font-size: var(--text-sm);
+	}
 
 	.summary-content {
 		padding: 1rem;
@@ -159,6 +169,10 @@ const { data, id } = Astro.props.project;
 		.card {
 			height: 22rem;
 			border-radius: 1.5rem;
+		}
+
+		.title-container {
+			padding: 0.75rem; /* Slightly more padding on desktop */
 		}
 
 		.title {
