@@ -87,12 +87,12 @@ const { data, id } = Astro.props.project;
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: flex-end; /* Keeps content at the bottom */
 		flex-grow: 1;
 		padding: 1rem;
 		z-index: 1;
-		/* CHANGED: Significantly lighter gradient */
-		background: linear-gradient(to top, rgba(9, 11, 17, 0.7) 10%, rgba(9, 11, 17, 0.3) 40%, transparent);
+		/* Default (mobile) gradient - made darker and cover more area */
+		background: linear-gradient(to top, rgba(9, 11, 17, 0.95) 10%, rgba(9, 11, 17, 0.7) 50%, transparent);
 	}
 
 	.title {
@@ -151,6 +151,11 @@ const { data, id } = Astro.props.project;
 			font-size: var(--text-xl);
 		}
 		
+		/* Desktop gradient - revert to lighter for more image visibility */
+		.text-overlay {
+			background: linear-gradient(to top, rgba(9, 11, 17, 0.7) 10%, rgba(9, 11, 17, 0.3) 40%, transparent);
+		}
+
 		/* Show all bullet points on desktop */
 		.summary li {
 			display: list-item;
