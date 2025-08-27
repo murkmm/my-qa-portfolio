@@ -115,7 +115,10 @@ const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Numb
 		gap: 1.5rem;
 	}
 	
-	/* REMOVED: All the override styles for the cards are now gone from this file */
+	/* --- NEW: Override for card height on this page's mobile view --- */
+	.timeline-projects :global(.card) {
+		min-height: 14rem;
+	}
 
 	/* --- DESKTOP TIMELINE STYLES --- */
 	@media (min-width: 50em) {
@@ -156,6 +159,11 @@ const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Numb
 		}
 		.timeline-item:nth-child(even)::before {
 			grid-column: 3;
+		}
+
+		/* On desktop, we can use the component's default min-height */
+		.timeline-projects :global(.card) {
+			min-height: 22rem;
 		}
 	}
 </style>
