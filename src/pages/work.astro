@@ -68,19 +68,17 @@ const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Numb
 		padding: 2rem 0;
 	}
 
-	/* The vertical line on mobile (on the left side) */
 	.timeline-container::before {
 		content: '';
 		position: absolute;
 		top: 0;
-		left: 2.5rem; /* Aligns with the center of the year marker */
+		left: 2.5rem;
 		transform: translateX(-50%);
 		width: 2px;
 		height: 100%;
 		background-color: var(--gray-800);
 	}
 
-	/* On mobile, use a 2-column grid for the marker and the content */
 	.timeline-item {
 		position: relative;
 		display: grid;
@@ -90,8 +88,8 @@ const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Numb
 	}
 
 	.timeline-year-marker {
-		grid-column: 1; /* Year marker in the first column */
-		padding: 0; /* Adjusted for mobile alignment */
+		grid-column: 1;
+		padding: 0;
 		z-index: 1;
 	}
 	
@@ -108,42 +106,41 @@ const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Numb
 	}
 
 	.timeline-projects {
-		grid-column: 2; /* Project tiles in the second column */
+		grid-column: 2;
 		list-style: none;
-		padding: 0.75rem 0 0 0; /* Add padding to align with year text */
+		padding: 0.75rem 0 0 0;
 		margin: 0;
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
 	}
 	
+	/* REMOVED: All the override styles for the cards are now gone from this file */
+
 	/* --- DESKTOP TIMELINE STYLES --- */
 	@media (min-width: 50em) {
 		.timeline-container {
-			gap: 4rem; /* Increase gap for desktop */
+			gap: 4rem;
 		}
 		
-		/* Move the line back to the center on desktop */
 		.timeline-container::before {
 			left: 50%;
 		}
 
-		/* Restore the 3-column grid for the alternating layout */
 		.timeline-item {
 			grid-template-columns: 1fr auto 1fr;
 			gap: 2rem;
 		}
 
 		.timeline-year-marker {
-			grid-column: 2; /* Put the year marker back in the middle */
+			grid-column: 2;
 			padding: 0.5rem;
 		}
 
 		.timeline-projects {
-			padding-top: 0; /* Reset mobile padding */
+			padding-top: 0;
 		}
 
-		/* Restore the alternating layout for project tiles */
 		.timeline-item:nth-child(odd) .timeline-projects {
 			grid-column: 3;
 		}
@@ -152,7 +149,6 @@ const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Numb
 			grid-column: 1;
 		}
 
-		/* This placeholder is needed to keep the grid balanced */
 		.timeline-item:nth-child(odd)::before,
 		.timeline-item:nth-child(even)::before {
 			content: '';

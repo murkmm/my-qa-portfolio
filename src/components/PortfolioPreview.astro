@@ -32,31 +32,23 @@ const { data, id } = Astro.props.project;
 
 		cards.forEach((card) => {
 			card.addEventListener('click', function (event) {
-				// We only run this logic on touch-enabled devices
 				const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 				if (!isTouchDevice) {
 					return;
 				}
-
-				// If this card is already active, let the link work normally
 				if (this.classList.contains('is-active')) {
 					return;
 				}
-
-				// If any other card is active, remove its active state
 				cards.forEach((c) => {
 					if (c !== this) {
 						c.classList.remove('is-active');
 					}
 				});
-
-				// It's the first tap: prevent the link, and make this card active
 				event.preventDefault();
 				this.classList.add('is-active');
 			});
 		});
 
-		// Optional: if a user taps outside of any card, close all of them
 		document.addEventListener('click', function (event) {
 			if (!(event.target as HTMLElement).closest('.card')) {
 				cards.forEach((card) => card.classList.remove('is-active'));
@@ -69,7 +61,7 @@ const { data, id } = Astro.props.project;
 	.card {
 		position: relative;
 		display: block;
-		height: 11rem;
+		min-height: 11rem; /* CHANGED: from height to min-height */
 		border-radius: 0.75rem;
 		overflow: hidden;
 		box-shadow: var(--shadow-sm);
@@ -82,11 +74,14 @@ const { data, id } = Astro.props.project;
 	}
 
 	img {
+		position: absolute; /* Position image behind the overlay */
+		inset: 0;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: center center;
 		transition: transform 0.4s ease-out;
+		z-index: -1; /* Ensure it's behind the text overlay */
 	}
 
 	.text-overlay {
@@ -97,7 +92,6 @@ const { data, id } = Astro.props.project;
 		justify-content: flex-end;
 		padding: 1rem;
 		z-index: 1;
-		/* CHANGED: This gradient is now more subtle and covers less of the image */
 		background: linear-gradient(to top, rgba(9, 11, 17, 0.95) 10%, rgba(9, 11, 17, 0.7) 40%, transparent);
 	}
 
@@ -116,9 +110,9 @@ const { data, id } = Astro.props.project;
 		margin: 0;
 		font-size: var(--text-sm);
 		color: var(--accent-text-over);
-		opacity: 0.9;
+		opacity: 0;
 		max-height: 0;
-		transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+		transition: opacity 0.3s ease-out, max-height 0.3s ease-out, margin-top 0.3s ease-out;
 		overflow: hidden;
 	}
 
@@ -128,7 +122,6 @@ const { data, id } = Astro.props.project;
 		padding-top: 0.5rem;
 	}
 
-	/* --- HOVER AND ACTIVE STATES --- */
 	.card:hover img,
 	.card.is-active img {
 		transform: scale(1.1);
@@ -143,7 +136,7 @@ const { data, id } = Astro.props.project;
 
 	@media (min-width: 50em) {
 		.card {
-			height: 22rem;
+			min-height: 22rem; /* CHANGED: from height to min-height */
 			border-radius: 1.5rem;
 		}
 
