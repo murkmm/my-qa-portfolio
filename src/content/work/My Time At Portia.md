@@ -13,7 +13,7 @@ tags:
   - 'Redmine'
 summary:
   - 'Mastered the Unity engine, adapting my testing skills from Unreal engine.'
-  - 'Specialized in multi platform compliance testing (Sony, Microsoft, Nintendo).'
+  - 'Specialised in multi platform compliance testing (Sony, Microsoft, Nintendo).'
   - 'Discovered a critical soft lock bug that was overlooked by other testers.'
 ---
 
