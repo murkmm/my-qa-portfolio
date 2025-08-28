@@ -1,6 +1,7 @@
 ---
 title: 'The Dark Pictures Anthology: Man of Medan'
 publishDate: '2019-08-30'
+featured: true
 img: '/assets/Man Of Medan.jpg'
 img_alt: 'Promotional art for the horror game Man of Medan.'
 description: |

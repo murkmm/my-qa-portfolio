@@ -1,6 +1,7 @@
 ---
 title: 'Hidden Agenda (PlayLink)'
 publishDate: '2017-10-24'
+featured: true
 img: '/assets/Hidden Agenda.jpg'
 img_alt: 'A promotional image for the PlayLink game Hidden Agenda.'
 description: |
