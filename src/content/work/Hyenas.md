@@ -1,6 +1,6 @@
 ---
 title: 'Hyenas (Cancelled Project)'
-publishDate: '2021-10-01'
+publishDate: '2021-01-01'
 img: '/assets/HYENAS.webp'
 img_alt: 'Promotional art for the multiplayer shooter Hyenas.'
 description: |
