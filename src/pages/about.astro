@@ -19,57 +19,57 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				/>
 			</Hero>
 
-			<section>
-				<h2 class="section-title">Background</h2>
+			<section class="about-section">
+				<h2 class="section-title">My Journey in Games</h2>
 				<div class="content">
 					<p>
-						As a QA and Test Engineer with nearly a decade of experience in the games industry, I've had the privilege of contributing to a wide array of projects across PC, console, and mobile. My passion lies in ensuring a stable, high-performance, and enjoyable experience for players by embedding myself in the development lifecycle from early design through to final release.
+						For as long as I can remember, games have been my passion not just playing them, but understanding what makes them work. That passion led me into a career in QA, and for nearly a decade, I've had the privilege of helping to ship titles for some of the most respected studios in the industry, including T.T. Games, Supermassive Games, Creative Assembly, and Unity.
 					</p>
 					<p>
-						My career has given me a comprehensive understanding of the entire games testing lifecycle. I began at T.T. Games, working on beloved titles like LEGO City Undercover, before moving on to collaborate with studios such as Sony, Supermassive Games, and Creative Assembly. These roles have involved everything from hands on functional testing and leading QA teams to designing and executing detailed test plans in fast paced Agile environments.
+						My journey began in the sprawling, complex worlds of the LEGO franchise before expanding to a huge variety of genres and platforms. I've had the chance to help bring beloved classics like <em>Alex Kidd in Miracle World DX</em> back to life, test innovative narrative horror experiences like <em>Man of Medan</em>, and ensure a quality experience for massively popular games like <em>Fall Guys</em> on mobile. This has allowed me to grow from a hands on tester finding critical, show stopping bugs to a senior team member leading QA strategies, mentoring new testers, and ensuring multi-platform releases meet the highest quality bar.
 					</p>
 					<p>
-						Today, as Director at my own company, Ki10 Games, I'm applying this deep expertise not only to QA but also to core game design and programming. I believe in a hands-on approach, working closely with designers and developers to translate requirements into effective test strategies and, ultimately, to create games that meet the high expectations of players and the project's goals.
+						This deep experience in seeing what makes a game truly great from both a technical and player perspective inspired me to expand my own skill set. Today, I'm channelling all those years of learning into my own studio, Ki10 Games, where I'm not only continuing my QA work but also leading efforts in game design and programming on my own independent title.
 					</p>
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
+
+			<section class="about-section">
+				<h2 class="section-title">Skills & Expertise</h2>
 				<div class="content">
-					<ul>
-						<li>
-							<strong>Level 4 & 5 Games Development</strong><br />
-							Hopwood Hall College - 2015
-						</li>
-						<li>
-							<strong>BTEC Level 3 Games Development</strong><br />
-							Hopwood Hall College - 2013
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
+					<p>
+						Over my career, I've developed a comprehensive skill set that covers the full spectrum of game development quality assurance. For a more detailed history, you're welcome to download my CV.
+					</p>
+					<br />
 					<h4>Core Expertise</h4>
 					<ul>
-						<li><strong>Test Strategy & Planning:</strong> Designing and executing comprehensive test plans, cases, and scripts covering gameplay, UI/UX, performance, and compatibility across the full development lifecycle.</li>
-						<li><strong>Manual & Exploratory Testing:</strong> Extensive experience in functional, usability, performance, and regression testing on a wide range of platforms.</li>
-						<li><strong>Defect Management:</strong> Expert in identifying, logging, triaging, and tracking defects using industry-standard tools to ensure swift resolution.</li>
-                        <li><strong>Team Leadership & Mentoring:</strong> Proven ability to lead and coordinate QA teams, mentor junior testers, and improve bug reporting standards and best practices.</li>
+						<li><strong>Test Strategy & Planning:</strong> Designing and executing comprehensive test plans, cases, and scripts for gameplay, UI/UX, and multi-platform compliance.</li>
+						<li><strong>Manual & Exploratory Testing:</strong> Extensive experience in functional, usability, performance, and regression testing with a reputation for finding elusive, high impact bugs.</li>
+						<li><strong>Defect Management:</strong> Expert in identifying, logging, triaging, and tracking defects using industry standard tools to ensure swift resolution.</li>
+						<li><strong>Team Leadership & Mentoring:</strong> Proven ability to lead and coordinate QA teams, mentor junior testers, and improve bug reporting standards and best practices.</li>
+						<li><strong>Game Design:</strong> Designing core gameplay systems and shaping narrative direction, with a focus on refining the player experience based on feedback, market expectations, and a quality first mindset.</li>
 					</ul>
-					<br/>
+					<br />
 					<h4>Technical Skills</h4>
 					<ul>
-						<li><strong>Bug Tracking:</strong> JIRA, DevTrack, TestRail</li>
+						<li><strong>Bug Tracking:</strong> JIRA, DevTrack, TestRail, Redmine</li>
 						<li><strong>Game Engines:</strong> Unity, Unreal Engine 4/5, CryEngine</li>
-						<li><strong>Platforms:</strong> PC, PlayStation, Xbox, Nintendo Switch, Mobile (iOS, Android), VR, Stadia, Luna</li>
+						<li><strong>Platforms:</strong> PC, PlayStation (PS3, PS4, PSVR, PS5), Xbox (360, One, Series), Nintendo (Wii U, Switch), Mobile (iOS, Android), & Cloud (Stadia, Luna).</li>
 					</ul>
-					<br/>
-					<p>
-						For a more detailed look at my professional history, please feel free to download my CV.
-					</p>
+					<br />
 					<a href="/mark-mcmanus-cv.pdf" class="button" download>Download CV</a>
+				</div>
+			</section>
+
+			<section class="about-section">
+				<h2 class="section-title">Outside of Work</h2>
+				<div class="content">
+					<p>
+						When I'm not professionally testing games, I'm usually... playing them! I love exploring everything the medium has to offer, from massive AAA worlds to creative indie gems. My passion for development doesn't stop when I clock out; I'm constantly working on personal game prototypes to sharpen my design and programming skills, with the dream of one day releasing my own title.
+					</p>
+					<p>
+						Beyond the screen, my other great passions are football I'm a lifelong Manchester United supporter and I also love diving into a good board game with friends.
+					</p>
 				</div>
 			</section>
 		</main>
@@ -91,7 +91,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		box-shadow: var(--shadow-md);
 	}
 
-	section {
+	.about-section {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
@@ -99,15 +99,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	}
 
 	.section-title {
-		grid-column-start: 1;
 		font-size: var(--text-xl);
 		color: var(--gray-0);
 	}
 
 	.content {
-		grid-column: 2 / 4;
+		/* No grid styles needed here by default */
 	}
 	
+	.content > :global(* + *) {
+		margin-top: 1rem;
+	}
+
 	.content ul {
 		list-style: disc;
 		padding-left: 1.25rem;
@@ -128,35 +131,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		text-decoration-color: currentColor;
 	}
 
-    /* Simple button style for the CV download link */
-    .button {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        background-color: var(--accent-regular);
-        color: var(--accent-text-over);
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: background-color 0.2s ease-in-out;
-    }
-    .button:hover {
-        background-color: var(--accent-dark);
-        text-decoration: none;
-    }
+	.button {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		background-color: var(--accent-regular);
+		color: var(--accent-text-over);
+		border-radius: 999px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: background-color 0.2s ease-in-out;
+		margin-top: 1rem;
+	}
+	.button:hover {
+		background-color: var(--accent-dark);
+		text-decoration: none;
+	}
 
 	@media (min-width: 50em) {
 		.about {
+			gap: 5rem;
+		}
+
+		.about-section {
 			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
+			grid-template-columns: 1fr 3fr; /* Title column and Content column */
+			gap: 2rem;
 			font-size: var(--text-lg);
+		}
+
+		.section-title {
+			grid-column: 1 / 2; /* Title takes the first column */
+			text-align: right;
+		}
+
+		.content {
+			grid-column: 2 / 3; /* Content takes the second column */
 		}
 	}
 </style>
