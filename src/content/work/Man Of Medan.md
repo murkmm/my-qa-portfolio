@@ -15,7 +15,7 @@ tags:
 summary:
   - 'Led all QA efforts for the Google Stadia version, including in depth platform research.'
   - 'Tested complex multiplayer modes, including 2 player online co-op and 5 player local.'
-  - 'Onboarded and coordinated with an external QA team (Pole To Win).'
+  - 'Onboarded and coordinated with an external QA team.'
   - 'Began developing my skills in test automation by setting up automated playthrough scripts.'
 ---
 

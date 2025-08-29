@@ -1,7 +1,6 @@
 ---
 title: 'Hidden Agenda (PlayLink)'
 publishDate: '2017-10-24'
-featured: true
 img: '/assets/Hidden Agenda.jpg'
 img_alt: 'A promotional image for the PlayLink game Hidden Agenda.'
 description: |
@@ -12,7 +11,7 @@ tags:
   - 'PlayLink'
   - 'Unreal Engine 4'
   - 'Multiplayer'
-  # V-- Corrected Indentation --V
+  
 summary:
   - 'Mastered a new testing ecosystem using mobile devices as controllers.'
   - 'Tested complex multiplayer modes with branching narratives for up to six players.'
