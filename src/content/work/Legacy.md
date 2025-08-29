@@ -2,7 +2,7 @@
 title: 'Legacy'
 publishDate: '2022-06-01'
 img: '/assets/Legacy.webp'
-img_alt: 'An isometric view of a bustling town in the game Legacy.'
+img_alt: 'A view of a bustling town in the game Legacy.'
 description: |
   As the primary QA contact for the business simulation game Legacy, I was embedded directly within the development team at 22 Cans to ensure rapid issue resolution and a tight feedback loop.
 tags:
@@ -40,4 +40,4 @@ The challenge of being the primary embedded QA was balancing a wide range of res
 * **Monday** (defect tracking and project managment)
 * **Confluence** (for test plans and QA knowledge base)
 * **Unity Engine**
-* **PC**
+* **PC and Mac**
