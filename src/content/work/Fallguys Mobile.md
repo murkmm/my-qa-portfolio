@@ -1,6 +1,7 @@
 ---
 title: 'Fall Guys (Mobile)'
 publishDate: '2024-02-01'
+featured: true
 img: '/assets/Fallguys Mobile.png'
 img_alt: 'Artwork from the game Fall Guys.'
 description: |

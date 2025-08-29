@@ -1,6 +1,7 @@
 ---
 title: 'KIT - Knight in Training (In Development)'
 publishDate: '2025-08-29'
+featured: true
 img: '/assets/KIT temp logo.jpg'
 img_alt: 'Promotional art for the game KIT - Knight in Training.'
 description: |

@@ -1,7 +1,6 @@
 ---
 title: 'The Dark Pictures Anthology: Little Hope'
 publishDate: '2020-10-30'
-featured: true
 img: '/assets/Little Hope.jpg'
 img_alt: 'Promotional art for the horror game Little Hope.'
 description: |
