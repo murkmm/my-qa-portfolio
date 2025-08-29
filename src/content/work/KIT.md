@@ -13,7 +13,7 @@ tags:
   - 'In Development'
 summary:
   - 'Leading all design efforts, including core gameplay systems and narrative direction.'
-  - 'Taking full ownership of the programming, from debugging to performance optimization.'
+  - 'Taking full ownership of the programming, from debugging to performance optimisation.'
   - 'Applying 9+ years of QA expertise to create and execute a comprehensive test strategy.'
 ---
 
