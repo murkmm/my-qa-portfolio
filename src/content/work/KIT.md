@@ -1,15 +1,15 @@
 ---
-title: 'KIT - Knight in Training (In Development)'
+title: 'KIT - Knight In Training (In Development)'
 publishDate: '2025-08-29'
 featured: true
 img: '/assets/KIT temp logo.jpg'
-img_alt: 'Promotional art for the game KIT - Knight in Training.'
+img_alt: 'Promotional art for the game KIT - Knight In Training.'
 description: |
-  As Director at my own studio, Ki10 Games, I am leading the design, programming, and quality assurance for my debut independent title, an action-adventure game currently in development.
+  As Director at my own studio, Ki10 Games, I am leading the design, programming, and quality assurance for my debut independent title, an 3D Platformer adventure game currently in development.
 tags:
+  - 'Director'
   - 'Game Design'
   - 'Programming'
-  - 'QA Lead'
   - 'Unity'
   - 'In Development'
 summary:
@@ -21,7 +21,7 @@ summary:
 **Company:** Ki10 Games
 
 ### Project Overview
-*KIT - Knight in Training* is my debut independent title, currently in active development at my own studio, Ki10 Games. It is an action-adventure game where I am channeling my nine years of industry experience into every facet of its creation. The goal is to build a polished and engaging experience that reflects a deep understanding of both game development and player expectations.
+*KIT - Knight in Training* is my debut independent title, currently in active development at my own studio, Ki10 Games. It is an an 3D Platformer adventure game where I am channeling my nine years of industry experience into every facet of its creation. The goal is to build a polished and engaging experience that reflects a deep understanding of both game development and player expectations.
 
 ### My Role & Responsibilities
 As the Director of the project, my role encompasses the full spectrum of game development, requiring me to leverage and expand upon my entire career skillset. My responsibilities are divided into three core areas:
@@ -32,13 +32,19 @@ As the Director of the project, my role encompasses the full spectrum of game de
 ### The Challenge
 The ultimate challenge of being an independent developer is wearing multiple hats effectively. The project requires a constant shift in mindset from the creative thinking of a designer, to the logical problem solving of a programmer, to the critical and methodical analysis of a QA tester. Balancing these demanding roles while making steady progress on the project is the core challenge I am currently navigating.
 
+### Gameplay Highlights
+
+Here is a highlight from the prototype of the game that I am currently working on.
+
+<img src="/assets/KIT Highlight.webp" alt="Gameplay from KIT - Knight In Training" class="centered-image" />
+
 ### My Approach & Actions
 * **Design:** I am building the game's foundation by developing its core systems and narrative, focusing on creating a fun and intuitive player experience from the ground up.
 * **Programming:** I am actively writing, debugging, and optimising the game's code, applying my deep understanding of game stability and performance to my own work.
 * **Testing:** I am implementing a professional grade QA process for my own project, creating robust test plans and maintaining a knowledge base to track issues, test data, and platform specific behaviors.
 
 ### Impact & Results
-* **(Project is in development)** My direct, hands-on control over all three core disciplines design, programming, and QA is ensuring that a quality first mindset is embedded in every aspect of the game from its inception.
+* **(Project is in development)** My direct, hands on control over all three core disciplines design, programming, and QA is ensuring that a quality first mindset is embedded in every aspect of the game from its inception.
 * This project represents the culmination of my professional journey, allowing me to apply nearly a decade of lessons learned in the games industry to create a product that I am truly passionate about.
 
 ### Technologies & Tools Used
