@@ -32,6 +32,13 @@ Building on my established expertise from the previous title, my role expanded t
 ### The Challenge
 While the core technology was familiar, the main challenge on *Little Hope* was to improve our efficiency and the depth of our test coverage. With a new team member to train and the ongoing need to coordinate with an external QA partner, the focus shifted from learning new systems to optimising our existing ones, all while balancing the immense workload of testing a highly complex narrative game.
 
+### Gameplay Highlights
+
+Here is a highlight from the game that I was responsible for testing.
+
+<img src="/assets/Little Hope Highlight.webp" alt="Gameplay from Little Hope" class="centered-image" />
+
+
 ### My Approach & Actions
 * **Enhanced Test Documentation:** I updated and refined existing test cases and Confluence guides based on our prior experience, making the testing process more efficient for the entire team.
 * **Provided Direct Mentorship:** I successfully onboarded and mentored the new QA tester, providing them with the guidance and knowledge needed to become a productive member of the team quickly.
