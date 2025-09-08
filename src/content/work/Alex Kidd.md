@@ -21,10 +21,16 @@ summary:
 *Alex Kidd in Miracle World DX* is a modern remake of the beloved SEGA Master System classic. As a publisher QA Tester, I was part of a team responsible for managing multiple concurrent projects, ensuring this nostalgic title met the high standards expected by both the IP holder and a new generation of players.
 
 ### My Role & Responsibilities
-My role involved a blend of hands-on testing, planning, and mentorship. I performed full compliance passes on all major platforms, created comprehensive test plans and guides for internal and external partners, and mentored colleagues on industry-standard testing practices and platform holder requirements.
+My role involved a blend of hands-on testing, planning, and mentorship. I performed full compliance passes on all major platforms, created comprehensive test plans and guides for internal and external partners, and mentored colleagues on industry standard testing practices and platform holder requirements.
 
 ### The Challenge
 The main challenge was balancing the testing needs of multiple concurrent projects while ensuring a title with such a nostalgic legacy was a polished and faithful remake. This required deep research into each project's needs and meticulous planning to meet submission deadlines.
+
+### Gameplay Highlights
+
+Here is a highlight from the game that I was responsible for testing.
+
+<img src="/assets/Alex_Kidd.webp" alt="A scene from Hidden Agenda's E3 Demo" class="centered-image" />
 
 ### My Approach & Actions
 * I conducted full compliance testing across PlayStation, Xbox, Nintendo, and PC platforms to ensure the game passed all certification requirements.
@@ -35,10 +41,10 @@ The main challenge was balancing the testing needs of multiple concurrent projec
 ### Impact & Results
 * My thorough compliance testing ensured a smooth and successful submission process across all platforms.
 * The test documentation I created became a key resource, improving the efficiency and consistency of both internal and external test teams.
-* My feedback helped the development partner address key issues, contributing to a higher-quality final product that was well-received by fans of the original.
+* My feedback helped the development partner address key issues, contributing to a higher quality final product that was well received by fans of the original.
 
 ### Technologies & Tools Used
-* **Jira** (for bug tracking and reporting)
+* **Airtable** (for bug tracking and reporting)
 * **Confluence** (for test documentation)
 * **All major console platforms** (PlayStation, Xbox, Nintendo, Stadia, Luna)
 * **PC platforms** (Steam, Epic)
