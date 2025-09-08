@@ -23,7 +23,13 @@ summary:
 As the main QA point person, I managed the full lifecycle of bug reporting, including triaging, logging, and tracking issues. I developed and executed targeted test strategies focused on the core simulation and progression systems and coordinated with external QA teams to align testing priorities.
 
 ### The Challenge
-The challenge of being the primary embedded QA was balancing a wide range of responsibilities. I had to be both a hands-on tester and a strategic planner, managing the flow of information between the internal development team and external QA partners while ensuring a tight feedback loop for rapid issue resolution.
+The challenge of being the primary embedded QA was balancing a wide range of responsibilities. I had to be both a hands on tester and a strategic planner, managing the flow of information between the internal development team and external QA partners while ensuring a tight feedback loop for rapid issue resolution.
+
+### Gameplay Highlights
+
+Here is a highlight from the game that I was responsible for testing.
+
+<img src="/assets/Legacy Highlight.webp" alt="Gameplay from Legacy" class="centered-image" />
 
 ### My Approach & Actions
 * I provided continuous, direct feedback on design implementation and user experience to the development team.
