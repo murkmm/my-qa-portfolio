@@ -30,7 +30,7 @@ The main challenge was balancing the testing needs of multiple concurrent projec
 
 Here is a highlight from the game that I was responsible for testing.
 
-<img src="/assets/Alex_Kidd.webp" alt="A scene from Hidden Agenda's E3 Demo" class="centered-image" />
+<img src="/assets/Alex_Kidd.webp" alt="Gameplay from Alex Kidd DX" class="centered-image" />
 
 ### My Approach & Actions
 * I conducted full compliance testing across PlayStation, Xbox, Nintendo, and PC platforms to ensure the game passed all certification requirements.
