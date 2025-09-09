@@ -1,7 +1,8 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content'; // Import CollectionEntry type
-// ... other imports remain the same
+import { getCollection, type CollectionEntry } from 'astro:content';
+// Component Imports
 import CallToAction from '../components/CallToAction.astro';
+// Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
@@ -9,6 +10,7 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Skills from '../components/Skills.astro';
+// Layout import
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 
@@ -30,7 +32,7 @@ function shuffle(array: CollectionEntry<'work'>[]): CollectionEntry<'work'>[] {
 // 4. Create a final list: 2 featured + 2 random from the rest
 const selectedProjects = [
 	...featuredProjects.slice(0, 2),
-	...shuffle(otherProjects).slice(0, 2)
+	...shuffle(otherProjects).slice(0, 2),
 ];
 
 // 5. Shuffle the final 4 so the featured ones don't always appear first
@@ -72,10 +74,10 @@ const sortedCompanies = allCompanies.sort((a, b) => (b.isCurrent ? 1 : -1));
 				</Hero>
 
 				<img
-					alt="A Placeholder image of Mark McManus"
+					alt="A Headshot image of Mark McManus"
 					width="480"
 					height="620"
-					src="/assets/Placeholder potrait .jpg"
+					src="/assets/Website Home Image.JPG"
 				/>
 			</header>
 
@@ -158,7 +160,7 @@ const sortedCompanies = allCompanies.sort((a, b) => (b.isCurrent ? 1 : -1));
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
-		object-position: top;
+		object-position: top; /* This is the base (mobile) style */
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
@@ -175,16 +177,17 @@ const sortedCompanies = allCompanies.sort((a, b) => (b.isCurrent ? 1 : -1));
 		.roles {
 			margin-top: 0.5rem;
 			display: flex;
-			flex-wrap: wrap; /* Allows pills to wrap */
-			gap: 0.75rem; /* Increased gap slightly for better spacing */
-			justify-content: flex-start; /* Aligns items to the start */
-			align-items: center; /* Aligns items vertically */
+			flex-wrap: wrap;
+			gap: 0.75rem;
+			justify-content: flex-start;
+			align-items: center;
 		}
 
 		.hero img {
 			aspect-ratio: 3 / 4;
 			border-radius: 4.5rem;
 			object-fit: cover;
+			/* This is also the desktop style, but it's now correctly inherited from the base style */
 		}
 	}
 
