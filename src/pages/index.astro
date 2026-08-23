@@ -16,11 +16,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const allProjects = await getCollection('work');
 
-// 2. Separate featured projects from the others
-const featuredProjects = allProjects.filter((project) => project.data.featured);
-const otherProjects = allProjects.filter((project) => !project.data.featured);
-
-// 3. Function to shuffle an array
 function shuffle(array: CollectionEntry<'work'>[]): CollectionEntry<'work'>[] {
 	for (let i = array.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
@@ -29,14 +24,19 @@ function shuffle(array: CollectionEntry<'work'>[]): CollectionEntry<'work'>[] {
 	return array;
 }
 
-// 4. Create a final list: 2 featured + 2 random from the rest
-const selectedProjects = [
-	...featuredProjects.slice(0, 2),
-	...shuffle(otherProjects).slice(0, 2),
-];
+// Games made at Ki10 Games get their own section, newest first, so the two
+// current titles always lead rather than competing with the QA credits.
+const studioProjects = allProjects
+	.filter((project) => project.data.studio)
+	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 
-// 5. Shuffle the final 4 so the featured ones don't always appear first
-const projects = shuffle(selectedProjects);
+// QA credits on other studios' titles: the featured ones plus a rotating pick.
+const qaProjects = allProjects.filter((project) => !project.data.studio);
+const featuredQa = qaProjects
+	.filter((project) => project.data.featured)
+	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+const otherQa = qaProjects.filter((project) => !project.data.featured);
+const projects = shuffle([...featuredQa.slice(0, 1), ...shuffle(otherQa).slice(0, 3)]);
 
 // --- List of companies you've worked with ---
 const allCompanies = [
@@ -49,7 +49,8 @@ const allCompanies = [
 	{ name: 'Merge Games', logo: '/assets/logos/Merge Games Logo.png', url: 'https://www.mergegames.com/' },
 	{ name: 'The Breach Studios', logo: '/assets/logos/thebreachlogo.png', url: 'https://www.thebreachstudios.com/' },
 	{ name: 'Unity', logo: '/assets/logos/Unity_Technologies_logo.png', url: 'https://unity.com/' },
-	{ name: 'KI10 Games', logo: '/assets/logos/KI10 logo.png', isCurrent: true, url: 'https://ki10games.com/' }, // Using '#' as a placeholder link
+	{ name: 'Cloud Imperium Games', logo: '/assets/logos/cloud_imperium_games_logo.png', isCurrent: true, url: 'https://cloudimperiumgames.com/' },
+	{ name: 'KI10 Games', logo: '/assets/logos/KI10 logo.png', isCurrent: true, url: 'https://ki10games.com/' },
 ];
 
 // Sort the list to make sure the current company is always first
@@ -62,12 +63,13 @@ const sortedCompanies = allCompanies.sort((a, b) => (b.isCurrent ? 1 : -1));
 			<header class="hero">
 				<Hero
 					title="Mark McManus"
-					tagline="QA Veteran & Game Designer."
+					tagline="Game designer & developer."
+					subtagline="QA veteran of 9+ years. Skill Check is out now on Google Play."
 					align="start"
 				>
 					<div class="roles">
 						<Pill><Icon icon="bug" size="1.33em" /> Bug Hunter</Pill>
-						<Pill><Icon icon="clipboard-text" size="1.33em" /> Test Designer</Pill>
+						<Pill><Icon icon="rocket-launch" size="1.33em" /> Ships Games</Pill>
 						<Pill><Icon icon="strategy-path" size="1.33em" /> QA Strategist</Pill>
 						<Pill><Icon icon="game-controller" size="1.33em" /> Game Designer</Pill>
 					</div>
@@ -87,8 +89,37 @@ const sortedCompanies = allCompanies.sort((a, b) => (b.isCurrent ? 1 : -1));
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Projects</h3>
-					<p>Follow my career journey through a selection of projects I've helped bring to life.</p>
+					<h3>Games I've Made</h3>
+					<p>
+						Titles I've designed and built myself at my own studio, Ki10 Games, where I own design,
+						programming and QA end to end.
+					</p>
+				</header>
+
+				<div class="gallery">
+					<Grid variant="thirds">
+						{
+							studioProjects.map((project) => (
+								<li>
+									<PortfolioPreview project={project} />
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+
+				<div class="cta">
+					<CallToAction href="https://skillcheckgame.com/">
+						Play Skill Check
+						<Icon icon="arrow-right" size="1.2em" />
+					</CallToAction>
+				</div>
+			</section>
+
+			<section class="section with-background bg-variant with-cta">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Games I've Tested</h3>
+					<p>Nearly a decade of QA across a selection of titles I've helped bring to life.</p>
 				</header>
 
 				<div class="gallery">
@@ -111,7 +142,7 @@ const sortedCompanies = allCompanies.sort((a, b) => (b.isCurrent ? 1 : -1));
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
+			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Companies I've Worked With</h3>
 					<p>

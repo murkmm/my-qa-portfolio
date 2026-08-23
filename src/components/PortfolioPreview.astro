@@ -12,6 +12,7 @@ const { data, id } = Astro.props.project;
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 
 	<div class="text-overlay">
+		{data.status && <span class="status">{data.status}</span>}
 		<h3 class="title">{data.title}</h3>
 		{
 			data.summary && (
@@ -92,6 +93,19 @@ const { data, id } = Astro.props.project;
 		padding: 1rem;
 		z-index: 1;
 		background: linear-gradient(to top, rgba(9, 11, 17, 0.95) 10%, rgba(9, 11, 17, 0.7) 40%, transparent);
+	}
+
+	.status {
+		align-self: flex-start;
+		margin-bottom: 0.4rem;
+		padding: 0.2rem 0.6rem;
+		border-radius: 999px;
+		background: var(--accent-regular);
+		color: var(--accent-text-over);
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
 	}
 
 	.title {

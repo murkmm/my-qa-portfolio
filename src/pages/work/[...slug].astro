@@ -113,6 +113,16 @@ const { Content } = await render(entry);
 		max-width: 100%;
 	}
 
+	.content :global(.note) {
+		margin-top: 3rem;
+		padding: 1rem 1.25rem;
+		border-left: 3px solid var(--gray-700);
+		border-radius: 0.25rem;
+		background: var(--gray-999_40);
+		color: var(--gray-400);
+		font-size: var(--text-sm);
+	}
+
 	.content :global(blockquote) {
 		font-size: var(--text-lg);
 		font-family: var(--font-brand);

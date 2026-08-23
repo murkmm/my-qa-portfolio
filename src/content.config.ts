@@ -14,6 +14,10 @@ export const collections = {
 			img_alt: z.string().optional(),
 			summary: z.array(z.string()).optional(),
 			featured: z.boolean().optional(),
+			// Games made at Ki10 Games, as opposed to QA credits on other studios' titles.
+			studio: z.boolean().optional(),
+			// Shown as a badge on cards, e.g. Released / In Development / On Hold.
+			status: z.string().optional(),
 
 		}),
 	}),

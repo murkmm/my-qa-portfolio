@@ -1,12 +1,12 @@
 ---
 interface Props {
-	variant?: 'offset' | 'small';
+	variant?: 'offset' | 'small' | 'thirds';
 }
 
 const { variant } = Astro.props;
 ---
 
-<ul class:list={['grid', { offset: variant === 'offset', small: variant === 'small' }]}>
+<ul class:list={['grid', { offset: variant === 'offset', small: variant === 'small', thirds: variant === 'thirds' }]}>
 	<slot />
 </ul>
 
@@ -28,10 +28,21 @@ const { variant } = Astro.props;
 		grid-column: 1 / 3;
 	}
 
+	/* Three equal columns, no stagger. The offset variant leaves a hole when the
+	   item count is odd, which is wrong for a section that always shows three. */
+	.grid.thirds {
+		gap: 1.5rem;
+	}
+
 	@media (min-width: 50em) {
 		.grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 4rem;
+		}
+
+		.grid.thirds {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2rem;
 		}
 
 		.grid.offset {

@@ -1,62 +1,70 @@
 ---
-title: "KIT - Knight In Training (In Development)"
-publishDate: "2025-08-29"
-featured: true
-img: "/assets/KIT temp logo.jpg"
-img_alt: "Promotional art for the game KIT - Knight In Training."
+title: 'KIT - Knight In Training'
+status: 'On Hold'
+publishDate: '2025-08-29'
+featured: false
+studio: true
+img: '/assets/kit-card.jpg'
+img_alt: 'KIT standing in the grass in Knight In Training.'
 description: |
-  As Director at my own studio, Ki10 Games, I am leading the design, programming, and quality assurance for my debut independent title, a 3D Platformer adventure game currently in development.
+  Ki10 Games' first project, a 3D action adventure built in Unity where I led design, programming and QA. Currently on hold, and a formative lesson in scoping a project to the size of the team building it.
 tags:
-  - "Director"
-  - "Game Design"
-  - "Programming"
-  - "Unity"
-  - "In Development"
+  - 'Director'
+  - 'Game Design'
+  - 'Programming'
+  - 'Unity'
+  - 'On Hold'
 summary:
-  - "Leading all design efforts, including core gameplay systems and narrative direction."
-  - "Taking full ownership of the programming, from debugging to performance optimisation."
-  - "Applying 9+ years of QA expertise to create and execute a comprehensive test strategy."
+  - 'Led design, programming and QA on Ki10 Games first project.'
+  - 'Built a dynamic camera system blending 3D exploration with 2D side on sections.'
+  - 'Paused deliberately once scope outgrew a two person team, which reshaped how we scope now.'
 ---
 
-**Company:** Ki10 Games
+**Company:** Ki10 Games · **Platform:** PC · **Status:** On hold
 
 ### Project Overview
 
-_KIT - Knight in Training_ is my debut independent title, currently in active development at my own studio, Ki10 Games. It is a 3D Platformer adventure game where I am channeling my nine years of industry experience into every facet of its creation. The goal is to build a polished and engaging experience that reflects a deep understanding of both game development and player expectations.
+_KIT - Knight in Training_ is a 3D action adventure in the spirit of the mascot platformers I grew up on. A vibrant world, a camera that shifts between 3D exploration and 2D side on sections, and a small cat with a very large sword.
+
+It was Ki10 Games' first project and the subject of our first nine devlogs. **It is currently on hold rather than cancelled.** The work is documented and saved, and I fully intend to return to it once the studio has the capacity to do it properly.
 
 ### My Role & Responsibilities
 
-As the Director of the project, my role encompasses the full spectrum of game development, requiring me to leverage and expand upon my entire career skillset. My responsibilities are divided into three core areas:
+As Director I owned the full spectrum of the project:
 
-- **Game Design:** I am leading all design efforts, developing the core gameplay systems, shaping the narrative direction, and continuously refining the player experience based on a clear internal vision.
-- **Programming:** I have taken full ownership of programming the game in Unity. This includes building features, debugging complex issues, optimising performance, and integrating third party tools and frameworks.
-- **Quality Assurance:** Drawing on my extensive background, I am creating and executing all test plans, cases, and scripts to ensure optimal test coverage. I am also maintaining a detailed QA knowledge base for the project.
+- **Game Design:** Core gameplay systems, narrative direction, and a map and quest system built around tracking collectibles across a hand built world.
+- **Programming:** Built the game in Unity, including the camera manager, save system, NPC dialogue, content gating and a shop system.
+- **Quality Assurance:** Created and executed all test plans and cases, and maintained a QA knowledge base for the project.
 
-### The Challenge
+### What Got Built
 
-The ultimate challenge of being an independent developer is wearing multiple hats effectively. The project requires a constant shift in mindset from the creative thinking of a designer, to the logical problem solving of a programmer, to the critical and methodical analysis of a QA tester. Balancing these demanding roles while making steady progress on the project is the core challenge I am currently navigating.
+Before the project was paused, a substantial amount of it worked:
+
+- A **dynamic camera system** blending dolly paths, player controlled cameras and full 2D side on sections, with transitions designed to be invisible to the player.
+- A **map and quest system** tracking collectibles across the world.
+- **Core player mechanics** including double jump, coyote time and a spin attack.
+- **Level interactivity** covering breakable objects, hazards, and button driven environmental toggles.
+- A **level select hub** with content gating and mid level checkpoints.
+- **Save system, NPC dialogue, shop and cosmetics**, plus a full music and SFX system.
+- A **creature companion system**, where creatures you meet in the world come home with you.
+
+### The Challenge, and What I Learned From It
+
+The challenge with KIT was not any individual system. It was **scope**.
+
+A 3D action adventure is enormous. Every system we finished uncovered two more we had not started, and it gradually became clear the project was far bigger than two people with day jobs could carry to a finish line. I had spent nearly a decade testing games at studios with the headcount to make projects that size work, and I had underestimated what that headcount was actually doing.
+
+Rather than let it drift indefinitely or quietly abandon it, I made a deliberate call to **pause KIT and ship something achievable instead**. That decision led directly to _Skill Check_, which became Ki10 Games' first released title, and to _Boop n Burn_, which has been scoped against a fixed public deadline from the outset.
+
+I consider this the most valuable lesson of my time as a director so far. Recognising that a project has outgrown its team, and acting on it early rather than late, is a judgement call I am far better equipped to make now than I was at the start.
 
 ### Gameplay Highlights
 
-Here is a highlight from the prototype of the game that I am currently working on.
-
 <img src="/assets/KIT Highlight.webp" alt="Gameplay from KIT - Knight In Training" class="centered-image" />
-
-### My Approach & Actions
-
-- **Design:** I am building the game's foundation by developing its core systems and narrative, focusing on creating a fun and intuitive player experience from the ground up.
-- **Programming:** I am actively writing, debugging, and optimising the game's code, applying my deep understanding of game stability and performance to my own work.
-- **Testing:** I am implementing a professional grade QA process for my own project, creating robust test plans and maintaining a knowledge base to track issues, test data, and platform specific behaviors.
-
-### Impact & Results
-
-- **(Project is in development)** My direct, hands on control over all three core disciplines design, programming, and QA is ensuring that a quality first mindset is embedded in every aspect of the game from its inception.
-- This project represents the culmination of my professional journey, allowing me to apply nearly a decade of lessons learned in the games industry to create a product that I am truly passionate about.
 
 ### Technologies & Tools Used
 
-- **Unity Engine**
-- **Jira** (for bug and task tracking)
-- **Confluence** (for design documentation and QA knowledge base)
-- **C# / Unity Programming**
-- **PC & Console Development Kits**
+- **Unity Engine** (C#)
+- **Jira** for bug and task tracking
+- **Confluence** for design documentation and the QA knowledge base
+- **PC development**

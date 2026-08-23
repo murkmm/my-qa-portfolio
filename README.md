@@ -1,30 +1,76 @@
-# Astro Starter Kit: Portfolio
+# Mark McManus — QA & Game Development Portfolio
 
-```sh
-npm create astro@latest -- --template portfolio
+Personal portfolio site. Built with [Astro](https://astro.build/).
+
+## Structure
+
+| Path                    | What's in it                                                              |
+| :---------------------- | :------------------------------------------------------------------------ |
+| `src/content/work/`     | One Markdown file per project. All the case studies live here.            |
+| `src/pages/`            | Home, About, Portfolio index, and the `[...slug]` route for case studies. |
+| `src/components/`       | Shared UI: nav, footer, hero, portfolio cards, skills grid, theme toggle. |
+| `src/styles/global.css` | Design tokens (colours, type scale, spacing) and global styles.           |
+| `public/assets/`        | Images, gameplay clips, company logos and the CV PDF.                     |
+
+## Adding a project
+
+Create a new `.md` file in `src/content/work/`. The filename becomes the URL slug,
+so `Skill Check.md` becomes `/work/skill-check`.
+
+```yaml
+---
+title: 'Game Title'
+publishDate: '2026-05-18' # drives the year markers on the portfolio timeline
+featured: true # surfaces it on the home page
+studio: true # only for Ki10 Games titles, which get their own home page section
+img: '/assets/game-title.webp' # card image
+img_alt: 'Describe the image for screen readers'
+description: |
+  One paragraph, shown on the card and as the page description.
+tags:
+  - 'Game Design'
+  - 'Released'
+summary:
+  - 'Bullet points shown when hovering the card on the home page.'
+---
+Markdown body: the full case study.
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+`featured` and `studio` are both optional and default to false.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **`studio: true`** puts the project in the "Games I've Made" section on the home page.
+- **`featured: true`** on a QA credit gives it priority in "Games I've Tested".
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+## Images
 
-## 🧞 Commands
+Assets live in `public/assets/` and are served as-is, so **Astro does not optimise
+them**. Compress before committing:
 
-All commands are run from the root of the project, from a terminal:
+- **Screenshots and photos:** max 1600px wide, JPEG quality ~82 or WebP ~85.
+- **Gameplay clips:** animated WebP, quality ~52. Keep the frame size as exported.
+  Resizing an animated WebP breaks the frame strip.
+- **Logos:** max 400px wide.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Anything over ~1MB is worth a second look. A 15MB hero image makes the site feel
+broken on mobile.
 
-## 👀 Want to learn more?
+## The CV
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The downloadable CV at `/mark-mcmanus-cv.pdf` is generated from `cv/mark-mcmanus-cv.html`.
+Edit the HTML, then regenerate:
+
+```sh
+chrome --headless=new --no-pdf-header-footer   --print-to-pdf="public/mark-mcmanus-cv.pdf"   "file:///<absolute-path>/cv/mark-mcmanus-cv.html"
+```
+
+On Windows, `chrome` is usually `C:\Program Files\Google\Chrome\Application\chrome.exe`.
+Keeping the source in the repo means the PDF stays editable and the download URL never changes.
+
+## Commands
+
+| Command           | Action                         |
+| :---------------- | :----------------------------- |
+| `npm install`     | Install dependencies           |
+| `npm run dev`     | Dev server at `localhost:4321` |
+| `npm run build`   | Build to `./dist/`             |
+| `npm run preview` | Preview the built site locally |
