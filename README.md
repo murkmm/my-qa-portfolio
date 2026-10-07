@@ -56,8 +56,11 @@ broken on mobile.
 
 ## The CV
 
-The downloadable CV at `/mark-mcmanus-cv.pdf` is generated from `cv/mark-mcmanus-cv.html`.
-Edit the HTML, then regenerate:
+The downloadable CV lives at `public/mark-mcmanus-cv.pdf`. To update it, overwrite that file
+with the new export and keep the filename, so the `/mark-mcmanus-cv.pdf` download URL never changes.
+
+`cv/mark-mcmanus-cv.html` is an older HTML version of the CV and is no longer the source of the
+current PDF. If you go back to it, edit the HTML and regenerate:
 
 ```sh
 chrome --headless=new --no-pdf-header-footer   --print-to-pdf="public/mark-mcmanus-cv.pdf"   "file:///<absolute-path>/cv/mark-mcmanus-cv.html"

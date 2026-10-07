@@ -66,9 +66,14 @@ I owned the project end to end as Director, which in practice meant every discip
 
 ### Gameplay Highlights
 
-<img src="/assets/skill-check-question.webp" alt="A Skill Check trivia question in play, with a countdown timer" class="centered-image" />
+The main menu with today's three cards on offer, a matching set firing a big score bonus, a question in play, and the collection of cartridges to master.
 
-<img src="/assets/skill-check-collection.webp" alt="The Skill Check collection screen showing cartridges to master" class="centered-image" />
+<div class="screenshot-grid">
+  <img src="/assets/skill-check-menu.webp" alt="The Skill Check main menu showing today's Age of Empires II daily run, three illustrated cards and yesterday's score and rank" width="720" height="1278" loading="lazy" />
+  <img src="/assets/skill-check-synergy.webp" alt="A Maid of Orléans matching set stacked on the console, raising the potential score to 4,700" width="720" height="1294" loading="lazy" />
+  <img src="/assets/skill-check-question.webp" alt="A trivia question about the William Wallace campaign with three answers and a countdown bar" width="720" height="1272" loading="lazy" />
+  <img src="/assets/skill-check-collection.webp" alt="The collection screen showing illustrated cartridges from The Sims, Spyro and Outer Wilds" width="720" height="1308" loading="lazy" />
+</div>
 
 ### Technologies & Tools Used
 

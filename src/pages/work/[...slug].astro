@@ -113,6 +113,20 @@ const { Content } = await render(entry);
 		max-width: 100%;
 	}
 
+	/* Portrait phone screenshots: side by side rather than one tall image after another. */
+	.content :global(.screenshot-grid) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		align-items: start;
+	}
+
+	.content :global(.screenshot-grid img) {
+		width: 100%;
+		height: auto;
+		border-radius: 1rem;
+	}
+
 	.content :global(.note) {
 		margin-top: 3rem;
 		padding: 1rem 1.25rem;
