@@ -66,14 +66,13 @@ I owned the project end to end as Director, which in practice meant every discip
 
 ### Gameplay Highlights
 
-The main menu with the day's run on offer, a synergy firing mid run, a question in play, the archive of every past daily and a perfected cartridge in the collection.
+The main menu with today's three cards on offer, a matching set firing a big score bonus, a question in play, and the collection of cartridges to master.
 
 <div class="screenshot-grid">
-  <img src="/assets/skill-check-menu.webp" alt="The Skill Check main menu showing today's daily run, the three cards on offer, a day streak and yesterday's score and rank" width="699" height="1242" loading="lazy" />
-  <img src="/assets/skill-check-synergy.webp" alt="A Dragon's Best Friend synergy activating mid run, raising the potential score to 2,600" width="699" height="1184" loading="lazy" />
-  <img src="/assets/skill-check-question.webp" alt="A Skill Check trivia question about Sparx from Spyro with three answers and a countdown bar" width="699" height="1242" loading="lazy" />
-  <img src="/assets/skill-check-archive.webp" alt="The archive calendar, where every past daily run can be replayed by date" width="699" height="1242" loading="lazy" />
-  <img src="/assets/skill-check-mastery.webp" alt="A collection cartridge marked as perfected, with its lore and win rate" width="699" height="1242" loading="lazy" />
+  <img src="/assets/skill-check-menu.webp" alt="The Skill Check main menu showing today's Age of Empires II daily run, three illustrated cards and yesterday's score and rank" width="720" height="1278" loading="lazy" />
+  <img src="/assets/skill-check-synergy.webp" alt="A Maid of Orléans matching set stacked on the console, raising the potential score to 4,700" width="720" height="1294" loading="lazy" />
+  <img src="/assets/skill-check-question.webp" alt="A trivia question about the William Wallace campaign with three answers and a countdown bar" width="720" height="1272" loading="lazy" />
+  <img src="/assets/skill-check-collection.webp" alt="The collection screen showing illustrated cartridges from The Sims, Spyro and Outer Wilds" width="720" height="1308" loading="lazy" />
 </div>
 
 ### Technologies & Tools Used
