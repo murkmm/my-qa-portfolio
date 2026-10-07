@@ -66,9 +66,15 @@ I owned the project end to end as Director, which in practice meant every discip
 
 ### Gameplay Highlights
 
-<img src="/assets/skill-check-question.webp" alt="A Skill Check trivia question in play, with a countdown timer" class="centered-image" />
+The main menu with the day's run on offer, a synergy firing mid run, a question in play, the archive of every past daily and a perfected cartridge in the collection.
 
-<img src="/assets/skill-check-collection.webp" alt="The Skill Check collection screen showing cartridges to master" class="centered-image" />
+<div class="screenshot-grid">
+  <img src="/assets/skill-check-menu.webp" alt="The Skill Check main menu showing today's daily run, the three cards on offer, a day streak and yesterday's score and rank" width="699" height="1242" loading="lazy" />
+  <img src="/assets/skill-check-synergy.webp" alt="A Dragon's Best Friend synergy activating mid run, raising the potential score to 2,600" width="699" height="1184" loading="lazy" />
+  <img src="/assets/skill-check-question.webp" alt="A Skill Check trivia question about Sparx from Spyro with three answers and a countdown bar" width="699" height="1242" loading="lazy" />
+  <img src="/assets/skill-check-archive.webp" alt="The archive calendar, where every past daily run can be replayed by date" width="699" height="1242" loading="lazy" />
+  <img src="/assets/skill-check-mastery.webp" alt="A collection cartridge marked as perfected, with its lore and win rate" width="699" height="1242" loading="lazy" />
+</div>
 
 ### Technologies & Tools Used
 
