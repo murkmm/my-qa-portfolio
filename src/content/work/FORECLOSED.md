@@ -29,7 +29,10 @@ _FORECLOSED_ is a narrative action adventure set in a cyberpunk city, and the wh
 
 The comic book style made it an interesting one to test. Alongside the usual functional bugs, I was looking for art and presentation problems specific to that style, while also covering compliance on several platforms.
 
-<img src="/assets/FORECLOSED.webp" alt="Gameplay from FORECLOSED" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay from FORECLOSED">
+  <source src="/videos/foreclosed.mp4" type="video/mp4" />
+  <source src="/videos/foreclosed.webm" type="video/webm" />
+</video>
 
 ### Tools
 

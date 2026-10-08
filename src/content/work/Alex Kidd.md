@@ -29,7 +29,10 @@ _Alex Kidd in Miracle World DX_ is a remake of the SEGA Master System platformer
 
 Because people remember the original so fondly, I also kept an eye on whether it still felt like Alex Kidd, and a good chunk of my feedback was about how faithful it was to the Master System version.
 
-<img src="/assets/Alex_Kidd.webp" alt="Gameplay from Alex Kidd DX" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay from Alex Kidd DX">
+  <source src="/videos/alex-kidd.mp4" type="video/mp4" />
+  <source src="/videos/alex-kidd.webm" type="video/webm" />
+</video>
 
 ### Tools
 

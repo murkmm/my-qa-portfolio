@@ -29,7 +29,10 @@ _Hyenas_ was a session based multiplayer PvPvE shooter. I was a QA Technician on
 
 With a new IP and lots of connected systems that changed all the time, things moved fast. Talking to the designers and developers every day was the best way to know where to focus.
 
-<img src="/assets/HYENAS_.webp" alt="Gameplay from HYENAS" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay from HYENAS">
+  <source src="/videos/hyenas.mp4" type="video/mp4" />
+  <source src="/videos/hyenas.webm" type="video/webm" />
+</video>
 
 ### Tools
 
