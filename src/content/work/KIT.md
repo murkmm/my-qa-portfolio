@@ -1,32 +1,33 @@
 ---
 title: 'KIT - Knight In Training'
-status: 'On Hold'
+status: 'In Development'
 publishDate: '2025-08-29'
 featured: false
 studio: true
 img: '/assets/kit-card.jpg'
 img_alt: 'KIT standing in the grass in Knight In Training.'
 description: |
-  Ki10 Games' first project, a 3D action adventure built in Unity where I led design, programming and QA. Currently on hold, and a formative lesson in scoping a project to the size of the team building it.
+  Ki10 Games' first project, a 3D action adventure where I lead design, programming and QA. Paused in Unity as a lesson in scope, and now back in development as a port to Godot.
 tags:
   - 'Director'
   - 'Game Design'
   - 'Programming'
   - 'Unity'
-  - 'On Hold'
+  - 'Godot'
+  - 'In Development'
 summary:
   - 'Led design, programming and QA on Ki10 Games first project.'
   - 'Built a dynamic camera system blending 3D exploration with 2D side on sections.'
-  - 'Paused deliberately once scope outgrew a two person team, which reshaped how we scope now.'
+  - 'Paused deliberately when scope outgrew the team, now being rebuilt in Godot.'
 ---
 
-**Company:** Ki10 Games · **Platform:** PC · **Status:** On hold
+**Company:** Ki10 Games · **Platform:** PC · **Status:** In development (Godot port)
 
 ### Project Overview
 
 _KIT - Knight in Training_ is a 3D action adventure in the spirit of the mascot platformers I grew up on. A vibrant world, a camera that shifts between 3D exploration and 2D side on sections, and a small cat with a very large sword.
 
-It was Ki10 Games' first project and the subject of our first nine devlogs. **It is currently on hold rather than cancelled.** The work is documented and saved, and I fully intend to return to it once the studio has the capacity to do it properly.
+It was Ki10 Games' first project and the subject of our first nine devlogs. After a deliberate pause, **it is back in development**, and I am porting it from Unity to Godot.
 
 ### My Role & Responsibilities
 
@@ -58,13 +59,20 @@ Rather than let it drift indefinitely or quietly abandon it, I made a deliberate
 
 I consider this the most valuable lesson of my time as a director so far. Recognising that a project has outgrown its team, and acting on it early rather than late, is a judgement call I am far better equipped to make now than I was at the start.
 
+### Back in Development: The Godot Port
+
+With _Skill Check_ shipped and Ki10's other projects built in Godot, I have brought KIT back and am porting it from Unity to Godot. Having every studio project in one engine makes it far easier to move between them and reuse what each one teaches.
+
+The core mechanics are already feeling good in the new engine and are going through fine tuning, and work has started on the first level. The screenshots below are from the original Unity version.
+
 ### Gameplay Highlights
 
 <img src="/assets/KIT Highlight.webp" alt="Gameplay from KIT - Knight In Training" class="centered-image" />
 
 ### Technologies & Tools Used
 
-- **Unity Engine** (C#)
+- **Unity Engine** (C#), original version
+- **Godot Engine** (GDScript), current port
 - **Jira** for bug and task tracking
 - **Confluence** for design documentation and the QA knowledge base
 - **PC development**
