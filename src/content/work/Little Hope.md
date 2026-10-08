@@ -33,7 +33,10 @@ Having just shipped _Man of Medan_, I knew the tech and the tools, so this time 
 
 As on Man of Medan, I logged the most bugs on the embedded test team, through a mix of systematic and exploratory testing. We were also working with an external QA partner, so a lot of the job was keeping everyone pointed at the right parts of a very big story.
 
-<img src="/assets/Little Hope Highlight.webp" alt="Gameplay from Little Hope" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay from Little Hope">
+  <source src="/videos/little-hope-highlight.mp4" type="video/mp4" />
+  <source src="/videos/little-hope-highlight.webm" type="video/webm" />
+</video>
 
 ### Tools
 

@@ -29,7 +29,10 @@ _LEGO Dimensions_ was T.T. Games' toys to life game, and in its second year it k
 
 The toys to life side made it a big job. Every new character, vehicle and gadget could be combined with everything that already existed, and the packs had fixed release dates, often tied to a film coming out.
 
-<img src="/assets/lego-dimensions-highlight.webp" alt="A scene from the LEGO Dimensions Battle Arenas" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="A scene from the LEGO Dimensions Battle Arenas">
+  <source src="/videos/lego-dimensions-highlight.mp4" type="video/mp4" />
+  <source src="/videos/lego-dimensions-highlight.webm" type="video/webm" />
+</video>
 
 ### The Battle Arenas
 

@@ -28,7 +28,10 @@ _The Inpatient_ was a psychological horror game made just for PlayStation VR, an
 - Wrote test plans and guides in Confluence so our team and a remote team in Liverpool were working from the same information.
 - Tested the branching story paths and paid close attention to anything that didn't match _Until Dawn_.
 
-<img src="/assets/The_Inpatient_Highlight.webp" alt="A scene from The Inpatient" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="A scene from The Inpatient">
+  <source src="/videos/the-inpatient-highlight.mp4" type="video/mp4" />
+  <source src="/videos/the-inpatient-highlight.webm" type="video/webm" />
+</video>
 
 ### Keeping it consistent with Until Dawn
 

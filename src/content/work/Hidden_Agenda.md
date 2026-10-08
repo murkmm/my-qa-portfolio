@@ -32,7 +32,10 @@ _Hidden Agenda_ was a crime thriller and one of Sony's PlayLink games, where you
 
 The number of combinations was the hard part. Every scene could play out differently depending on earlier choices and who was still alive, across two modes and up to six players. Knowing the story paths well meant I could reach the unusual situations where the harder to find bugs were.
 
-<img src="/assets/Hidden_Agenda__highlight.webp" alt="A scene from Hidden Agenda's E3 demo" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="A scene from Hidden Agenda's E3 demo">
+  <source src="/videos/hidden-agenda-highlight.mp4" type="video/mp4" />
+  <source src="/videos/hidden-agenda-highlight.webm" type="video/webm" />
+</video>
 
 ### The E3 demo bug
 

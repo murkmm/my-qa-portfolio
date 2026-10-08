@@ -30,7 +30,10 @@ A lot was new to me on this one: my first Unity game, a new bug tracker (Redmine
 - Helped write playthrough guides in Confluence so the main story events and the golden path got tested consistently.
 - A lot of exploratory testing of the crafting and progression systems.
 
-<img src="/assets/My_Time_At_Portia_Highlight.webp" alt="A scene from My Time at Portia" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="A scene from My Time at Portia">
+  <source src="/videos/my-time-at-portia-highlight.mp4" type="video/mp4" />
+  <source src="/videos/my-time-at-portia-highlight.webm" type="video/webm" />
+</video>
 
 ### The soft lock
 

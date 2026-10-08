@@ -69,7 +69,10 @@ The Godot version, in Briarwatch (the models are placeholders for now):
 
 The original Unity version:
 
-<img src="/assets/KIT Highlight.webp" alt="Gameplay from the Unity version of KIT - Knight In Training" class="centered-image" />
+<video class="centered-image" autoplay loop muted playsinline preload="metadata" aria-label="Gameplay from the Unity version of KIT - Knight In Training">
+  <source src="/videos/kit-highlight.mp4" type="video/mp4" />
+  <source src="/videos/kit-highlight.webm" type="video/webm" />
+</video>
 
 ### Tools
 
