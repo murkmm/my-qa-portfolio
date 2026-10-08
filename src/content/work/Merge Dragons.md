@@ -25,7 +25,7 @@ With a live game, every update goes out to a lot of players on a lot of differen
 ### What I did
 
 - Wrote and ran test plans for mobile performance, memory use and battery drain.
-- Compatibility testing across different screen sizes, OS versions and hardware.
+- Compatibility testing on four devices at different performance levels.
 - Checked updates against Apple App Store and Google Play requirements.
 - Ran test sessions focused on how the game actually feels to play, which turned up issues our scripted tests didn't.
 - Mentored junior testers on mobile testing and writing good bug reports.
@@ -34,4 +34,4 @@ With a live game, every update goes out to a lot of players on a lot of differen
 
 ### Tools
 
-Jira, Confluence, the Unity engine, profiling and performance tools, and a lot of iOS and Android devices.
+Jira, Confluence, the Unity engine, profiling and performance tools, and four iOS and Android test devices.

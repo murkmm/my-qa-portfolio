@@ -32,7 +32,7 @@ I came back to Supermassive full time for this one, and I was given a lot more r
 - Wrote test cases in Excel and playthrough guides in Confluence to keep track of the huge number of story branches.
 - Started dabbling in test automation, setting up scripts that played through the game automatically to take some of the repetitive work off our hands.
 
-Between three modes, a branching story and four platforms (one of them brand new), there was a lot to cover. Even with the planning, coordination and test writing on top, I still logged the most bugs on the embedded QA team.
+Between three modes, a branching story and four platforms (one of them brand new), there was a lot to cover. Even with the planning, coordination and test writing on top, I logged well over 100 bugs, more than any other tester on the project.
 
 <img src="/assets/Man Of Medan Highlight.webp" alt="A scene from Man of Medan's multiplayer mode" class="centered-image" />
 

@@ -5,7 +5,7 @@ featured: true
 img: '/assets/Fallguys Mobile.png'
 img_alt: 'Artwork from the game Fall Guys.'
 description: |
-  Senior Mobile QA at Unity on the mobile version of Fall Guys. I ran the testing from requirements through to release sign off, across a wide spread of iOS and Android devices.
+  Senior Mobile QA at Unity on the mobile version of Fall Guys. I ran the testing from requirements through to release sign off, on iOS and Android devices at different performance levels.
 tags:
   - 'Senior QA'
   - 'Mobile Testing'
@@ -13,7 +13,7 @@ tags:
   - 'Live Service'
 summary:
   - 'Ran testing from requirements through to release sign off.'
-  - 'Device compatibility and fragmentation testing on iOS and Android.'
+  - 'Compatibility testing on four devices at different performance levels.'
   - 'QA reports and dashboards for go / no-go release decisions.'
 ---
 
@@ -23,12 +23,12 @@ As a Senior Mobile QA Tester at Unity, one of the games I worked on was the mobi
 
 ### The main risk: device fragmentation
 
-Fall Guys is fast and physics based, and it has to feel fair. On mobile that's hard, because players are on everything from new flagships to old budget phones, with different screen sizes, OS versions and performance. Most of my planning went into making sure we covered that spread properly.
+Fall Guys is fast and physics based, and it has to feel fair. On mobile that's hard, because players are on everything from new flagships to old budget phones, with different screen sizes, OS versions and performance. To cover that, I tested on four devices at different performance levels, so we could see how the game held up from the top end down to the slower phones.
 
 ### What I did
 
 - Planned and ran the testing for each milestone, making sure coverage kept up with development.
-- Compatibility and fragmentation testing across a wide range of iOS and Android devices, OS versions and hardware.
+- Compatibility testing across four iOS and Android devices at different performance levels.
 - Wrote test cases aimed at mobile performance: memory use, battery drain and how responsive the controls felt.
 - Put together QA reports and dashboards so the wider team could see where each build stood and make go / no-go calls on release candidates.
 
@@ -36,4 +36,4 @@ Fall Guys is fast and physics based, and it has to feel fair. On mobile that's h
 
 ### Tools
 
-Jira, Confluence, Azure DevOps, the Unity engine, profiling and performance tools, and a lot of iOS and Android devices.
+Jira, Confluence, Azure DevOps, the Unity engine, profiling and performance tools, and four iOS and Android test devices.

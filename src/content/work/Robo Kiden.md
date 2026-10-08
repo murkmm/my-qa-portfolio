@@ -4,13 +4,13 @@ publishDate: '2023-08-01'
 img: '/assets/Robo_Kiden.jpg'
 img_alt: 'Artwork for the game Robo Kiden.'
 description: |
-  Senior QA Tester and QA lead at The Breach Studios on Robo Kiden, a third person shooter. I set up the testing approach, ran the QA team and reported on quality to management.
+  Senior QA Tester and QA lead at The Breach Studios on Robo Kiden, a third person shooter. I set up the testing approach, led a team of three testers and reported on quality to management.
 tags:
   - 'QA Lead'
   - 'Test Strategy'
   - 'Team Management'
 summary:
-  - 'Led the QA team and its day to day testing.'
+  - 'Led a QA team of three testers.'
   - 'Wrote the test strategy for internal and external testers.'
   - 'Ran bug tracking, priorities and status reporting.'
 ---
@@ -21,7 +21,7 @@ _Robo Kiden_ is a third person shooter from The Breach Studios. I joined as Seni
 
 ### What I did
 
-- Led and coordinated the QA team and made sure everyone was working to the same standard.
+- Led a team of three testers, coordinated their work and made sure everyone was working to the same standard.
 - Wrote the test strategy for both our internal team and external testers, tied to the project's milestones.
 - Put together the test scenarios, cases and scripts we needed.
 - Set up how we tracked and reported bugs.
