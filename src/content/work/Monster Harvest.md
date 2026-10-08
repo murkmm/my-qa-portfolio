@@ -4,40 +4,30 @@ publishDate: '2021-08-31'
 img: '/assets/monster-harvest.jpg'
 img_alt: 'A character standing in a field in the farming simulator Monster Harvest.'
 description: |
-  As a QA Tester for the publisher Merge Games, I was responsible for the quality assurance of this unique pixel-art farming simulator with a monster-collecting twist.
+  Publisher QA at Merge Games on Monster Harvest, a pixel art farming sim with monster collecting. Long term playthroughs, compliance on every platform and the test plans the team worked from.
 tags:
   - 'Publisher QA'
   - 'Game Testing'
   - 'Farming Sim'
 summary:
-  - 'Ensured the title was released with the highest quality and best user experience.'
-  - 'Performed full compliance passes on all major platforms including next-gen systems.'
-  - 'Created comprehensive test plans and guides used by internal and external partners.'
+  - 'Long term playthroughs to test progression and balance.'
+  - 'Compliance passes on every platform, including next-gen consoles.'
+  - 'Wrote test plans and guides for internal and external testers.'
 ---
+
 **Company:** Merge Games (Publisher) / Maple Powered Games (Developer)
 
-### Project Overview
-*Monster Harvest* is a charming pixel-art indie game that blends the genres of farming simulation and monster collecting. As part of the publisher QA team at Merge Games, I was responsible for ensuring the game was polished, balanced, and ready for release across a wide variety of platforms.
+_Monster Harvest_ is a pixel art indie game that mixes farming sim and monster collecting. I worked on it in the publisher QA team at Merge Games, testing it on a lot of different platforms ahead of release.
 
-### My Role & Responsibilities
-My duties included the full testing of the title, from functional and usability checks to rigorous multi-platform compliance passes. I was also responsible for creating test documentation and guiding other team members on platform-specific requirements.
+### What I did
 
-### The Challenge
-The biggest challenge was testing the long-term progression systems inherent to the farming sim genre. This required methodical, long-term save files to test for balance issues, economic exploits, and bugs that would only appear dozens of hours into the game, all while managing strict release deadlines.
+- Kept long running save files going to test the farming, crafting and monster collecting loops over many in-game days.
+- Wrote test plans and guides that our internal testers and external partners both used.
+- Full compliance passes against every platform holder's requirements, including next-gen consoles.
+- Sent regular feedback to Maple Powered Games on bugs and on how the game felt to play.
 
-### My Approach & Actions
-* I created and maintained long-term playthroughs to test the core farming, crafting, and monster-collecting loops for stability and balance.
-* I developed comprehensive test plans that were used by both internal testers and external partners to ensure consistent coverage.
-* I executed full compliance passes against all platform holder guidelines, including next-generation systems.
-* I provided continuous feedback to the development partner to help them refine the user experience and overall game quality.
+The tricky part with a farming sim is that a lot of the problems don't show up for hours. Balance issues, money exploits and some bugs only appear dozens of hours into a save, so those long playthroughs had to be kept going alongside everything else, with release dates coming up fast.
 
-### Impact & Results
-* My thorough testing of the long-term progression systems helped the team identify and fix key balancing issues before launch.
-* The test documentation I created ensured that both our internal and external teams were aligned, leading to more efficient bug reporting and verification.
-* My work was crucial in ensuring the game passed certification on all platforms, contributing to a successful multi-platform release.
+### Tools
 
-### Technologies & Tools Used
-* **Jira** (for bug tracking and reporting)
-* **Confluence** (for test documentation)
-* **All major console platforms** (PlayStation, Xbox, Nintendo, Stadia, Luna)
-* **PC platforms** (Steam, Epic)
+Jira, Confluence, and dev kits for PlayStation, Xbox and Nintendo, alongside Stadia, Luna, Steam and Epic.

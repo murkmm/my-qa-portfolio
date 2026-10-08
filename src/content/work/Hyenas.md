@@ -4,46 +4,33 @@ publishDate: '2021-01-01'
 img: '/assets/HYENAS.webp'
 img_alt: 'Promotional art for the multiplayer shooter Hyenas.'
 description: |
-  As a core QA Technician at Creative Assembly, I provided holistic testing for the multiplayer PvPvE shooter Hyenas, focusing on build stability and risk assessment before its cancellation.
+  QA Technician at Creative Assembly on Hyenas, a multiplayer PvPvE shooter that was later cancelled. Daily smoke tests, bug reporting, risk spotting with the dev leads and regular multiplayer sessions.
 tags:
   - 'QA Testing'
   - 'Multiplayer'
   - 'SEGA'
 summary:
-  - 'Ran daily build and feature smoke tests on all target platforms.'
-  - 'Identified key areas of risk by interfacing daily with development leads.'
-  - 'Organized and participated in multiplayer play sessions to test network stability and core gameplay loops.'
+  - 'Daily build and feature smoke tests on every target platform.'
+  - 'Worked with dev leads each day to spot the riskiest areas.'
+  - 'Organised and played in multiplayer sessions to test stability and the core loop.'
 ---
-**Company:** Creative Assembly / Sega
 
-### Project Overview
-*Hyenas* was an ambitious, session based multiplayer PvPvE shooter. As a member of the core QA team, I had a holistic view of the project, working closely with all departments to ensure the quality and stability of the game during its active development. Although the project was ultimately cancelled, my time on it was a valuable experience in testing large scale, live service titles.
+**Company:** Creative Assembly / SEGA
 
-### My Role & Responsibilities
-My role was to act as a versatile QA Technician, providing broad testing coverage and feedback. Key duties included running daily smoke tests on all target platforms, creating clear and concise bug reports, reviewing existing issues to ensure accurate prioritization, and organising regular multiplayer play sessions to test the core gameplay loop.
+_Hyenas_ was a session based multiplayer PvPvE shooter. I was a QA Technician on the core team, which meant working with most departments and seeing a lot of the game while it was in active development. The game was eventually cancelled, but it was a big learning experience in testing a large online game.
 
-### The Challenge
-The primary challenge was testing a complex, new IP with many interconnected systems while it was in a constant state of flux. Identifying potential risks early by interfacing with design and development experts was crucial to focusing our test efforts where they would have the most impact.
+### What I did
 
-### Gameplay Highlights
+- Smoke tested every new build each day on all target platforms, so problems were spotted early.
+- Talked to the development leads each day about where the risks were, so we tested the right things first.
+- Wrote bug reports with clear repro steps, build details and video.
+- Reviewed existing bugs to keep their priorities accurate.
+- Organised and played in multiplayer sessions, and fed back on stability and how the core loop felt.
 
-Here is a highlight from the game that I was responsible for testing.
+With a new IP and lots of connected systems that changed all the time, things moved fast. Talking to the designers and developers every day was the best way to know where to focus.
 
 <img src="/assets/HYENAS_.webp" alt="Gameplay from HYENAS" class="centered-image" />
 
-### My Approach & Actions
-* I executed daily smoke tests to quickly validate the health of each new build.
-* I worked directly with development leads to identify and communicate high risk areas.
-* I authored detailed bug reports with clear reproduction steps, build notes, and video evidence.
-* I organised and participated in daily multiplayer playtests to provide direct feedback on the game's quality, stability, and overall player experience.
+### Tools
 
-### Impact & Results
-* My consistent smoke testing and clear bug reporting helped the team rapidly identify and fix critical issues, improving daily build stability.
-* My proactive communication with domain experts ensured that QA's efforts were always aligned with the project's most immediate risks and priorities.
-* The feedback gathered from the play sessions I organized was instrumental in refining the core gameplay loop during the development process.
-
-### Technologies & Tools Used
-* **Jira** (for bug tracking and reporting)
-* **Confluence** (for test documentation)
-* **Unreal Engine 5**
-* **PC & Console Development Kits**
+Jira, Confluence, Unreal Engine 5 and PC and console dev kits.

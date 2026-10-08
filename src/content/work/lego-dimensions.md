@@ -4,57 +4,39 @@ publishDate: '2016-11-18'
 img: '/assets/lego-dimensions.jpg'
 img_alt: 'Gameplay from the LEGO Dimensions Battle Arenas and DLC packs.'
 description: |
-  As part of the large-scale, ongoing support for LEGO Dimensions, my team was responsible for testing and ensuring the quality of new downloadable content packs.
+  My first industry role, at T.T. Games, testing the year two DLC packs for LEGO Dimensions. I logged 200+ bugs in the Battle Arenas and found an AI bug that broke lesser used characters.
 tags:
   - 'QA Testing'
   - 'Game Testing'
   - 'Jira'
   - 'Multiplayer'
-# V-- Corrected Indentation --V
 summary:
-  - 'Authored 200+ bug reports for the multiplayer Battle Arenas.'
-  - 'Discovered a critical AI pathing bug affecting niche characters.'
-  - 'Ensured stability for three major DLC packs, including Sonic & Fantastic Beasts.'
+  - 'Logged 200+ bugs in the multiplayer Battle Arenas.'
+  - 'Found an AI pathing bug affecting lesser used characters.'
+  - 'Tested DLC packs including Sonic and Fantastic Beasts.'
 ---
 
 **Company:** T.T. Games
 
-### Project Overview
-As part of the large scale, ongoing support for LEGO Dimensions, my team was responsible for testing and ensuring the quality of new downloadable content packs. The goal was to integrate major global IPs like Sonic the Hedgehog and Fantastic Beasts into the existing game engine, ensuring they met the high-quality standards expected by both the studio and the IP holders.
+_LEGO Dimensions_ was T.T. Games' toys to life game, and in its second year it kept getting new content packs based on big films and franchises. This was one of my first jobs in the industry, and our team tested those new packs.
 
-### My Role & Responsibilities
-As a QA Tester in one of my first industry roles, my key responsibilities included:
-* Performing end to end testing of all new content, including Story Packs, Level Packs, and newly introduced characters.
-* Conducting comprehensive playthroughs of major IP integrations like *Fantastic Beasts* and *The LEGO Batman Movie*, with content lasting from 1 to 5 hours.
-* Specialising in the rigorous testing of the new multiplayer Battle Arena modes across all supported platforms (PS3, PS4, Xbox 360, Xbox One, Wii U) and character combinations.
+### What I did
 
-### The Challenge
-The primary challenge was the sheer complexity of the toys to life system. We had to test for countless character, vehicle, and gadget combinations to ensure there were no game-breaking bugs. The multiplayer arenas added another layer of complexity as all characters both new and old had to be tested within it, with tight deadlines to meet the marketing and release dates for the new physical LEGO packs, which often tied in with corresponding cinema releases.
+- Tested the Story Packs (_Fantastic Beasts_, _Ghostbusters_, _The LEGO Batman Movie_) and Level Packs (_Sonic the Hedgehog_, _Adventure Time_, _Mission: Impossible_), with exploratory, functional and regression testing. Some of them took up to five hours to play through.
+- Tested the new multiplayer Battle Arenas on PS3, PS4, Xbox 360, Xbox One and Wii U, with as many character combinations as I could.
+- Wrote bug reports in Jira with repro steps and video, and checked fixes with the developers.
+- Ran multiplayer test sessions to track down hard to reproduce bugs.
 
-### Gameplay Highlights
+The toys to life side made it a big job. Every new character, vehicle and gadget could be combined with everything that already existed, and the packs had fixed release dates, often tied to a film coming out.
 
-Here is a highlight from the battle arenas that I was responsible for testing.
+<img src="/assets/lego-dimensions-highlight.webp" alt="A scene from the LEGO Dimensions Battle Arenas" class="centered-image" />
 
-<img src="/assets/lego-dimensions-highlight.webp" alt="A scene from  LEGO Dimension's Battle Arenas" class="centered-image" />
+### The Battle Arenas
 
+I logged over 200 bugs in the Battle Arenas, including a lot of A class, game breaking ones. Most testers were using the main heroes, so I made a point of trying every character, and that turned up a bug where lots of the less popular characters had broken AI pathing and would just walk into walls. After that I wrote a new test plan specifically for AI controlled characters, so every character got checked.
 
-### My Approach & Actions
-* Conducted extensive exploratory and regression testing on the Story Packs (*Fantastic Beasts*, *Ghostbusters*, *LEGO Batman Movie*) and Level Packs (*Sonic the Hedgehog*, *Adventure Time*, *Mission: Impossible*).
-* Authored clear, detailed, and reproducible bug reports in Jira, complete with video evidence and step by step instructions to aid the development team.
-* Executed functional test plans against character abilities, level progression, and UI elements to ensure they met design specifications.
-* Collaborated closely with developers to verify bug fixes and provide direct feedback on gameplay feel and stability.
-* Spearheaded multiplayer test sessions to identify and replicate hard-to-find bugs related to network stability and gameplay balance.
+Outside the arenas I found everything from graphical glitches to progression blockers in the story and level packs. I also became known for getting through big regression lists quickly. A lot of people found them tedious, but I actually enjoyed them.
 
-### Impact & Results
-* Became known as one of the most prolific testers for the Battle Arena feature, personally identifying and documenting hundreds of issues, including many A Class game-breaking bugs.
-* Beyond the arenas, my comprehensive testing of the main Story and Level packs was vital in ensuring a smooth player experience. I uncovered a wide spectrum of issues, from environmental and graphical glitches to critical progression blockers and game-breaking bugs.
-* I was also well known for my efficiency in clearing huge regression lists, a task many testers found tedious but that I thoroughly enjoyed and embraced, ensuring the stability of each new game build.
-* My focused testing led to the discovery of a critical AI bug where less popular characters failed to function correctly in the Battle Arenas. While others focused on main heroes, I made it my mission to test every character, which revealed that many niche characters had broken pathing and would simply walk into walls.
-* Following this discovery, I took the initiative to create a new test plan specifically for AI-controlled characters. This ensured every character was fully functional, resulting in a solid and polished multiplayer experience for all players.
-* My contributions were key to the successful, on-time shipment of multiple major DLC packs, helping maintain the game's positive reception and commercial success.
+### Tools
 
-### Technologies & Tools Used
-* **Jira** (for bug tracking and reporting)
-* **Microsoft Excel** (for test cases and playthrough documents)
-* **Console Development Kits:** PS3, PS4, Xbox 360, Xbox One, Wii U
-* **Proprietary T.T. Games Engine & Debug Tools**
+Jira, Excel for test cases and playthrough documents, PS3, PS4, Xbox 360, Xbox One and Wii U dev kits, and T.T. Games' own engine and debug tools.

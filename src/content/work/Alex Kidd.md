@@ -4,47 +4,33 @@ publishDate: '2021-06-22'
 img: '/assets/Alex Kidd.jpg'
 img_alt: 'Gameplay from the platformer Alex Kidd in Miracle World DX.'
 description: |
-  As a QA Tester for the publisher Merge Games, I was responsible for ensuring this modern remake of a SEGA classic met the highest standards of quality across all major platforms.
+  Publisher QA at Merge Games on the remake of the SEGA Master System classic. I ran compliance on every platform it shipped on and wrote the test plans the wider team used.
 tags:
   - 'Publisher QA'
   - 'Game Testing'
   - 'Compliance Testing'
   - 'SEGA'
 summary:
-  - 'Performed full compliance passes on PlayStation, Xbox, and Nintendo platforms.'
-  - 'Created comprehensive test plans and guides for internal and external test teams.'
-  - 'Worked closely with the production team to ensure project deadlines were met.'
+  - 'Ran compliance passes on PlayStation, Xbox, Nintendo and PC.'
+  - 'Wrote the test plans and guides used by internal and external testers.'
+  - 'Worked with production to keep submissions on schedule.'
 ---
-**Company:** Merge Games (Publisher) / Sega (IP Holder)
 
-### Project Overview
-*Alex Kidd in Miracle World DX* is a modern remake of the beloved SEGA Master System classic. As a publisher QA Tester, I was part of a team responsible for managing multiple concurrent projects, ensuring this nostalgic title met the high standards expected by both the IP holder and a new generation of players.
+**Company:** Merge Games (Publisher) / SEGA (IP Holder)
 
-### My Role & Responsibilities
-My role involved a blend of hands-on testing, planning, and mentorship. I performed full compliance passes on all major platforms, created comprehensive test plans and guides for internal and external partners, and mentored colleagues on industry standard testing practices and platform holder requirements.
+_Alex Kidd in Miracle World DX_ is a remake of the SEGA Master System platformer. I worked on it as a publisher QA tester at Merge Games, where we usually had several projects on the go at once, so a lot of the job was planning: working out what each game needed and making sure it was tested in time for each submission date.
 
-### The Challenge
-The main challenge was balancing the testing needs of multiple concurrent projects while ensuring a title with such a nostalgic legacy was a polished and faithful remake. This required deep research into each project's needs and meticulous planning to meet submission deadlines.
+### What I did
 
-### Gameplay Highlights
+- Full compliance passes on PlayStation, Xbox, Nintendo and PC (Steam and Epic), plus Stadia and Luna.
+- Wrote the test plans and guides in Confluence that both our internal team and external testers worked from.
+- Sent feedback to the external developer on bugs and on things that could be better for players.
+- Helped newer testers get to grips with functional and compliance testing and the platform holders' requirements.
 
-Here is a highlight from the game that I was responsible for testing.
+Because people remember the original so fondly, I also kept an eye on whether it still felt like Alex Kidd, and a good chunk of my feedback was about how faithful it was to the Master System version.
 
 <img src="/assets/Alex_Kidd.webp" alt="Gameplay from Alex Kidd DX" class="centered-image" />
 
-### My Approach & Actions
-* I conducted full compliance testing across PlayStation, Xbox, Nintendo, and PC platforms to ensure the game passed all certification requirements.
-* I authored detailed test plans and guides in Confluence, creating a central knowledge base for all testers.
-* I provided direct feedback to the external development partner on ways to improve game quality and the user experience.
-* I mentored junior colleagues, guiding them on best practices for both functional and compliance testing.
+### Tools
 
-### Impact & Results
-* My thorough compliance testing ensured a smooth and successful submission process across all platforms.
-* The test documentation I created became a key resource, improving the efficiency and consistency of both internal and external test teams.
-* My feedback helped the development partner address key issues, contributing to a higher quality final product that was well received by fans of the original.
-
-### Technologies & Tools Used
-* **Airtable** (for bug tracking and reporting)
-* **Confluence** (for test documentation)
-* **All major console platforms** (PlayStation, Xbox, Nintendo, Stadia, Luna)
-* **PC platforms** (Steam, Epic)
+Airtable for bug tracking, Confluence for test documentation, and dev kits for PlayStation, Xbox and Nintendo, alongside Stadia, Luna, Steam and Epic.

@@ -7,7 +7,7 @@ studio: true
 img: '/assets/boop-n-burn.webp'
 img_alt: 'Players scrambling across the shipping yard arena in Boop n Burn.'
 description: |
-  Ki10 Games' current title. A sixteen player floor is lava party brawler built in Godot for PC, Switch and Xbox Series, where I lead design and programming ahead of a Steam Next Fest demo.
+  Ki10 Games' main project: a sixteen player floor is lava party brawler built in Godot for PC, Switch and Xbox Series. I lead design and programming, and we're aiming for a Steam Next Fest demo.
 tags:
   - 'Director'
   - 'Game Design'
@@ -16,56 +16,47 @@ tags:
   - 'Multiplayer'
   - 'In Development'
 summary:
-  - 'Leading design and programming on a sixteen player online party brawler.'
-  - 'Designing shove based combat around a stamina economy and readable player intent.'
-  - 'Targeting a playable demo for Steam Next Fest across PC, Switch and Xbox Series.'
+  - 'Lead design and programming on a sixteen player online party brawler.'
+  - 'Shove based combat, with stamina so every push is a decision.'
+  - 'Getting multiplayer ready for a Steam Next Fest demo.'
 ---
 
 **Company:** Ki10 Games · **Platforms:** PC, Nintendo Switch, Xbox Series X|S · **Status:** In development
 
-### Project Overview
+_Boop n Burn_ is a floor is lava party brawler and Ki10 Games' main project. Up to sixteen players drop into an arena with one rule: don't touch the lava. There's no health bar. You shove people in, and the last one standing wins the round.
 
-_Boop n Burn_ is a floor is lava party brawler and Ki10 Games' current project. A lobby of up to sixteen players drops into an arena with one rule: don't touch the lava. There is no health bar and nothing to chip away at. You shove people in, and the last one standing takes the round.
+It has free for all and team modes and five arenas so far, and it's built in Godot for PC, Nintendo Switch and Xbox Series. We're aiming for a playable demo at Steam Next Fest in February 2027.
 
-It supports free for all and team modes, runs across five themed arenas, and is built in Godot for PC, Nintendo Switch and Xbox Series. A playable demo is planned for Steam Next Fest in February 2027.
+### The design problem
 
-### The Challenge
+A party game only works if the main action is still fun the fiftieth time, and in Boop n Burn that action is the shove. It needs enough depth to keep people playing all night without getting so complicated that someone picking up a controller for the first time is lost.
 
-Party games live or die on a single question: **is the core interaction fun the fiftieth time?** There is no story to carry a weak loop and no progression that can rescue a boring minute to minute.
+The technical side is the hardest thing I've built: physics with sixteen players online, where everyone's game has to agree on who pushed who, and in which direction. If it doesn't, losing feels random instead of funny.
 
-The design problem is making one verb, the shove, deep enough to sustain a full session without adding complexity that locks out the person picking up a controller for the first time. On top of that sits the hardest technical constraint on anything I've built: **sixteen player networked physics**, where every client needs to agree on who pushed whom and in which direction, with results readable enough that losing feels fair and funny rather than arbitrary.
+### What I do
 
-### My Role & Responsibilities
+- Design: the shove, the stamina that limits it, how matches and rounds flow, progression and unlocks, and the arenas.
+- Programming: gameplay in Godot, especially the physics and the online multiplayer.
+- Technical direction: how the multiplayer works, which platforms we target, and what two people can realistically get done by the demo.
+- QA: playtests, network testing, the test approach for an online game, and planning certification for Switch and Xbox.
 
-- **Game Design:** Leading design on the core shove mechanic, the stamina economy that governs it, match structure and round flow, the progression and unlock system, and arena layout.
-- **Programming:** Building gameplay systems in Godot, with a focus on the physics interactions and networked multiplayer that the whole game rests on.
-- **Technical Direction:** Setting the multiplayer architecture and platform targets, and scoping features against what two people can realistically deliver by a fixed demo date.
-- **Quality Assurance:** Running playtests, defining the test approach for a multiplayer title, and owning platform certification planning for Switch and Xbox Series.
+### Design choices so far
 
-### My Approach & Actions
-
-- Designed the moveset around **momentum rather than a combo string**, so the skill ceiling comes from reading other players and positioning, not from memorising inputs.
-- Introduced a **stamina cost on shoving** so committing to a push is a genuine decision with a downside, rather than a button players mash continuously.
-- Built in a **kill feed** that names who shoved whom, turning every elimination into a social moment and giving players a reason to seek out a rematch.
-- Layered **XP and gear unlocks** on top of the core loop to give sessions a longer arc, without letting unlocks affect competitive balance.
-- Built **five distinct arenas** so the same core rule reads differently across a session, from an open shipping yard to a cramped warehouse interior.
-- Scoped the entire project deliberately against a **fixed public deadline**, applying the lesson Skill Check taught us about picking a target we can actually hit.
-
-### Gameplay Highlights
+- Movement is built on momentum rather than combos, so the skill is in reading other players and positioning, not memorising buttons.
+- Shoving costs stamina, so every push is a decision and you can't just mash it.
+- A kill feed says who shoved who, which makes every knockout a moment and gets people wanting a rematch.
+- XP and gear unlocks give longer sessions something to work towards, without affecting balance.
+- Five arenas, from an open shipping yard to a cramped warehouse, so the same rule plays differently each round.
+- The whole project is scoped to a fixed public date, which is something we learned from Skill Check.
 
 <img src="/assets/boop-n-burn-ruins.webp" alt="The ruined temple arena in Boop n Burn, with the current leader wearing a crown" class="centered-image" />
 
 <img src="/assets/boop-n-burn-arcade.webp" alt="The arcade arena in Boop n Burn, with pink lava" class="centered-image" />
 
-### Impact & Results
+### Where it's at
 
-- **(Project is in development)** The core loop is playable end to end with full lobbies, five arenas, progression and unlocks in place.
-- The technical foundation, networked multiplayer physics at sixteen players, is the most demanding system I have built and directly extends the multiplayer and platform experience I gained testing titles like _Fall Guys_ on mobile.
-- Scope is being held against a public demo date rather than allowed to drift, which is a direct result of what shipping Skill Check taught us.
+You can play it start to finish with full lobbies, five arenas, progression and unlocks. Right now most of my time is going into getting the multiplayer ready and running network tests ahead of Next Fest. A lot of what I learned about multiplayer and platforms testing games like _Fall Guys_ on mobile feeds straight into it.
 
-### Technologies & Tools Used
+### Tools
 
-- **Godot Engine** (GDScript)
-- **Networked multiplayer** and server authoritative physics
-- **Jira & Confluence** for tracking and design documentation
-- **PC, Nintendo Switch & Xbox Series** development targets
+Godot (GDScript), networked multiplayer with server authoritative physics, Jira and Confluence, and PC, Switch and Xbox Series as targets.
