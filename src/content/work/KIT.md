@@ -4,8 +4,8 @@ status: 'In Development'
 publishDate: '2025-08-29'
 featured: false
 studio: true
-img: '/assets/kit-card.jpg'
-img_alt: 'KIT standing in the grass in Knight In Training.'
+img: '/assets/kit-godot-card.webp'
+img_alt: 'Briarwatch, the first level of KIT, rebuilt in Godot.'
 description: |
   Ki10 Games' first project, a 3D action adventure where I lead design, programming and QA. Paused in Unity as a lesson in scope, and now back in development as a port to Godot.
 tags:
@@ -63,11 +63,19 @@ I consider this the most valuable lesson of my time as a director so far. Recogn
 
 With _Skill Check_ shipped and Ki10's other projects built in Godot, I have brought KIT back and am porting it from Unity to Godot. Having every studio project in one engine makes it far easier to move between them and reuse what each one teaches.
 
-The core mechanics are already feeling good in the new engine and are going through fine tuning, and work has started on the first level. The screenshots below are from the original Unity version.
+The core mechanics are working in the new engine and are going through fine tuning, and work has started on the first level, Briarwatch.
 
 ### Gameplay Highlights
 
-<img src="/assets/KIT Highlight.webp" alt="Gameplay from KIT - Knight In Training" class="centered-image" />
+The Godot version, in Briarwatch (the models are placeholders for now):
+
+<img src="/assets/kit-godot-vista.webp" alt="A wide view of Briarwatch in the Godot version of KIT" class="centered-image" />
+
+<img src="/assets/kit-godot-village.webp" alt="KIT on Briarwatch Green, under the oath tree" class="centered-image" />
+
+The original Unity version:
+
+<img src="/assets/KIT Highlight.webp" alt="Gameplay from the Unity version of KIT - Knight In Training" class="centered-image" />
 
 ### Technologies & Tools Used
 

@@ -7,7 +7,7 @@ studio: true
 img: '/assets/the-one-bullet-job.webp'
 img_alt: 'The One Bullet Job key art: the robber in a vault beside the game logo.'
 description: |
-  A turn based heist puzzle for Android, built in Godot as Ki10 Games' current side project. I own design, programming and QA, including the solver tooling that proves every one of its 120 jobs can be beaten.
+  A turn based heist puzzle for Android, built in Godot as a Ki10 Games side project. I handle design, programming and QA, including the solver tooling that checks all 120 jobs can be beaten.
 tags:
   - 'Director'
   - 'Game Design'
@@ -38,27 +38,24 @@ The game has 120 jobs across 20 chapters, each chapter introducing one new mecha
 
 ### The Challenge
 
-A puzzle game with a large numbered campaign has a very specific quality problem: **every single level has to be beatable, and must stay beatable.** One unsolvable room, or one that quietly changes after a rules tweak, breaks trust with players in a way no patch note fixes.
+Every level in a puzzle campaign has to be beatable, and has to stay beatable when the rules change. With 120 jobs and new mechanics being added chapter by chapter, checking that by hand after every change isn't realistic.
 
-The second problem is subtler. A level being solvable does not make it fun. Generating content at scale is easy, generating content worth playing is not.
+Solvable also isn't the same as fun, so the tooling had to help me find good levels, not just valid ones.
 
 ### My Approach & Actions
 
-This is where my QA background shaped the architecture from the start:
-
-- **One source of truth for the rules.** The live game, the solver, hints, best run replays and the level generator all run on the same rules engine, so there is no gap between "the solver says this works" and "the game lets you do it".
-- **An independent cross-check.** A separate Python implementation of the rules re-solves the levels. If the two ever disagree, something is wrong, and I find out before players do.
-- **Solver-proven levels.** Every job in the campaign is solved on each check, its escape and three star routes are replayed through the real rules, and the results must match the independent solver. Pars come from proven solutions, not guesses.
-- **A generator with quality gates.** The in-editor Level Lab generated 1,000 distinct candidate rooms in about two and a half minutes in testing, rejecting rotated or mirrored duplicates and rooms where a new mechanic doesn't actually matter. Generated rooms are never published automatically. Each is reviewed before it joins the campaign.
-- **Frozen, versioned level data.** Published levels are stored as versioned data, so level 48 is the same level for every player, forever.
-- **Automated regression.** CI workflows replay solutions through the live game and check the level catalog, campaign, animation and menus on every relevant change.
+- **Shared rules.** The game, the solver, hints, replays and the level generator all use the same rules code, so the solver and the game can't disagree about what a move does.
+- **A second solver.** A separate Python version of the rules solves the levels again, and the two results are compared.
+- **Every job checked.** On each run, every job in the campaign is solved, its escape and three star routes are replayed through the game's rules, and the results are compared with the Python solver. Each job's par comes from a solved route.
+- **Level generator.** A Godot editor plugin generates candidate rooms. In one test it made 1,000 distinct rooms in about two and a half minutes. It rejects rotated or mirrored duplicates and rooms where the chapter's new mechanic isn't needed. Nothing it makes goes into the game until I've reviewed it.
+- **Fixed level data.** Published levels are saved as versioned data files, so a level doesn't change for players after release.
+- **CI.** GitHub Actions run the campaign, level catalog, animation and menu checks whenever the relevant files change.
 
 ### Impact & Results
 
-- A complete **120 job campaign across 20 chapters**, with every job proven beatable.
-- Store ready presentation: key art, feature graphic and store screenshots rendered from real gameplay by an in-game capture tool.
-- A reusable **generate, prove, review, freeze** pipeline that lets the campaign grow without lowering the bar.
-- Most importantly, a clear demonstration of something I have argued for throughout my QA career: quality is cheapest when it is designed into the architecture, not tested in at the end.
+- A **120 job campaign across 20 chapters**, with every job checked as beatable.
+- Store art and screenshots captured from real gameplay with an in-game capture tool.
+- A repeatable process for adding levels: generate, solve, review, then publish.
 
 ### Gameplay Highlights
 
