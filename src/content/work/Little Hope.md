@@ -4,7 +4,7 @@ publishDate: '2020-10-30'
 img: '/assets/Little Hope.jpg'
 img_alt: 'Promotional art for the horror game Little Hope.'
 description: |
-  I refined my expertise in cinematic horror QA on the second instalment of The Dark Pictures Anthology, focusing on enhancing multiplayer test strategies and mentoring new team members.
+  The second Dark Pictures game at Supermassive. Second time round I improved our multiplayer testing, trained a new tester and kept digging into the branching story.
 tags:
   - 'QA Testing'
   - 'Game Testing'
@@ -12,49 +12,29 @@ tags:
   - 'Mentorship'
   - 'Unreal Engine 4'
 summary:
-  - 'Refined and improved multiplayer and compliance testing processes based on previous project experience.'
-  - 'Took on mentorship responsibilities by onboarding and training a new QA tester.'
-  - 'Continued to lead the team in bug discovery through deep, systematic testing of the complex narrative.'
+  - 'Improved our multiplayer and compliance testing using lessons from Man of Medan.'
+  - 'Trained up a new QA tester.'
+  - 'Logged the most bugs on the embedded test team again.'
 ---
 
 **Company:** Supermassive Games
 
-### Project Overview
-*Little Hope* is the second instalment in The Dark Pictures Anthology, a cinematic horror game that follows a new cast of characters stranded in a haunted, abandoned town. Building on the foundation of *Man of Medan*, the project's goal was to further refine the choice and consequence gameplay, delivering another terrifying, branching narrative for players on PC, Xbox One, and PlayStation 4.
+_Little Hope_ is the second game in The Dark Pictures Anthology: a new cast stuck in a haunted, abandoned town, with the same choice and consequence storytelling as _Man of Medan_. It came out on PC, Xbox One and PlayStation 4.
 
-### My Role & Responsibilities
-Building on my established expertise from the previous title, my role expanded to include a greater focus on process improvement and team development. My responsibilities included:
-* **Process Refinement:** Applying lessons learned from *Man of Medan* to enhance our testing strategies for the complex multiplayer modes (2 player online co-op and 5 player Movie Night).
-* **Mentorship and Onboarding:** I was personally responsible for training a new QA tester, bringing them up to speed on Supermassive's projects, tools, and testing methodologies.
-* **Comprehensive Narrative Testing:** I continued to perform deep dive testing into the vast number of story permutations, ensuring every player choice led to a stable and coherent outcome.
-* **Multi Platform Compliance:** I performed rigorous compliance testing to ensure the game met the technical certification requirements for Sony and Microsoft.
+Having just shipped _Man of Medan_, I knew the tech and the tools, so this time the focus was on doing the testing better rather than learning it.
 
-### The Challenge
-While the core technology was familiar, the main challenge on *Little Hope* was to improve our efficiency and the depth of our test coverage. With a new team member to train and the ongoing need to coordinate with an external QA partner, the focus shifted from learning new systems to optimising our existing ones, all while balancing the immense workload of testing a highly complex narrative game.
+### What I did
 
-### Gameplay Highlights
+- Updated our test cases and Confluence guides using what we'd learned on Man of Medan, especially for the two player online co-op and five player Movie Night modes.
+- Trained a new QA tester and got them up to speed on Supermassive's games, tools and ways of working.
+- Kept testing the branching story to make sure every choice led somewhere stable and made sense.
+- Compliance testing for Sony and Microsoft.
+- Helped QA leads plan each day's testing so we covered functionality, performance, compliance and full playthroughs.
 
-Here is a highlight from the game that I was responsible for testing.
+As on Man of Medan, I logged the most bugs on the embedded test team, through a mix of systematic and exploratory testing. We were also working with an external QA partner, so a lot of the job was keeping everyone pointed at the right parts of a very big story.
 
 <img src="/assets/Little Hope Highlight.webp" alt="Gameplay from Little Hope" class="centered-image" />
 
+### Tools
 
-### My Approach & Actions
-* **Enhanced Test Documentation:** I updated and refined existing test cases and Confluence guides based on our prior experience, making the testing process more efficient for the entire team.
-* **Provided Direct Mentorship:** I successfully onboarded and mentored the new QA tester, providing them with the guidance and knowledge needed to become a productive member of the team quickly.
-* **Led by Example:** I continued to set the standard for bug discovery, consistently identifying the highest number of defects in the embedded test team through systematic and exploratory testing.
-* **Collaborated on Test Strategy:** I worked with QA leadership to help structure the daily test plans, ensuring a logical balance between functional, performance, compliance, and playthrough testing.
-
-### Impact & Results
-* My efforts in refining our test documentation and processes **led to increased team efficiency and more effective test coverage** compared to the previous project.
-* My successful onboarding of a new team member **helped the team scale effectively** to meet the project's demanding QA needs.
-* I was once again recognised as a **top performing tester** due to my high rate of impactful bug discovery, which was critical for stabilizing the game's complex branching story.
-* By building on my prior experience, I was able to contribute at a higher level, **helping to deliver a more polished and stable product** for the second entry in the anthology.
-
-### Technologies & Tools Used
-* **Jira** (for bug tracking and reporting)
-* **Microsoft Excel** (for test cases and checklists)
-* **Confluence** (for test plans and QA knowledge base)
-* **Unreal Engine 4**
-* **PlayStation 4, Xbox One, & PC**
-* **Proprietary Supermassive Games debug tools**
+Jira, Excel for test cases and checklists, Confluence, Unreal Engine 4, PlayStation 4, Xbox One, PC and Supermassive's own debug tools.
