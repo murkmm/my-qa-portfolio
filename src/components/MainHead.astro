@@ -4,20 +4,30 @@ import '../styles/global.css';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	/** Image shown when the page is shared. A site path such as /assets/foo.webp. */
+	image?: string | undefined;
 }
 
 const {
-	title = 'Mark McManus | Game Developer & QA Portfolio',
-	description = 'Game designer, developer and QA veteran with 9+ years of experience. Explore shipped games, development projects and QA case studies by Mark McManus.',
+	title = 'Mark McManus | Senior Games QA & Game Developer',
+	description = "Mark McManus: senior games QA and game developer. Case studies from 9+ years of QA, and the games I'm making at Ki10 Games.",
+	image = '/assets/share-card.jpg',
 } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(encodeURI(image), Astro.site);
 ---
 
 <meta charset="UTF-8" />
 <meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Mark McManus" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={imageUrl} />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>

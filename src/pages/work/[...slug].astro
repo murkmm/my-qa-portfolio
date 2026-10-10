@@ -16,7 +16,7 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<BaseLayout title={entry.data.title + ' | Mark McManus'} description={entry.data.description}>
+<BaseLayout title={entry.data.title + ' | Mark McManus'} description={entry.data.description} image={entry.data.hero || entry.data.img}>
 	<main id="main-content" tabindex="-1" class="wrapper case-study">
 		<a class="text-link back-link" href={entry.data.studio ? '/work/#development' : '/work/#qa'}
 			>← Back to {entry.data.studio ? 'development' : 'QA'} work</a
@@ -164,14 +164,14 @@ const { Content } = await render(entry);
 	.story :global(li + li) {
 		margin-top: 0.6rem;
 	}
-	.story :global(img) {
+	.story :global(video), .story :global(img) {
 		display: block;
 		border-radius: 0.7rem;
 		margin-block: 1.5rem;
 		width: 100%;
 		height: auto;
 	}
-	.story :global(.game-screens) {
+	.story :global(.screenshot-grid), .story :global(.game-screens) {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 1.25rem;

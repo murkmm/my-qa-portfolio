@@ -8,7 +8,7 @@ img: '/assets/skillcheck-card.webp'
 hero: '/assets/skillcheck-hero.webp'
 img_alt: 'The Skill Check daily trivia game running on mobile.'
 description: |
-  My first released game, and the first for Ki10. I built this daily gaming trivia game in Godot and handled everything from the design and backend to QA and getting it onto Google Play and the web.
+  Ki10 Games' first released game: a daily gaming trivia game built in Godot, out on Google Play and the web. I did the design, programming, backend, release and QA.
 tags:
   - 'Director'
   - 'Game Design'
@@ -16,47 +16,53 @@ tags:
   - 'Godot'
   - 'Released'
 summary:
-  - 'Built and released the game on Google Play and the web.'
-  - 'Designed and built the daily content pipeline, progression and a 1,594 card collection.'
-  - 'Handled store submission, updates and crash monitoring after release.'
+  - 'Took it from first prototype to live on Google Play.'
+  - 'Built the daily question pipeline, progression and a 1,594 cartridge collection.'
+  - 'Handled store submission, live updates and crash monitoring.'
 ---
 
-**Ki10 Games · Android and web · Released**
+**Company:** Ki10 Games · **Platforms:** Android, Web · **Status:** Released
 
-### A game we could actually finish
+_Skill Check_ is a daily trivia game about gaming history. Every day there's a new themed run of questions on franchises, studios and deep cuts, and a collection of nearly 1,600 cartridges to unlock and master as you go. It's the first game Ki10 Games has released, and my first commercial release. It's free on Google Play and in your browser.
 
-Skill Check is a daily trivia game about gaming history. You get a fresh set of questions every day, with nearly 1,600 cartridges to collect along the way. It’s free on Android and in your browser.
+- **Play it in your browser:** [skillcheckgame.com](https://skillcheckgame.com/)
+- **Get it on Google Play:** [Skill Check on the Play Store](https://play.google.com/store/apps/details?id=com.ki10games.skillcheck)
 
-KIT was our first project, but it had become a lot for two people with day jobs. I wanted to take something smaller all the way through release. Skill Check was that game, and it became the first one we shipped at Ki10.
+### Why a trivia game
 
-- [Play Skill Check in your browser](https://skillcheckgame.com/)
-- [Get it on Google Play](https://play.google.com/store/apps/details?id=com.ki10games.skillcheck)
+Our first project, KIT, was a big 3D action adventure, and after a year it was clear two people with day jobs couldn't finish something that size. I'd helped ship plenty of other studios' games, but never my own, and there's a lot about releasing a game you can't learn from the QA side.
 
-### What I worked on
+So I picked something small enough to finish and set out to release it properly, on a real store, not leave it as a prototype.
 
-I designed and programmed the game in Godot. The cards you draw decide how difficult a run is and how many points you can earn, so choosing harder cards is a bit of a gamble.
+### What I did
 
-I also built the daily content pipeline, authentication, cloud saves and leaderboards. The questions need to turn up each day without me manually feeding them in every morning.
+I made it end to end:
 
-Getting it out meant handling the Google Play submission, store images, builds and web hosting. My QA work covered test plans, device testing and crash reporting, so I could see what was going wrong once people were playing on their own phones.
+- Design: the daily run, the cards that set both the difficulty and the score on offer, and the progression and collection that bring people back.
+- Programming: the game itself in Godot, and the pipeline that generates and serves a new set of questions every day without me having to do it by hand.
+- Backend: login, cloud saves, leaderboards and the daily content service, and keeping it all running after launch.
+- Release: Google Play submission, store listing, build pipelines and versioning, plus the web build and hosting.
+- QA: test plans, device coverage, and crash reporting set up from the start so I could see what was going wrong on real phones.
 
-### What I learnt
+I released on Android first to see how the game ran on lots of different hardware, then brought it to the web so people could play without installing anything. Since launch I've done a big art update, so nearly every cartridge now has proper artwork.
 
-Having worked in QA for years, I was used to testing games before release. Being responsible for the whole thing myself was different. Store submission, updates and keeping a backend running were all part of the job this time.
+### What I learned
 
-Keeping the scope small enough to finish was the useful lesson. There was still plenty to do after the game itself worked. We now have a release process to build on for the next Ki10 game.
+Releasing Skill Check taught me more in a few months than another year of prototyping would have, especially about store requirements, how many different Android phones are out there, and the gap between a game working on my machine and working on a stranger's old phone. Ki10 now has a release process, backend and crash monitoring that the next game can use.
 
-### How it looks now
+The collection turned out to be the part players got most into, and that's shaped how we're designing progression in our other games.
 
-The newer artwork gives the cartridges much more character. These are the current menu, card selection, question and collection screens.
+### Screenshots
 
-<div class="game-screens">
-<figure><img src="/assets/skillcheck-menu.webp" width="720" height="1278" alt="Skill Check daily run menu with illustrated game cartridges" loading="lazy" decoding="async" /><figcaption>The daily run.</figcaption></figure>
-<figure><img src="/assets/skillcheck-card-select.webp" width="720" height="1294" alt="Choosing a cartridge before a Skill Check question" loading="lazy" decoding="async" /><figcaption>Picking the next cartridge.</figcaption></figure>
-<figure><img src="/assets/skillcheck-question.webp" width="720" height="1272" alt="A trivia question in the updated Skill Check interface" loading="lazy" decoding="async" /><figcaption>A question in play.</figcaption></figure>
-<figure><img src="/assets/skillcheck-collection.webp" width="720" height="1308" alt="The Skill Check collection with the new cartridge artwork" loading="lazy" decoding="async" /><figcaption>The cartridge collection.</figcaption></figure>
+The main menu with today's three cards, a matching set giving a big score bonus, a question in play, and the collection.
+
+<div class="screenshot-grid">
+  <img src="/assets/skill-check-menu.webp" alt="The Skill Check main menu showing today's Age of Empires II daily run, three illustrated cards and yesterday's score and rank" width="720" height="1278" loading="lazy" />
+  <img src="/assets/skill-check-synergy.webp" alt="A Maid of Orléans matching set stacked on the console, raising the potential score to 4,700" width="720" height="1294" loading="lazy" />
+  <img src="/assets/skill-check-question.webp" alt="A trivia question about the William Wallace campaign with three answers and a countdown bar" width="720" height="1272" loading="lazy" />
+  <img src="/assets/skill-check-collection.webp" alt="The collection screen showing illustrated cartridges from The Sims, Spyro and Outer Wilds" width="720" height="1308" loading="lazy" />
 </div>
 
 ### Tools
 
-Godot and GDScript, Google Play Console, backend services for accounts and leaderboards, crash reporting, Jira and Confluence.
+Godot (GDScript), Google Play Console, backend services for login, cloud saves and leaderboards, crash reporting, Jira and Confluence, and Android and web build pipelines.

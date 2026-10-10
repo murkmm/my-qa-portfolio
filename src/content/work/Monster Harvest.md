@@ -4,30 +4,30 @@ publishDate: '2021-08-31'
 img: '/assets/monster-harvest.jpg'
 img_alt: 'A character standing in a field in the farming simulator Monster Harvest.'
 description: |
-  I tested Monster Harvest at Merge Games, focusing on longer playthroughs, farming and collection systems, and platform compliance.
+  Publisher QA at Merge Games on Monster Harvest, a pixel art farming sim with monster collecting. Long term playthroughs, compliance on every platform and the test plans the team worked from.
 tags:
   - 'Publisher QA'
   - 'Game Testing'
   - 'Farming Sim'
 summary:
-  - "Tested farming, crafting and collection across longer playthroughs."
-  - "Ran platform compliance checks."
-  - "Wrote test plans shared with internal and external teams."
+  - 'Long term playthroughs to test progression and balance.'
+  - 'Compliance passes on every platform, including next-gen consoles.'
+  - 'Wrote test plans and guides for internal and external testers.'
 ---
 
 **Company:** Merge Games (Publisher) / Maple Powered Games (Developer)
 
-### Bugs that need a longer playthrough
+_Monster Harvest_ is a pixel art indie game that mixes farming sim and monster collecting. I worked on it in the publisher QA team at Merge Games, testing it on a lot of different platforms ahead of release.
 
-Monster Harvest mixes farming with monster collecting. As part of the publisher QA team at Merge Games, I tested the gameplay, usability and platform requirements.
+### What I did
 
-Some progression and balance problems only showed up much later in a save. I maintained longer playthroughs to check farming, crafting and collection, including economic exploits and problems that appeared after hours of play.
+- Kept long running save files going to test the farming, crafting and monster collecting loops over many in-game days.
+- Wrote test plans and guides that our internal testers and external partners both used.
+- Full compliance passes against every platform holder's requirements, including next-gen consoles.
+- Sent regular feedback to Maple Powered Games on bugs and on how the game felt to play.
 
-I wrote test plans for our internal and external teams, ran compliance passes and gave feedback to the development partner. I also helped colleagues with platform-specific requirements.
+The tricky part with a farming sim is that a lot of the problems don't show up for hours. Balance issues, money exploits and some bugs only appear dozens of hours into a save, so those long playthroughs had to be kept going alongside everything else, with release dates coming up fast.
 
 ### Tools
 
-* **Jira** (for bug tracking and reporting)
-* **Confluence** (for test documentation)
-* **All major console platforms** (PlayStation, Xbox, Nintendo, Stadia, Luna)
-* **PC platforms** (Steam, Epic)
+Jira, Confluence, and dev kits for PlayStation, Xbox and Nintendo, alongside Stadia, Luna, Steam and Epic.

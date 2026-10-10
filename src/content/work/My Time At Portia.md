@@ -2,9 +2,9 @@
 title: 'My Time at Portia'
 publishDate: '2019-01-15'
 img: '/assets/my time at portia.png'
-img_alt: 'A scenic view of the vibrant world from the game My Time at Portia.'
+img_alt: 'A scenic view of the world of My Time at Portia.'
 description: |
-  I tested My Time at Portia at Team 17, covering gameplay and console compliance while learning Unity and Redmine on the project.
+  QA at the publisher Team17 on My Time at Portia, a sandbox life sim built in Unity. Lots of compliance work across Sony, Microsoft and Nintendo, and a soft lock bug other testers had missed.
 tags:
   - 'QA Testing'
   - 'Game Testing'
@@ -12,33 +12,33 @@ tags:
   - 'Unity'
   - 'Redmine'
 summary:
-  - "Moved from Unreal projects to testing a game built in Unity."
-  - "Ran PlayStation, Xbox and Nintendo compliance checks."
-  - "Found a progression blocker involving lost key items."
+  - 'First Unity project, after working in Unreal.'
+  - 'Compliance testing for Sony, Microsoft and Nintendo.'
+  - 'Found a soft lock bug that had been missed.'
 ---
 
-**Company:** Team 17 (Publisher) / Pathea Games (Developer)
+**Company:** Team17 (Publisher) / Pathea Games (Developer)
 
-### A new engine and a new sort of game
+_My Time at Portia_ is a 3D sandbox life sim where you build, craft and farm. Team17 published it on PC, PlayStation 4, Xbox One and Nintendo Switch, and I was on the QA team there, mostly focused on compliance and making sure the game held together.
 
-My Time at Portia was my first Unity project. At Team 17, I tested gameplay and platform compliance across PC, PS4, Xbox One and Switch, using Redmine to report bugs.
+A lot was new to me on this one: my first Unity game, a new bug tracker (Redmine) and a genre I hadn't tested before. I had to get up to speed quickly.
 
-I made Excel test sheets for items and collectibles and helped write playthrough guides in Confluence. Those gave the team a way to track coverage of story events and the main route through the game.
+### What I did
 
-### The missing key items
+- Compliance testing for all three console platform holders, building on what I'd already learned about Sony's requirements. I became one of the team's go to people for it.
+- Built Excel test sheets covering every in-game item and collectible, so we could track what had been tested and what was broken.
+- Helped write playthrough guides in Confluence so the main story events and the golden path got tested consistently.
+- A lot of exploratory testing of the crafting and progression systems.
 
-Exploratory testing turned up a soft lock caused by losing key items. The player could no longer progress. Finding and reproducing that was a useful reminder to test what happens when players do something outside the expected sequence.
+<video class="centered-image" controls playsinline preload="none" aria-label="A scene from My Time at Portia">
+  <source src="/videos/my-time-at-portia-highlight.mp4" type="video/mp4" />
+  <source src="/videos/my-time-at-portia-highlight.webm" type="video/webm" />
+</video>
 
-I also built on my Sony compliance experience by working with Microsoft and Nintendo’s requirements for the console submissions.
+### The soft lock
 
-### From the game
-
-<img src="/assets/My_Time_At_Portia_Highlight.webp" alt="A scene from  My Time At Portia" class="centered-image" loading="lazy" />
+While digging into the game's mechanics, I found a nasty soft lock caused by losing certain key items, which could stop players progressing. It had been missed until then, and my colleagues gave me a lot of credit for catching it before release.
 
 ### Tools
 
-* **Redmine** (for bug tracking and reporting)
-* **Microsoft Excel** (for test cases and checklists)
-* **Confluence** (for test plans and QA knowledge base)
-* **Unity Engine**
-* **Console Development Kits:** PlayStation 4, Xbox One, & Nintendo Switch
+Redmine, Excel, Confluence, the Unity engine, and PlayStation 4, Xbox One and Switch dev kits.

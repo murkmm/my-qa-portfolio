@@ -4,34 +4,36 @@ publishDate: '2021-01-01'
 img: '/assets/HYENAS.webp'
 img_alt: 'Promotional art for the multiplayer shooter Hyenas.'
 description: |
-  I worked in the core QA team on HYENAS at Creative Assembly, checking daily builds and running multiplayer playtests before the project was cancelled.
+  QA Technician at Creative Assembly on Hyenas, a multiplayer PvPvE shooter that was later cancelled. Daily smoke tests, bug reporting, risk spotting with the dev leads and regular multiplayer sessions.
 tags:
   - 'QA Testing'
   - 'Multiplayer'
   - 'SEGA'
 summary:
-  - "Ran daily build and feature smoke tests."
-  - "Worked with development leads to decide which risks needed testing."
-  - "Organised multiplayer playtests and reported bugs with reproduction steps."
+  - 'Daily build and feature smoke tests on every target platform.'
+  - 'Worked with dev leads each day to spot the riskiest areas.'
+  - 'Organised and played in multiplayer sessions to test stability and the core loop.'
 ---
 
-**Company:** Creative Assembly / Sega
+**Company:** Creative Assembly / SEGA
 
-### Checking the daily build
+_Hyenas_ was a session based multiplayer PvPvE shooter. I was a QA Technician on the core team, which meant working with most departments and seeing a lot of the game while it was in active development. The game was eventually cancelled, but it was a big learning experience in testing a large online game.
 
-I was a QA Technician on HYENAS at Creative Assembly. The game was changing throughout development, so I ran daily smoke tests to check that new builds and features were usable on the target platforms.
+### What I did
 
-I worked with development leads to identify risky areas, reviewed existing issues and wrote bug reports with reproduction steps, build details and video. I also organised and took part in multiplayer playtests to check stability and give feedback on how matches played.
+- Smoke tested every new build each day on all target platforms, so problems were spotted early.
+- Talked to the development leads each day about where the risks were, so we tested the right things first.
+- Wrote bug reports with clear repro steps, build details and video.
+- Reviewed existing bugs to keep their priorities accurate.
+- Organised and played in multiplayer sessions, and fed back on stability and how the core loop felt.
 
-The project was cancelled before release. The work here describes my role during development.
+With a new IP and lots of connected systems that changed all the time, things moved fast. Talking to the designers and developers every day was the best way to know where to focus.
 
-### From the game
-
-<img src="/assets/HYENAS_.webp" alt="Gameplay from HYENAS" class="centered-image" loading="lazy" />
+<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from HYENAS">
+  <source src="/videos/hyenas.mp4" type="video/mp4" />
+  <source src="/videos/hyenas.webm" type="video/webm" />
+</video>
 
 ### Tools
 
-* **Jira** (for bug tracking and reporting)
-* **Confluence** (for test documentation)
-* **Unreal Engine 5**
-* **PC & Console Development Kits**
+Jira, Confluence, Unreal Engine 5 and PC and console dev kits.

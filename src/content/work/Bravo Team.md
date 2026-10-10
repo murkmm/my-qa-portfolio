@@ -4,7 +4,7 @@ publishDate: '2018-03-20'
 img: '/assets/Bravo Team.jpg'
 img_alt: 'A gameplay scene from the VR first person shooter Bravo Team.'
 description: |
-  I tested Bravo Team at Supermassive Games, focusing on PlayStation VR, online co-op and the harder difficulty settings.
+  A co-op first person shooter for PlayStation VR at Supermassive Games. My first time testing online multiplayer, and I wrote the network test cases the team used for the co-op mode.
 tags:
   - 'QA Testing'
   - 'VR Testing'
@@ -12,31 +12,32 @@ tags:
   - 'Multiplayer'
   - 'Unreal Engine 4'
 summary:
-  - "Tested aiming, cover and movement in PlayStation VR."
-  - "Wrote co-op tests covering lag, disconnects and rejoining."
-  - "Coordinated test sessions with on-site and remote testers."
+  - 'Moved from narrative VR to a cover based VR shooter.'
+  - 'First time testing networked co-op, focusing on stability.'
+  - 'Wrote test cases for lag, disconnects and joining games in progress.'
 ---
 
 **Company:** Supermassive Games / Sony Interactive Entertainment
 
-### From VR horror to a co-op shooter
+_Bravo Team_ was a cover based shooter for PlayStation VR, built around two players working together online. I came onto it straight after _The Inpatient_, so I already knew VR, but a shooter and online co-op were both new to me.
 
-I came to Bravo Team after The Inpatient. I knew the VR hardware, but an action game with online co-op brought a different set of problems. I tested aiming, cover, movement and enemy behaviour, as well as the harder difficulty settings.
+### What I did
 
-### When the connection goes wrong
+- Got up to speed on shooter testing: aiming, weapon handling, cover, movement, enemy AI and how all of that works in VR.
+- Tested online co-op for the first time, which meant a lot of time on syncing, lag and what happens when someone drops out.
+- Wrote a set of test cases for the co-op mode covering disconnects, high latency, and joining or rejoining a game that's already running. The team picked them up and used them for the rest of the project.
+- Played through on the higher difficulties. I was good at the game, so I could reach situations other testers weren't getting to and find the bugs and balance problems hiding there.
+- Helped organise the daily work for a team split between the studio and remote testers, including setting up lots of two player sessions so co-op and single player both got covered.
 
-This was my first networked co-op project. I wrote a set of tests for high latency, disconnects, and players joining or rejoining a session. The team used those alongside regular two-player playthroughs.
+<video class="centered-image" controls playsinline preload="none" aria-label="A scene from Bravo Team">
+  <source src="/videos/bravo-team-highlight.mp4" type="video/mp4" />
+  <source src="/videos/bravo-team-highlight.webm" type="video/webm" />
+</video>
 
-I helped coordinate sessions between the on-site and remote testers, making sure we covered both single-player and co-op. Playing on the harder settings also turned up bugs and balance problems that were less obvious in a normal run.
+### What I took from it
 
-### From the game
-
-<img src="/assets/Bravo_Team_Highlight.webp" alt="A scene from  Bravo Team" class="centered-image" loading="lazy" />
+Bravo Team was where I first learned shooter and online multiplayer testing, and both came up again and again in later roles.
 
 ### Tools
 
-* **DevTrack** (for bug reporting and tracking)
-* **Confluence** (for test plans and guides)
-* **Unreal Engine 4**
-* **PlayStation VR**
-* **Proprietary Supermassive Games debug tools**
+DevTrack for bugs, Confluence for test plans, Unreal Engine 4, PlayStation VR and Supermassive's own debug tools.

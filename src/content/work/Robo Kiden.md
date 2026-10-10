@@ -4,28 +4,32 @@ publishDate: '2023-08-01'
 img: '/assets/Robo_Kiden.jpg'
 img_alt: 'Artwork for the game Robo Kiden.'
 description: |
-  I was Senior QA Tester and Team Lead on Robo Kiden at The Breach Studios, planning tests, coordinating the team and reporting on build quality.
+  Senior QA Tester and QA lead at The Breach Studios on Robo Kiden, a third person shooter. I set up the testing approach, led a team of three testers and reported on quality to management.
 tags:
   - 'QA Lead'
   - 'Test Strategy'
   - 'Team Management'
 summary:
-  - "Led the QA team and planned daily test coverage."
-  - "Created test strategies for internal and external teams."
-  - "Managed bug tracking, priorities and progress reports."
+  - 'Led a QA team of three testers.'
+  - 'Wrote the test strategy for internal and external testers.'
+  - 'Ran bug tracking, priorities and status reporting.'
 ---
 
 **Company:** The Breach Studios
 
-### Leading the QA work
+_Robo Kiden_ is a third person shooter from The Breach Studios. I joined as Senior QA Tester and ended up running QA for the project, from planning how we'd test it down to the team's daily work.
 
-At The Breach Studios, I was responsible for test planning and the QA team’s day-to-day work on Robo Kiden. I created test strategies and materials for both internal and external teams, then prioritised coverage around the project’s milestones.
+### What I did
 
-I managed bug tracking and reporting, kept track of the team’s workload and brought QA findings to project meetings. A regular part of the job was explaining the current state of the build and what still needed testing, so the team could make decisions with that information.
+- Led a team of three testers, coordinated their work and made sure everyone was working to the same standard.
+- Wrote the test strategy for both our internal team and external testers, tied to the project's milestones.
+- Put together the test scenarios, cases and scripts we needed.
+- Set up how we tracked and reported bugs.
+- Prioritised the team's workload each day so we were always on the riskiest areas first.
+- Represented QA in meetings, reported on where quality stood, and brought what we'd learned into retrospectives.
+
+The big job here was building the project's whole QA setup at once: the plans, the bug process, the team and the reporting.
 
 ### Tools
 
-* **Jira / Azure DevOps** 
-* **Sentry**  (for crash tracking and monitoring)
-* **Confluence** (for test strategy documentation)
-* **PC & Console Development Kits**
+Jira and Azure DevOps, Sentry for crash tracking, Confluence for documentation, and PC and console dev kits.

@@ -10,7 +10,7 @@ Personal portfolio site. Built with [Astro](https://astro.build/).
 | `src/pages/`            | Home, About, Portfolio index, and the `[...slug]` route for case studies. |
 | `src/components/`       | Shared UI: nav, footer, hero, portfolio cards, skills grid, theme toggle. |
 | `src/styles/global.css` | Design tokens (colours, type scale, spacing) and global styles.           |
-| `public/assets/`        | Images, gameplay clips, company logos and the CV PDF.                     |
+| `public/assets/`        | Images and company logos. Gameplay clips live in `public/videos/`.        |
 
 ## Adding a project
 
@@ -47,8 +47,12 @@ Assets live in `public/assets/` and are served as-is, so **Astro does not optimi
 them**. Compress before committing:
 
 - **Screenshots and photos:** max 1600px wide, JPEG quality ~82 or WebP ~85.
-- **Gameplay clips:** animated WebP, quality ~52. Keep the frame size as exported.
-  Resizing an animated WebP breaks the frame strip.
+- **Gameplay clips:** short looping MP4s in `public/videos/`, embedded with
+  a `<video class="centered-image" autoplay loop muted playsinline>` with an MP4 `<source>` first and a WebM
+  `<source>` second (some browsers can't play MP4). See any case study in `src/content/work/` for the markup.
+  An MP4 is a fraction of the size of the same clip as an animated WebP or GIF. To convert one:
+  `ffmpeg -i clip.webp -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2,fps=30" -c:v libx264 -crf 30 -pix_fmt yuv420p -movflags +faststart -an clip.mp4`
+  and `ffmpeg -i clip.webp -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2,fps=30" -c:v libvpx-vp9 -b:v 0 -crf 42 -pix_fmt yuv420p -an clip.webm`
 - **Logos:** max 400px wide.
 
 Anything over ~1MB is worth a second look. A 15MB hero image makes the site feel
@@ -56,8 +60,11 @@ broken on mobile.
 
 ## The CV
 
-The downloadable CV at `/mark-mcmanus-cv.pdf` is generated from `cv/mark-mcmanus-cv.html`.
-Edit the HTML, then regenerate:
+The downloadable CV lives at `public/mark-mcmanus-cv.pdf`. To update it, overwrite that file
+with the new export and keep the filename, so the `/mark-mcmanus-cv.pdf` download URL never changes.
+
+`cv/mark-mcmanus-cv.html` is an older HTML version of the CV and is no longer the source of the
+current PDF. If you go back to it, edit the HTML and regenerate:
 
 ```sh
 chrome --headless=new --no-pdf-header-footer   --print-to-pdf="public/mark-mcmanus-cv.pdf"   "file:///<absolute-path>/cv/mark-mcmanus-cv.html"

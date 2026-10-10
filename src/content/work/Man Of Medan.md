@@ -4,7 +4,7 @@ publishDate: '2019-08-30'
 img: '/assets/Man Of Medan.jpg'
 img_alt: 'Promotional art for the horror game Man of Medan.'
 description: |
-  At Supermassive Games, I led testing for the Stadia version of Man of Medan and worked on multiplayer coverage, story test cases and external QA coordination.
+  Back at Supermassive Games on the first Dark Pictures game. I led testing on the Google Stadia version, tested the co-op and Movie Night modes, and started dabbling in test automation.
 tags:
   - 'QA Testing'
   - 'Game Testing'
@@ -12,34 +12,33 @@ tags:
   - 'Compliance Testing'
   - 'Automation'
 summary:
-  - "Led testing and platform research for the Stadia version."
-  - "Covered online co-op and five-player Movie Night mode."
-  - "Coordinated external testers and tried basic playthrough automation."
+  - 'Led testing on the Google Stadia version.'
+  - 'Tested 2 player online co-op and 5 player local Movie Night.'
+  - 'Onboarded and worked with an external QA team.'
+  - 'First steps into test automation with automated playthrough scripts.'
 ---
 
 **Company:** Supermassive Games
 
-### A new platform alongside three game modes
+_Man of Medan_ was the first game in The Dark Pictures Anthology, a run of shorter standalone horror games following on from _Until Dawn_, where your choices decide who lives. It came out on PC, Xbox One and PS4, and was a launch title for Google Stadia.
 
-I returned to Supermassive Games full-time for Man of Medan. Alongside testing on PC, PS4 and Xbox One, I led the work on the Stadia version, researching its technical and compliance requirements and building the test plans around them.
+I came back to Supermassive full time for this one, and I was given a lot more responsibility than before.
 
-The game had single-player, two-player online co-op and five-player Movie Night. Each mode needed coverage of the branching story, so I wrote test cases in Excel and playthrough guides in Confluence to keep track of the different routes.
+### What I did
 
-### Working with external QA
+- Led the testing for the Stadia version. Stadia was brand new, so I researched its technical and compliance requirements and wrote the test plans for it.
+- Tested all three ways to play: single player, two player online co-op, and Movie Night, where up to five people play together locally.
+- Was a main contact for our external QA partner, Pole To Win, and onboarded and led two of their testers who sat with our team.
+- Wrote test cases in Excel and playthrough guides in Confluence to keep track of the huge number of story branches.
+- Started dabbling in test automation, setting up scripts that played through the game automatically to take some of the repetitive work off our hands.
 
-I helped onboard two Pole To Win testers working with our on-site team and coordinated with their off-site colleagues. I also started experimenting with basic scripts for automated playthroughs to help with repetitive checks.
+Between three modes, a branching story and four platforms (one of them brand new), there was a lot to cover. Even with the planning, coordination and test writing on top, I logged well over 100 bugs, more than any other tester on the project.
 
-Between that work, I continued hands-on testing and bug reporting. There was always another combination of story choices to try.
-
-### From the game
-
-<img src="/assets/Man Of Medan Highlight.webp" alt="A scene from Man Of Medan's Multiplayer mode" class="centered-image" loading="lazy" />
+<video class="centered-image" controls playsinline preload="none" aria-label="A scene from Man of Medan's multiplayer mode">
+  <source src="/videos/man-of-medan-highlight.mp4" type="video/mp4" />
+  <source src="/videos/man-of-medan-highlight.webm" type="video/webm" />
+</video>
 
 ### Tools
 
-* **Jira** (for bug tracking and reporting)
-* **Microsoft Excel** (for test cases and checklists)
-* **Confluence** (for test plans and QA knowledge base)
-* **Unreal Engine 4**
-* Google Stadia, PlayStation 4, Xbox One, & PC
-* **Proprietary Supermassive Games debug tools**
+Jira, Excel for test cases and checklists, Confluence, Unreal Engine 4, Google Stadia, PlayStation 4, Xbox One, PC and Supermassive's own debug tools.

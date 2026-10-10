@@ -4,7 +4,7 @@ publishDate: '2020-10-30'
 img: '/assets/Little Hope.jpg'
 img_alt: 'Promotional art for the horror game Little Hope.'
 description: |
-  I returned to branching-story and multiplayer testing on Little Hope, while updating our test guides and helping a new tester get started.
+  The second Dark Pictures game at Supermassive. Second time round I improved our multiplayer testing, trained a new tester and kept digging into the branching story.
 tags:
   - 'QA Testing'
   - 'Game Testing'
@@ -12,32 +12,32 @@ tags:
   - 'Mentorship'
   - 'Unreal Engine 4'
 summary:
-  - "Updated multiplayer and compliance tests after Man of Medan."
-  - "Trained and supported a new QA tester."
-  - "Tested story branches, online co-op and Movie Night mode."
+  - 'Improved our multiplayer and compliance testing using lessons from Man of Medan.'
+  - 'Trained up a new QA tester.'
+  - 'Logged the most bugs on the embedded test team again.'
 ---
 
 **Company:** Supermassive Games
 
-### Building on Man of Medan
+_Little Hope_ is the second game in The Dark Pictures Anthology: a new cast stuck in a haunted, abandoned town, with the same choice and consequence storytelling as _Man of Medan_. It came out on PC, Xbox One and PlayStation 4.
 
-I worked on Little Hope at Supermassive Games after Man of Medan. The tools and game modes were familiar, so I could use what we’d learnt on the previous project to improve the test cases and playthrough guides.
+Having just shipped _Man of Medan_, I knew the tech and the tools, so this time the focus was on doing the testing better rather than learning it.
 
-I tested the story branches, two-player online co-op and five-player Movie Night mode, as well as Sony and Microsoft compliance requirements. I also helped QA leadership plan the daily mix of functional, performance and playthrough testing.
+### What I did
 
-### Helping a new tester get started
+- Updated our test cases and Confluence guides using what we'd learned on Man of Medan, especially for the two player online co-op and five player Movie Night modes.
+- Trained a new QA tester and got them up to speed on Supermassive's games, tools and ways of working.
+- Kept testing the branching story to make sure every choice led somewhere stable and made sense.
+- Compliance testing for Sony and Microsoft.
+- Helped QA leads plan each day's testing so we covered functionality, performance, compliance and full playthroughs.
 
-I trained a new team member on the projects, tools and testing process. Keeping the Confluence guides and test cases up to date helped with that, and with coordinating work with our external QA partner.
+As on Man of Medan, I logged the most bugs on the embedded test team, through a mix of systematic and exploratory testing. We were also working with an external QA partner, so a lot of the job was keeping everyone pointed at the right parts of a very big story.
 
-### From the game
-
-<img src="/assets/Little Hope Highlight.webp" alt="Gameplay from Little Hope" class="centered-image" loading="lazy" />
+<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from Little Hope">
+  <source src="/videos/little-hope-highlight.mp4" type="video/mp4" />
+  <source src="/videos/little-hope-highlight.webm" type="video/webm" />
+</video>
 
 ### Tools
 
-* **Jira** (for bug tracking and reporting)
-* **Microsoft Excel** (for test cases and checklists)
-* **Confluence** (for test plans and QA knowledge base)
-* **Unreal Engine 4**
-* **PlayStation 4, Xbox One, & PC**
-* **Proprietary Supermassive Games debug tools**
+Jira, Excel for test cases and checklists, Confluence, Unreal Engine 4, PlayStation 4, Xbox One, PC and Supermassive's own debug tools.

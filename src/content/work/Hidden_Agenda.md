@@ -4,40 +4,43 @@ publishDate: '2017-10-24'
 img: '/assets/Hidden Agenda.jpg'
 img_alt: 'A promotional image for the PlayLink game Hidden Agenda.'
 description: |
-  I tested Hidden Agenda at Supermassive Games, covering its branching story, six-player PlayLink sessions and E3 demo.
+  A PlayLink crime thriller at Supermassive Games, where up to six players vote on the story using their phones. I tested the branching story and both modes, and tracked down a save data bug in the E3 demo.
 tags:
   - 'QA Testing'
   - 'Game Testing'
   - 'PlayLink'
   - 'Unreal Engine 4'
   - 'Multiplayer'
-  
+
 summary:
-  - "Tested phones as controllers through PlayLink."
-  - "Covered story choices in cooperative and competitive modes."
-  - "Tracked a disappearing-character bug in the E3 demo to save data."
+  - 'Learned to test a game controlled from players’ phones.'
+  - 'Tested a branching story and multiplayer modes for up to six players.'
+  - 'Found the cause of a save data bug in the E3 demo.'
 ---
 
 **Company:** Supermassive Games / Sony Interactive Entertainment
 
-### Six players and a lot of possible choices
+_Hidden Agenda_ was a crime thriller and one of Sony's PlayLink games, where you play using your iOS or Android phone instead of a controller. Up to six people vote on decisions, and those votes shape the story. I was on the core QA team for it while also testing two other games.
 
-Hidden Agenda uses phones as controllers. I tested both the cooperative story and competitive mode, with up to six people making decisions that changed what happened next.
+### What I did
 
-I mapped and tested story branches, checked changes caused by character deaths and player choices, and reported problems with connectivity and the mobile app. I was working across two other titles at the same time, so knowing the paths well helped me focus each session.
+- Learned to test with phones as controllers, which came with its own set of problems to look out for.
+- Tested the co-op Story Mode and the competitive mode, where some players are secretly given their own objectives.
+- Mapped out the branching story and tested the different paths, character combinations and scene changes that come from players' choices.
+- Wrote bug reports in DevTrack, a lot of them about multiplayer connections and the phone app.
+- Tested the E3 demo, the game's first showing to press and the public.
 
-### The disappearing character
+The number of combinations was the hard part. Every scene could play out differently depending on earlier choices and who was still alive, across two modes and up to six players. Knowing the story paths well meant I could reach the unusual situations where the harder to find bugs were.
 
-During E3 demo testing, I investigated a bug where a character disappeared from every scene after restarting on the same save. I traced it to corrupted save data and found that clearing the save between playthroughs avoided the issue. That gave the team a practical workaround for the demo while they dealt with the bug.
+<video class="centered-image" controls playsinline preload="none" aria-label="A scene from Hidden Agenda's E3 demo">
+  <source src="/videos/hidden-agenda-highlight.mp4" type="video/mp4" />
+  <source src="/videos/hidden-agenda-highlight.webm" type="video/webm" />
+</video>
 
-### From the game
+### The E3 demo bug
 
-<img src="/assets/Hidden_Agenda__highlight.webp" alt="A scene from Hidden Agenda's E3 Demo" class="centered-image" loading="lazy" />
+While testing the E3 demo, we had a bug where a character would disappear from every scene for good if the game was restarted on the same save. It was stubborn and nobody could pin it down. I kept digging until I worked out it was down to corrupted save data, and suggested a simple workaround: clear the save data between playthroughs. That let the developers sort it before the demo went in front of the press, and the dev team thanked me for getting to the bottom of it.
 
 ### Tools
 
-* **DevTrack** (for bug reporting and tracking)
-* **Confluence** (for test plans and QA knowledge base)
-* **Unreal Engine 4**
-* **iOS & Android mobile devices**
-* **Proprietary Supermassive Games debug tools**
+DevTrack, Confluence, Unreal Engine 4, iOS and Android devices and Supermassive's own debug tools.

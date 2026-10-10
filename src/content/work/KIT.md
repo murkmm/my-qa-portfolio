@@ -5,9 +5,9 @@ publishDate: '2025-08-29'
 featured: false
 studio: true
 img: '/assets/kit-godot-card.webp'
-img_alt: 'KIT in the Godot rebuild of Knight in Training, using placeholder models.'
+img_alt: 'Briarwatch, the first level of KIT, rebuilt in Godot.'
 description: |
-  Ki10 Games' first project, a 3D action adventure where I lead design, programming and QA. Originally built in Unity and now being rebuilt in Godot, with core mechanics taking shape and work underway on the first level.
+  Ki10 Games' first project, a 3D action adventure where I lead design, programming and QA. We paused it in Unity when it got too big for us, and I'm now rebuilding it in Godot.
 tags:
   - 'Director'
   - 'Game Design'
@@ -16,63 +16,64 @@ tags:
   - 'Godot'
   - 'In Development'
 summary:
-  - 'Led design, programming and QA on Ki10 Games first project.'
-  - 'Rebuilding KIT in Godot, refining the core mechanics and starting work on the first level.'
-  - 'Built the original Unity camera system blending 3D exploration with 2D side on sections.'
+  - 'Lead design, programming and QA on Ki10 Games’ first project.'
+  - 'Built a camera system that moves between 3D exploration and 2D side on sections.'
+  - 'Paused when the scope outgrew the team, now being rebuilt in Godot.'
 ---
 
-**Company:** Ki10 Games · **Platform:** PC · **Status:** In development — being rebuilt in Godot
+**Company:** Ki10 Games · **Platform:** PC · **Status:** In development (Godot port)
 
-### A kitten with a sword
+_KIT - Knight in Training_ is a 3D action adventure inspired by the mascot platformers I grew up with: a colourful world, a camera that switches between 3D exploring and 2D side on sections, and a small cat with a very large sword.
 
-_KIT - Knight in Training_ is a 3D action adventure in the spirit of the mascot platformers I grew up on. A vibrant world, a camera that shifts between 3D exploration and 2D side on sections, and a small cat with a very large sword.
+It was Ki10 Games' first project and the subject of our first nine devlogs. We paused it, and now it's back, and I'm porting it from Unity to Godot.
 
-It was Ki10 Games' first project and the subject of our first nine devlogs. After a deliberate pause to focus on shipping smaller games, **KIT is back in development and being rebuilt in Godot**. The core mechanics are taking shape in the new engine and work has started on the first level, Briarwatch. The current build uses placeholder models while I refine how it feels to play.
+### My role
 
-The move brings KIT into the same engine as the other Ki10 projects. The original Unity work below remains an important part of the project's history and the foundation for what I learned about scope.
+As Director I've had a hand in almost everything:
 
-### What I worked on
+- Game design: the core gameplay, the story, and a map and quest system for tracking collectibles across the world.
+- Programming: in Unity I built the camera manager, save system, NPC dialogue, content gating and the shop.
+- QA: I wrote and ran the test plans and kept a QA knowledge base for the project.
 
-As Director I lead the project across design, programming and QA. In the original Unity version, that included:
+### What we built in Unity
 
-- **Game Design:** Core gameplay systems, narrative direction, and a map and quest system built around tracking collectibles across a hand built world.
-- **Programming:** Built the game in Unity, including the camera manager, save system, NPC dialogue, content gating and a shop system.
-- **Quality Assurance:** Created and executed all test plans and cases, and maintained a QA knowledge base for the project.
+Before we paused it, a lot of the game worked:
 
-### What Got Built
+- A camera system mixing dolly paths, player controlled cameras and 2D side on sections, with transitions you shouldn't notice.
+- The map and quest system for tracking collectibles.
+- Player movement with a double jump, coyote time and a spin attack.
+- Breakable objects, hazards and button operated parts of the level.
+- A level select hub with content gating and checkpoints.
+- Saving, NPC dialogue, a shop and cosmetics, and music and sound effects.
+- A creature companion system, where creatures you meet in the world come home with you.
 
-Before the project was paused, a substantial amount of it worked:
+### Why we paused it
 
-- A **dynamic camera system** blending dolly paths, player controlled cameras and full 2D side on sections, with transitions designed to be invisible to the player.
-- A **map and quest system** tracking collectibles across the world.
-- **Core player mechanics** including double jump, coyote time and a spin attack.
-- **Level interactivity** covering breakable objects, hazards, and button driven environmental toggles.
-- A **level select hub** with content gating and mid level checkpoints.
-- **Save system, NPC dialogue, shop and cosmetics**, plus a full music and SFX system.
-- A **creature companion system**, where creatures you meet in the world come home with you.
+The problem was scope. A 3D action adventure is huge. Every system we finished showed us two more we hadn't started, and it became clear it was more than two people with day jobs could get over the finish line. I'd spent years testing games at studios big enough to make projects like this, and I'd underestimated how much of the work those bigger teams were actually covering.
 
-### Getting the scope wrong
+So I paused KIT and we made something we could finish. That became _Skill Check_, our first released game, and it's also why _Boop n Burn_ has had a fixed public deadline from the start. Spotting that a project has got too big for the team, and doing something about it early, is probably the most useful thing I've learned as a director.
 
-KIT got too big for two people with day jobs. Every system we finished seemed to uncover another one we needed. I’d spent years testing games made by much bigger teams, and I underestimated how much work there was to do ourselves.
+### Back in development in Godot
 
-We paused it and focused on something smaller. That became Skill Check, the first game we released. It also changed how we planned Boop n Burn: we picked a demo date and started deciding what we could realistically get done by then.
+Now that _Skill Check_ is out and our other games are built in Godot, I've brought KIT back and I'm porting it across. Having everything in one engine makes it much easier to move between projects and reuse what I learn on each one.
 
-KIT is back now, in Godot. I’m working on the mechanics and the first level, Briarwatch, with placeholder models for the moment. The original Unity systems below are part of the earlier version, rather than a list of things already finished in the rebuild.
+The core mechanics are working in Godot and I'm fine tuning them, and I've started building the first level, Briarwatch.
 
-### The current build and the original
+### Screenshots
 
-<img src="/assets/kit-godot-vista.webp" alt="Briarwatch in the current Godot rebuild of KIT, with placeholder models" class="centered-image" loading="lazy" />
+The Godot version, in Briarwatch (the models are placeholders for now):
 
-*Briarwatch in the Godot rebuild. Models are placeholders while the level and mechanics take shape.*
+<img src="/assets/kit-godot-vista.webp" alt="A wide view of Briarwatch in the Godot version of KIT" class="centered-image" />
 
-<img src="/assets/KIT Highlight.webp" alt="Gameplay from the original Unity version of KIT - Knight In Training" class="centered-image" loading="lazy" />
+<img src="/assets/kit-godot-village.webp" alt="KIT on Briarwatch Green, under the oath tree" class="centered-image" />
 
-*Gameplay from the original Unity version.*
+The original Unity version:
+
+<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from the Unity version of KIT - Knight In Training">
+  <source src="/videos/kit-highlight.mp4" type="video/mp4" />
+  <source src="/videos/kit-highlight.webm" type="video/webm" />
+</video>
 
 ### Tools
 
-- **Godot Engine** for the current rebuild
-- **Unity Engine** (C#) for the original version
-- **Jira** for bug and task tracking
-- **Confluence** for design documentation and the QA knowledge base
-- **PC development**
+Unity (C#) for the original version, Godot (GDScript) for the port, Jira for tasks and bugs, and Confluence for design docs and the QA knowledge base.

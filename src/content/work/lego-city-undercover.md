@@ -4,38 +4,42 @@ publishDate: '2017-04-04'
 img: '/assets/lego-city-undercover.jpg'
 img_alt: 'A gameplay screenshot from LEGO City Undercover showing the open world city.'
 description: |
-  I tested the PC, PS4, Xbox One and Switch ports of LEGO City Undercover at T.T. Games, with a focus on the open world and new two-player co-op mode.
+  QA at T.T. Games on the ports of LEGO City Undercover to PC, PS4, Xbox One and Nintendo Switch. I planned the testing of the open world, tested the new co-op mode, and checked old Wii U content had been removed.
 tags:
   - 'QA Testing'
   - 'Game Testing'
   - 'Jira'
   - 'Nintendo Switch'
-  # V-- Corrected Indentation --V
 summary:
-  - "Planned daily coverage of the open-world hub."
-  - "Tested the new two-player co-op mode through full playthroughs."
-  - "Checked controls and content carried over from the Wii U version."
+  - 'Planned each day’s testing of the open world hub.'
+  - 'Tested the new two player co-op mode from start to finish.'
+  - 'Checked leftover Wii U content had been taken out.'
 ---
 
 **Company:** T.T. Games
 
-### My second project at T.T. Games
+My second project at T.T. Games was porting _LEGO City Undercover_ from the Wii U to PC, Xbox One, PlayStation 4 and the Nintendo Switch, which hadn't launched yet. The ports added a two player co-op mode, and anything tied to the Wii U had to come out.
 
-I worked on bringing LEGO City Undercover from Wii U to PC, PS4, Xbox One and Switch. The work included full playthroughs, collectible tracking, achievements and character and vehicle unlocks.
+### What I did
 
-### Covering the whole city
+- Full playthroughs on all four platforms. I was one of the first testers to get hands on with the Switch.
+- Tested every collectible (achievements, police shields, character and vehicle unlocks) to make sure 100% completion was possible.
+- Led the testing of the open world hub, with its super builds, challenges, races and hidden collectibles.
+- Tested the new co-op mode from start to finish, working with another tester every day.
+- Regression tested everything that used to rely on the Wii U GamePad, to make sure the new controls and UI worked.
+- Logged bugs in Jira, from collectible tracking errors to co-op problems to Wii U content that hadn't been removed, and checked fixes with the porting team.
 
-I planned daily coverage for the open-world hub, dividing the map between testers so we weren’t all checking the same streets. That included super builds, races, challenges and hidden collectibles.
+### Two problems to solve
 
-I also worked with another tester on the new two-player co-op mode from start to finish. We checked stability and progression, while separate regression passes covered controls and UI that had previously relied on the Wii U GamePad. I reported remaining legacy content and verified fixes with the porting team.
+The first was the Wii U content. GamePad features and Wii U exclusive Easter eggs all had to go, and anything left behind could cause legal problems. I found several bits that had been missed before the game went for certification.
 
-### From the game
+The second was the size of the open world. To cover it without people testing the same streets twice, I split the map into sections and gave each tester their own areas in the daily plan, for both single player and co-op.
 
-<img src="/assets/lego-city-undercover-highlight.webp" alt="A scene from  LEGO City Undercover's Open World" class="centered-image" loading="lazy" />
+<video class="centered-image" controls playsinline preload="none" aria-label="A scene from LEGO City Undercover's open world">
+  <source src="/videos/lego-city-undercover-highlight.mp4" type="video/mp4" />
+  <source src="/videos/lego-city-undercover-highlight.webm" type="video/webm" />
+</video>
 
 ### Tools
 
-* **Jira** (for bug tracking and reporting)
-* **Microsoft Excel** (for managing test coverage and checklists)
-* **Console Development Kits:** PlayStation 4, Xbox One, & Nintendo Switch
-* **Proprietary T.T. Games Engine & Debug Tools**
+Jira, Excel for coverage tracking and checklists, PlayStation 4, Xbox One and Switch dev kits, and T.T. Games' own engine and debug tools.

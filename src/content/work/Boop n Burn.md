@@ -7,7 +7,7 @@ studio: true
 img: '/assets/boop-n-burn.webp'
 img_alt: 'Players scrambling across the shipping yard arena in Boop n Burn.'
 description: |
-  Ki10 Games' current title. A sixteen player floor is lava party brawler built in Godot for PC, Switch and Xbox Series, where I lead design and programming ahead of a Steam Next Fest demo.
+  Ki10 Games' main project: a sixteen player floor is lava party brawler built in Godot for PC, Switch and Xbox Series. I lead design and programming, and we're aiming for a Steam Next Fest demo.
 tags:
   - 'Director'
   - 'Game Design'
@@ -16,39 +16,47 @@ tags:
   - 'Multiplayer'
   - 'In Development'
 summary:
-  - 'Leading design and programming on a sixteen player online party brawler.'
-  - 'Building the shove mechanics, stamina system and networked physics.'
-  - 'Preparing a PC demo for Steam Next Fest, with consoles planned for the game.'
+  - 'Lead design and programming on a sixteen player online party brawler.'
+  - 'Shove based combat, with stamina so every push is a decision.'
+  - 'Getting multiplayer ready for a Steam Next Fest demo.'
 ---
 
-**Ki10 Games · PC, Nintendo Switch and Xbox Series X|S · In development**
+**Company:** Ki10 Games · **Platforms:** PC, Nintendo Switch, Xbox Series X|S · **Status:** In development
 
-### Don’t touch the lava
+_Boop n Burn_ is a floor is lava party brawler and Ki10 Games' main project. Up to sixteen players drop into an arena with one rule: don't touch the lava. There's no health bar. You shove people in, and the last one standing wins the round.
 
-Boop n Burn is a party brawler for up to sixteen players. You shove each other into lava, and the last one standing wins the round. There’s no health bar to work through. One well-timed push can do it.
+It has free for all and team modes and five arenas so far, and it's built in Godot for PC, Nintendo Switch and Xbox Series. We’re aiming for a playable PC demo at Steam Next Fest in February 2027. Switch and Xbox Series are planned for the game.
 
-We’re building it in Godot, with free-for-all and team modes across five arenas. We’re working towards a PC demo for Steam Next Fest in February 2027, with Switch and Xbox Series also planned for the game.
+### The design problem
 
-### What I’m working on
+A party game only works if the main action is still fun the fiftieth time, and in Boop n Burn that action is the shove. It needs enough depth to keep people playing all night without getting so complicated that someone picking up a controller for the first time is lost.
 
-I lead the design and programming. That covers the shove mechanic, stamina, round flow, progression, arena layouts and the multiplayer systems underneath it all. I also run playtests and plan the QA and platform certification work.
+The technical side is the hardest thing I've built: physics with sixteen players online, where everyone's game has to agree on who pushed who, and in which direction. If it doesn't, losing feels random instead of funny.
 
-Most of the work lately has been on multiplayer. A shove needs to happen properly for everyone in the match, otherwise it stops being funny fairly quickly. Getting the physics and networking to agree is the hardest part of the project.
+### What I do
 
-### Keeping it simple to play
+- Design: the shove, the stamina that limits it, how matches and rounds flow, progression and unlocks, and the arenas.
+- Programming: gameplay in Godot, especially the physics and the online multiplayer.
+- Technical direction: how the multiplayer works, which platforms we target, and what two people can realistically get done by the demo.
+- QA: playtests, network testing, the test approach for an online game, and planning certification for Switch and Xbox.
 
-The moves are built around momentum and positioning. Shoving costs stamina, so you have to pick your moment rather than keep pressing the button. A kill feed shows who pushed whom, which helps settle the argument afterwards.
+### Design choices so far
 
-There are XP and gear unlocks, but they don’t change the competitive balance. The arenas change the way a round plays, from the open shipping yard to a tighter warehouse.
+- Movement is built on momentum rather than combos, so the skill is in reading other players and positioning, not memorising buttons.
+- Shoving costs stamina, so every push is a decision and you can't just mash it.
+- A kill feed says who shoved who, which makes every knockout a moment and gets people wanting a rematch.
+- XP and gear unlocks give longer sessions something to work towards, without affecting balance.
+- Five arenas, from an open shipping yard to a cramped warehouse, so the same rule plays differently each round.
+- The whole project is scoped to a fixed public date, which is something we learned from Skill Check.
 
-### From the current build
+<img src="/assets/boop-n-burn-ruins.webp" alt="The ruined temple arena in Boop n Burn, with the current leader wearing a crown" class="centered-image" />
 
-<img src="/assets/boop-n-burn-ruins.webp" alt="The ruined temple arena in Boop n Burn, with the current leader wearing a crown" loading="lazy" />
+<img src="/assets/boop-n-burn-arcade.webp" alt="The arcade arena in Boop n Burn, with pink lava" class="centered-image" />
 
-<img src="/assets/boop-n-burn-arcade.webp" alt="The arcade arena in Boop n Burn, with pink lava" loading="lazy" />
+### Where it's at
 
-The core game, five arenas, progression and unlocks are playable. There’s still work to do before the demo, especially on making online matches reliable. Having an actual demo date helps us decide what needs doing now and what can wait.
+You can play it start to finish with full lobbies, five arenas, progression and unlocks. Right now most of my time is going into getting the multiplayer ready and running network tests ahead of Next Fest. A lot of what I learned about multiplayer and platforms testing games like _Fall Guys_ on mobile feeds straight into it.
 
 ### Tools
 
-Godot and GDScript, networked multiplayer with server-authoritative physics, Jira and Confluence.
+Godot (GDScript), networked multiplayer with server authoritative physics, Jira and Confluence, and PC, Switch and Xbox Series as targets.

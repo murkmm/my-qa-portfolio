@@ -4,32 +4,36 @@ publishDate: '2021-08-12'
 img: '/assets/FORECLOSED.jpg'
 img_alt: 'A scene from the cyberpunk action adventure game FORECLOSED.'
 description: |
-  I worked on functional and compliance testing for FORECLOSED at Merge Games, covering its gameplay, comic book presentation and platform requirements.
+  Publisher QA at Merge Games on a cyberpunk action adventure styled like a comic book. I tested it end to end on every platform, including compliance.
 tags:
   - 'Publisher QA'
   - 'Game Testing'
   - 'Compliance Testing'
 summary:
-  - "Tested gameplay and the interactive comic book presentation."
-  - "Ran Sony, Microsoft and Nintendo compliance checks."
-  - "Wrote test plans and helped colleagues with platform requirements."
+  - 'Functional and compliance testing on every platform it launched on.'
+  - 'Shared platform requirements knowledge with the rest of the team.'
+  - 'Sent detailed feedback to the developer, Antab Studio.'
 ---
 
 **Company:** Merge Games (Publisher) / Antab Studio (Developer)
 
-### Testing an interactive comic book
+_FORECLOSED_ is a narrative action adventure set in a cyberpunk city, and the whole game is presented like an interactive comic book. I tested it end to end as a publisher QA tester at Merge Games.
 
-I was part of the publisher QA team at Merge Games. FORECLOSED’s comic book presentation was part of how the game played, so visual problems needed attention alongside the usual gameplay bugs.
+### What I did
 
-I ran functional and compliance passes, wrote test plans around the mechanics, and sent feedback to the external developer. I also helped other testers with platform requirements and worked with production to plan coverage around deadlines.
+- Functional testing across the whole game.
+- Compliance checks against Sony, Microsoft and Nintendo requirements.
+- Researched how the game worked so I could write test plans and guides for the rest of the team.
+- Sent detailed feedback to Antab Studio on bugs, mechanics and presentation.
+- Helped other testers with platform requirements, which made later compliance passes quicker.
 
-### From the game
+The comic book style made it an interesting one to test. Alongside the usual functional bugs, I was looking for art and presentation problems specific to that style, while also covering compliance on several platforms.
 
-<img src="/assets/FORECLOSED.webp" alt="Gameplay from FORECLOSED" class="centered-image" loading="lazy" />
+<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from FORECLOSED">
+  <source src="/videos/foreclosed.mp4" type="video/mp4" />
+  <source src="/videos/foreclosed.webm" type="video/webm" />
+</video>
 
 ### Tools
 
-* **Jira** (for bug tracking and reporting)
-* **Confluence** (for test documentation)
-* **All major console platforms** (PlayStation, Xbox, Nintendo, Stadia, Luna)
-* **PC platforms** (Steam, Epic)
+Jira for bugs, Confluence for test documentation, and dev kits for PlayStation, Xbox and Nintendo, alongside Stadia, Luna, Steam and Epic.

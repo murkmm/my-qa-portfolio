@@ -4,33 +4,36 @@ publishDate: '2021-06-22'
 img: '/assets/Alex Kidd.jpg'
 img_alt: 'Gameplay from the platformer Alex Kidd in Miracle World DX.'
 description: |
-  I tested Alex Kidd in Miracle World DX at Merge Games, covering gameplay, platform compliance and test planning for the console and PC releases.
+  Publisher QA at Merge Games on the remake of the SEGA Master System classic. I ran compliance on every platform it shipped on and wrote the test plans the wider team used.
 tags:
   - 'Publisher QA'
   - 'Game Testing'
   - 'Compliance Testing'
   - 'SEGA'
 summary:
-  - "Ran compliance passes on PlayStation, Xbox and Nintendo."
-  - "Wrote test plans for internal and external testers."
-  - "Helped newer testers with functional testing and platform requirements."
+  - 'Ran compliance passes on PlayStation, Xbox, Nintendo and PC.'
+  - 'Wrote the test plans and guides used by internal and external testers.'
+  - 'Worked with production to keep submissions on schedule.'
 ---
 
-**Company:** Merge Games (Publisher) / Sega (IP Holder)
+**Company:** Merge Games (Publisher) / SEGA (IP Holder)
 
-### Publisher QA at Merge Games
+_Alex Kidd in Miracle World DX_ is a remake of the SEGA Master System platformer. I worked on it as a publisher QA tester at Merge Games, where we usually had several projects on the go at once, so a lot of the job was planning: working out what each game needed and making sure it was tested in time for each submission date.
 
-I worked on the remake of Alex Kidd as part of the publisher QA team. We had several projects on the go, so planning coverage around submission deadlines was a regular part of the job.
+### What I did
 
-I tested gameplay and platform requirements, wrote test plans and guides in Confluence, and gave feedback to the development partner. I also helped newer colleagues get to grips with functional and compliance testing. The documentation needed to work for both our own testers and external teams.
+- Full compliance passes on PlayStation, Xbox, Nintendo and PC (Steam and Epic), plus Stadia and Luna.
+- Wrote the test plans and guides in Confluence that both our internal team and external testers worked from.
+- Sent feedback to the external developer on bugs and on things that could be better for players.
+- Helped newer testers get to grips with functional and compliance testing and the platform holders' requirements.
 
-### From the game
+Because people remember the original so fondly, I also kept an eye on whether it still felt like Alex Kidd, and a good chunk of my feedback was about how faithful it was to the Master System version.
 
-<img src="/assets/Alex_Kidd.webp" alt="Gameplay from Alex Kidd DX" class="centered-image" loading="lazy" />
+<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from Alex Kidd DX">
+  <source src="/videos/alex-kidd.mp4" type="video/mp4" />
+  <source src="/videos/alex-kidd.webm" type="video/webm" />
+</video>
 
 ### Tools
 
-* **Airtable** (for bug tracking and reporting)
-* **Confluence** (for test documentation)
-* **All major console platforms** (PlayStation, Xbox, Nintendo, Stadia, Luna)
-* **PC platforms** (Steam, Epic)
+Airtable for bug tracking, Confluence for test documentation, and dev kits for PlayStation, Xbox and Nintendo, alongside Stadia, Luna, Steam and Epic.

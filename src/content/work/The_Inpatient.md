@@ -4,7 +4,7 @@ publishDate: '2018-01-23'
 img: '/assets/The Inpatient.jpg'
 img_alt: 'A tense scene from the VR horror game The Inpatient.'
 description: |
-  The Inpatient was my first VR testing project at Supermassive Games. I tested story paths, helped onboard Sony testers and wrote guides for the remote QA team.
+  Development QA at Supermassive Games on The Inpatient, a PlayStation VR prequel to Until Dawn. My first VR game, where I also helped bring in testers from Sony and kept the story consistent with Until Dawn.
 tags:
   - 'QA Testing'
   - 'VR Testing'
@@ -12,31 +12,31 @@ tags:
   - 'Leadership'
   - 'Confluence'
 summary:
-  - "Learnt PlayStation VR testing, including comfort and performance."
-  - "Helped onboard and coordinate Sony testers."
-  - "Checked the branching story against Until Dawn’s established lore."
+  - 'First VR project, testing on the then new PlayStation VR.'
+  - 'Onboarded testers from Sony and organised their daily work.'
+  - 'Flagged story details that didn’t match Until Dawn.'
 ---
 
 **Company:** Supermassive Games / Sony Interactive Entertainment
 
-### My first VR project
+_The Inpatient_ was a psychological horror game made just for PlayStation VR, and a prequel to _Until Dawn_. Your choices change how the story plays out. It was my first VR game, and I was on the core development QA team.
 
-The Inpatient is a PlayStation VR prequel to Until Dawn. I tested it at Supermassive Games, learning the hardware and checking comfort, performance and platform-specific problems alongside the usual gameplay tests.
+### What I did
 
-### Keeping the story and the team on track
+- Learned how to test in VR. On top of the usual functional testing there's player comfort, performance and problems specific to the headset to think about.
+- Onboarded several testers from Sony's internal QA team, gave them their daily tasks and got them up to speed on the game.
+- Wrote test plans and guides in Confluence so our team and a remote team in Liverpool were working from the same information.
+- Tested the branching story paths and paid close attention to anything that didn't match _Until Dawn_.
 
-I tested different story paths and flagged details that didn’t match Until Dawn. Several of those were changed following the feedback.
+<video class="centered-image" controls playsinline preload="none" aria-label="A scene from The Inpatient">
+  <source src="/videos/the-inpatient-highlight.mp4" type="video/mp4" />
+  <source src="/videos/the-inpatient-highlight.webm" type="video/webm" />
+</video>
 
-I also helped onboard testers from Sony, assigned daily tasks and wrote test plans and guides in Confluence. We were working with a remote team in Liverpool as well as the on-site testers, so the guides needed enough detail for someone to follow without being in the room.
+### Keeping it consistent with Until Dawn
 
-### From the game
-
-<img src="/assets/The_Inpatient_Highlight.webp" alt="A scene from  The Inpatient" class="centered-image" loading="lazy" />
+Until Dawn fans know that story really well, so anything in a prequel that contradicted it would get noticed. I flagged the inconsistencies I found and pushed for several of them to be changed, and they were.
 
 ### Tools
 
-* **DevTrack** (for bug reporting and tracking)
-* **Confluence** (for test plans, guides, and QA knowledge base)
-* **Unreal Engine 4**
-* **PlayStation VR**
-* **Proprietary Supermassive Games debug tools**
+DevTrack, Confluence, Unreal Engine 4, PlayStation VR and Supermassive's own debug tools.

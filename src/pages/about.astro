@@ -4,10 +4,7 @@ import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout
-	title="About Me | Mark McManus"
-	description="My background in games QA and making games at Ki10."
->
+<BaseLayout title="About Me | Mark McManus" description="About Mark McManus: over nine years in games QA, now Embedded QA Specialist at Cloud Imperium Games, co-founder of Ki10 Games and a Humans in Games board member.">
 	<div class="stack gap-20">
 		<main id="main-content" tabindex="-1" class="wrapper about">
 			<Hero
@@ -18,73 +15,93 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 					width="1553"
 					height="873"
 					src="/assets/Website about me image.JPG"
-					alt="Mark McManus"
+					alt="Mark McManus at work"
 				/>
 			</Hero>
+
 			<section class="about-section">
-				<h2 class="section-title">How I got here</h2>
+				<h2 class="section-title">How I Got Here</h2>
 				<div class="content">
 					<p>
-						I started in QA on the LEGO games. Since then I’ve worked across console, PC and mobile,
-						including roles at T.T. Games, Supermassive Games, Creative Assembly and Unity. That’s
-						meant testing quite a mix, from Man of Medan and Alex Kidd to Fall Guys on mobile.
+						I've loved games for as long as I can remember, and I've always been curious about how they work. That got me into QA, and I've now spent over nine years testing games at studios including T.T. Games, Supermassive Games, Creative Assembly and Unity.
 					</p>
 					<p>
-						I’m now an <strong>Embedded QA Specialist I – Tools at Cloud Imperium Games</strong>.
-						I’m the sole QA in the Tools team, testing the applications and pipelines people use to
-						build Star Citizen and Squadron 42.
+						Today I'm an <strong>Embedded QA Specialist - Tools at Cloud Imperium Games</strong>, working on <em>Star Citizen</em> and <em>Squadron 42</em>. I'm the main embedded QA for the Engine and Tools teams, working with the engineers to test the in-house tools, backend systems and pipelines the rest of the studio uses to build the games.
 					</p>
 					<p>
-						In 2024, Scott and I started Ki10 Games. I handle design, programming and QA. We
-						released Skill Check in 2026, a daily trivia game you can play on Android or in your
-						browser. I’m currently working on Boop n Burn, our sixteen-player party brawler, as well
-						as rebuilding KIT in Godot.
+						I started on the LEGO games at T.T. Games and have since tested all sorts of genres and platforms: the <em>Alex Kidd in Miracle World DX</em> remake, horror games like <em>Man of Medan</em>, and <em>Fall Guys</em> on mobile. Along the way I went from a tester hunting bugs to a senior tester planning QA, mentoring new testers and signing off releases on several platforms.
 					</p>
 					<p>
-						Making my own games has given me plenty more to learn, especially about keeping a
-						project small enough to finish. There’s more about that on the project pages.
+						After years of testing other people's games, I wanted to make my own. In 2024 I co-founded Ki10 Games, where I do design and programming as well as QA.
+					</p>
+					<p>
+						In 2026 we released our first game, <em>Skill Check</em>, a daily gaming trivia game that's out now on Google Play and free to play in your browser. I did the design, programming, backend, store submission and QA. Now I'm leading design and programming on <em>Boop n Burn</em>, a sixteen player party brawler for PC, Switch and Xbox Series, with a demo planned for Steam Next Fest. Alongside it I'm porting <em>KIT</em> to Godot and finishing <em>The One Bullet Job</em>, a turn based heist puzzle coming soon to Android.
+					</p>
+					<p>
+						QA showed me what it takes for a game to be ready to ship. Making my own has shown me how much work it takes to get there.
 					</p>
 				</div>
 			</section>
+
 			<section class="about-section">
-				<h2 class="section-title">What I work with</h2>
+				<h2 class="section-title">Industry Involvement</h2>
 				<div class="content">
 					<p>
-						Most of my QA work involves planning tests, finding and reproducing bugs, checking fixes
-						and helping the team understand what needs attention. I’ve also led QA teams, mentored
-						newer testers and worked on platform compliance.
+						I'm a board member at <a href="https://www.humansingames.world/" target="_blank" rel="noopener noreferrer">Humans in Games</a>, a games industry charity, where I represent the games QA profession.
 					</p>
+				</div>
+			</section>
+
+			<section class="about-section">
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>
+						Here's what I bring. For my full work history, you can download my CV.
+					</p>
+					<br />
+					<h4>What I do</h4>
 					<ul>
-						<li>
-							<strong>Testing:</strong> Gameplay, usability, performance, regression, tools and platform
-							compliance.
-						</li>
-						<li>
-							<strong>Tracking and planning:</strong> Jira, DevTrack, TestRail, Redmine, QTest and Excel.
-						</li>
-						<li><strong>Engines:</strong> Godot, Unity, Unreal Engine 4/5 and CryEngine.</li>
-						<li><strong>Programming:</strong> GDScript, C# and networked multiplayer.</li>
-						<li>
-							<strong>Platforms:</strong> PC, PlayStation, Xbox, Nintendo, iOS, Android and cloud gaming.
-						</li>
+						<li><strong>Test planning:</strong> Writing and running test plans, cases and scripts for gameplay, UI / UX and platform compliance.</li>
+						<li><strong>Embedded and technical QA:</strong> Working alongside engineers and tracking down tricky issues with logs, profiling, API testing, CI and Perforce.</li>
+						<li><strong>Release readiness:</strong> Risk based testing from requirements to sign off, with clear reporting for go / no-go decisions.</li>
+						<li><strong>Manual and exploratory testing:</strong> Functional, usability, performance and regression testing, and a knack for finding the bugs other people miss.</li>
+						<li><strong>Bug management:</strong> Finding, logging, triaging and tracking bugs until they're fixed.</li>
+						<li><strong>Leading and mentoring:</strong> Running QA teams, training new testers and improving how teams write bug reports.</li>
+						<li><strong>Game design:</strong> Designing gameplay systems and story, and shaping them from playtest feedback.</li>
+						<li><strong>Releasing games:</strong> Taking a game from prototype to store, including submission, build pipelines, live updates and crash monitoring.</li>
 					</ul>
-					<p>My CV has the full work history.</p>
+					<br />
+					<h4>Technical skills</h4>
+					<ul>
+						<li><strong>QA and development:</strong> Jira, TestRail, DevTrack, Redmine, Perforce, Git, Jenkins / CI</li>
+						<li><strong>Technical testing:</strong> API testing, profiling, log analysis, ADB / Android Studio, Xcode, Charles / Proxyman</li>
+						<li><strong>Test planning:</strong> TestRail, QTest, Excel</li>
+						<li><strong>Game engines:</strong> CryEngine / StarEngine, Unity, Unreal Engine 4/5, Godot</li>
+						<li><strong>Programming:</strong> C# (Unity), GDScript (Godot), networked multiplayer</li>
+						<li><strong>Platforms:</strong> PC, PlayStation (PS3, PS4, PSVR, PS5), Xbox (360, One, Series), Nintendo (Wii U, Switch), mobile (iOS, Android) and cloud (Stadia, Luna)</li>
+					</ul>
+					<br />
 					<a href="/mark-mcmanus-cv.pdf" class="button" download>Download CV</a>
 				</div>
 			</section>
+
 			<section class="about-section">
-				<h2 class="section-title">Away from work</h2>
+				<h2 class="section-title">Outside of Work</h2>
 				<div class="content">
 					<p>
-						There’s still a fair bit of gaming, as you might expect. I also like a board game with
-						friends, and I’m a lifelong Manchester United supporter.
+						When I'm not testing games, I'm usually playing them! I'll play pretty much anything, from huge AAA games to small indie ones. I also love making games in my spare time, which is how Ki10 Games started, and how I finally got my own game onto an actual store.
+					</p>
+					<p>
+						Away from screens, I'm a lifelong Manchester United fan, and I love a good board game with friends.
 					</p>
 				</div>
 			</section>
 		</main>
+
 		<ContactCTA />
 	</div>
 </BaseLayout>
+
 <style>
 	.about {
 		display: flex;
@@ -113,7 +130,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	.content {
 		/* No grid styles needed here by default */
 	}
-
+	
 	.content > :global(* + *) {
 		margin-top: 1rem;
 	}

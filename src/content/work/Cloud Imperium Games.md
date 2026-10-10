@@ -6,7 +6,7 @@ status: 'Current Role'
 img: '/assets/cloud-imperium-games.webp'
 img_alt: 'Cloud Imperium Games, developers of Star Citizen and Squadron 42.'
 description: |
-  My current role. As Embedded QA Specialist I - Tools at Cloud Imperium Games, I'm the sole QA embedded within the Tools team, testing the proprietary development tools and pipelines behind Star Citizen and Squadron 42.
+  My current role. I'm an Embedded QA Specialist - Tools at Cloud Imperium Games, the main embedded QA for the Engine and Tools teams, testing the in-house tools, backend systems and pipelines behind Star Citizen and Squadron 42.
 tags:
   - 'Embedded QA'
   - 'Tools & Pipelines'
@@ -14,38 +14,40 @@ tags:
   - 'Playtesting'
   - 'Current Role'
 summary:
-  - 'Sole QA embedded within the Tools team on Star Citizen and Squadron 42.'
-  - 'Test the proprietary development tools behind the content creation pipeline.'
-  - 'Main point of contact for Tools team QA support, reporting progress to leadership.'
+  - 'Main embedded QA for the Engine and Tools teams on Star Citizen and Squadron 42.'
+  - 'Test the in-house tools the content pipeline is built on.'
+  - 'Main contact for Tools QA, reporting to leadership.'
 ---
 
-**Cloud Imperium Games · Embedded QA Specialist I – Tools · October 2025 to present**
+**Company:** Cloud Imperium Games · **Role:** Embedded QA Specialist - Tools · **Oct 2025 to present**
 
-### Testing the tools people make games with
+Cloud Imperium Games makes _Star Citizen_ and _Squadron 42_. I'm the main embedded QA supporting the Engine and Tools teams, working directly with the engineers on the in-house tools, backend systems and pipelines the games are built with.
 
-I’m the sole QA embedded in the Tools team at Cloud Imperium Games, working on the development tools and pipelines used for Star Citizen and Squadron 42.
+The Tools team makes the software every other department uses to build the game, so the people using what I test are the studio's own developers, artists and designers. When a tool breaks, it can hold up a whole department.
 
-The people using what I test are developers, artists and designers. If a tool breaks, it can stop them getting their work done, so understanding how they use it is a big part of the job.
+### What I do
 
-### My day-to-day work
+- Test the in-house development tools and give feedback, to keep the content pipeline stable and quick to work with.
+- Write, run and maintain test cases that help pin down complex technical problems, and tidy up testing processes for teams in different studios.
+- Own test coverage for the tools: deciding what gets tested first, and being the person accountable for its quality.
+- Take part in regular playtests and pass on what I find.
+- Keep the QA documentation up to date: test data, known issues and environment setups.
+- Act as the main contact for Tools QA, and report risks, progress and test status to leadership and the wider teams.
+- Dig into problems with Perforce and Jira to find conflicts and reproduce tricky issues, so developers can fix them faster.
 
-- Test the tools, investigate issues and give feedback to the team.
-- Write and maintain test cases, including the data and environment details needed to repeat a test.
-- Prioritise coverage as the team’s only embedded QA.
-- Track bugs in Jira, use Perforce to follow changes, and verify fixes.
-- Take part in playtests and share findings with the relevant teams.
-- Act as the QA contact for Tools and keep leadership updated on progress.
+### How it's different
 
-### More than checking for crashes
+Testing tools isn't the same as testing a game. A bug in a game affects players. A bug in a tool affects the people making the game, and it adds up quickly when a whole team is waiting on a fix. The feedback is instant too, because the people using what I test sit in the same company.
 
-A tool can work and still be awkward to use. I look for those problems as well as bugs, because a slow or confusing workflow affects the people using it every day.
+A tool can also work perfectly and still be slow or awkward to use, and that costs time for everyone who uses it, so I report usability problems as well as bugs. With teams in several studios and time zones, clear documentation is a big part of the job.
 
-The teams are spread across studios and time zones, which makes clear test steps and documentation particularly useful. Someone else needs to be able to pick up the test without me sitting next to them.
-
-This work has also been useful at Ki10, particularly when building Skill Check’s content pipeline and release process.
+It's the most technical QA role I've had, working alongside development rather than at the end of it. It's also changed how I think about pipelines and developer experience, which helped when I was building Skill Check's content pipeline and release process.
 
 ### Tools
 
-Perforce, Jira and CIG’s proprietary development tools on PC.
+Perforce, Jira, Cloud Imperium's in-house development tools and pipelines, and PC.
 
-<p class="note">I can talk about the role in general terms, but internal tools and development details stay with CIG.</p>
+<p class="note">
+  This page describes my role in general terms only. It contains no confidential details about Cloud
+  Imperium Games' internal tools, unreleased features or development processes.
+</p>

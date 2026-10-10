@@ -4,34 +4,35 @@ publishDate: '2022-06-01'
 img: '/assets/Legacy.webp'
 img_alt: 'A view of a bustling town in the game Legacy.'
 description: |
-  I was the main QA contact embedded with the Legacy team at 22 Cans, testing its simulation systems and coordinating with external QA.
+  Embedded QA at 22cans on Legacy, a business sim where you invent products and grow a company. I was the main QA contact inside the development team.
 tags:
   - 'Embedded QA'
   - 'Game Testing'
   - 'Simulation'
 summary:
-  - "Acted as the main QA contact within the development team."
-  - "Tested simulation and progression systems."
-  - "Managed bug reports, fix verification and external QA priorities."
+  - 'Main QA contact inside the development team.'
+  - 'Test plans for the core simulation and progression systems.'
+  - 'Looked after bugs from triage through to verification.'
 ---
 
-**Company:** 22 Cans
+**Company:** 22cans
 
-### Embedded with the development team
+_Legacy_ is a business simulation game where you invent products, build them and run a company. I sat inside the development team as their main QA contact for most of production, so when something broke, I was usually the first person they spoke to.
 
-Legacy is a business simulation game. At 22 Cans, I was the main QA contact within the team, testing the simulation and progression systems and feeding back on how they worked in practice.
+### What I did
 
-I managed the bug database, from initial reports and prioritisation through to checking fixes. I also coordinated with external QA teams so they knew what had changed and where we needed coverage.
+- Fed back on design and user experience as features went in, as well as on bugs.
+- Wrote and ran test plans for the simulation and progression systems, which had a lot of moving parts that affected each other.
+- Looked after the bug database: triaging, logging, tracking and verifying fixes.
+- Was the go between for our external QA partners, keeping their testing pointed at whatever mattered most that week.
 
-The role mixed hands-on testing with planning. Being close to the developers made it easier to discuss an issue while I was investigating it and check my understanding of the intended behaviour.
+Being the only embedded QA meant doing two jobs at once. Some days I was heads down testing, other days I was planning and passing information between the developers and the external team. The upside was a very short feedback loop, so issues got reported, fixed and checked quickly.
 
-### From the game
-
-<img src="/assets/Legacy Highlight.webp" alt="Gameplay from Legacy" class="centered-image" loading="lazy" />
+<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from Legacy">
+  <source src="/videos/legacy-highlight.mp4" type="video/mp4" />
+  <source src="/videos/legacy-highlight.webm" type="video/webm" />
+</video>
 
 ### Tools
 
-* **Monday** (defect tracking and project managment)
-* **Confluence** (for test plans and QA knowledge base)
-* **Unity Engine**
-* **PC and Mac**
+Monday for bugs and project management, Confluence for test plans, the Unity engine, and PC and Mac.
