@@ -6,12 +6,14 @@ interface Props {
 	description?: string | undefined;
 	/** Image shown when the page is shared. A site path such as /assets/foo.webp. */
 	image?: string | undefined;
+	imageAlt?: string | undefined;
 }
 
 const {
 	title = 'Mark McManus | Senior Games QA & Game Developer',
 	description = "Mark McManus: senior games QA and game developer. Case studies from 9+ years of QA, and the games I'm making at Ki10 Games.",
 	image = '/assets/share-card.jpg',
+	imageAlt = 'Mark McManus — games QA and game development',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -27,7 +29,12 @@ const imageUrl = new URL(encodeURI(image), Astro.site);
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={imageUrl} />
+<meta property="og:image:alt" content={imageAlt} />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:image:alt" content={imageAlt} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>

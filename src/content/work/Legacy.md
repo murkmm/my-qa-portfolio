@@ -28,7 +28,7 @@ _Legacy_ is a business simulation game where you invent products, build them and
 
 Being the only embedded QA meant doing two jobs at once. Some days I was heads down testing, other days I was planning and passing information between the developers and the external team. The upside was a very short feedback loop, so issues got reported, fixed and checked quickly.
 
-<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from Legacy">
+<video class="centered-image" poster="/assets/Legacy.webp" controls playsinline preload="none" aria-label="Gameplay from Legacy">
   <source src="/videos/legacy-highlight.mp4" type="video/mp4" />
   <source src="/videos/legacy-highlight.webm" type="video/webm" />
 </video>

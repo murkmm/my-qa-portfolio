@@ -35,7 +35,7 @@ The first was the Wii U content. GamePad features and Wii U exclusive Easter egg
 
 The second was the size of the open world. To cover it without people testing the same streets twice, I split the map into sections and gave each tester their own areas in the daily plan, for both single player and co-op.
 
-<video class="centered-image" controls playsinline preload="none" aria-label="A scene from LEGO City Undercover's open world">
+<video class="centered-image" poster="/assets/lego-city-undercover.jpg" controls playsinline preload="none" aria-label="A scene from LEGO City Undercover's open world">
   <source src="/videos/lego-city-undercover-highlight.mp4" type="video/mp4" />
   <source src="/videos/lego-city-undercover-highlight.webm" type="video/webm" />
 </video>

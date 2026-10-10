@@ -16,7 +16,7 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<BaseLayout title={entry.data.title + ' | Mark McManus'} description={entry.data.description} image={entry.data.hero || entry.data.img}>
+<BaseLayout title={entry.data.title + ' | Mark McManus'} description={entry.data.description} image={entry.data.hero || entry.data.img} imageAlt={entry.data.img_alt || entry.data.title}>
 	<main id="main-content" tabindex="-1" class="wrapper case-study">
 		<a class="text-link back-link" href={entry.data.studio ? '/work/#development' : '/work/#qa'}
 			>← Back to {entry.data.studio ? 'development' : 'QA'} work</a
@@ -227,4 +227,9 @@ const { Content } = await render(entry);
 			margin-bottom: 2rem;
 		}
 	}
+  .story :global(video) { aspect-ratio: 16 / 9; object-fit: contain; background: #10171d; }
+  .story :global(.qa-example) { margin-block: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent-dark); background: var(--surface); }
+  .story :global(.qa-example h3) { margin-top: .75rem; }
+  .story :global(.qa-example dt) { font-weight: 700; color: var(--gray-0); margin-top: 1.25rem; }
+  .story :global(.qa-example dd) { margin: .35rem 0 0; }
 </style>

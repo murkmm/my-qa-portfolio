@@ -29,7 +29,7 @@ _Bravo Team_ was a cover based shooter for PlayStation VR, built around two play
 - Played through on the higher difficulties. I was good at the game, so I could reach situations other testers weren't getting to and find the bugs and balance problems hiding there.
 - Helped organise the daily work for a team split between the studio and remote testers, including setting up lots of two player sessions so co-op and single player both got covered.
 
-<video class="centered-image" controls playsinline preload="none" aria-label="A scene from Bravo Team">
+<video class="centered-image" poster="/assets/Bravo Team.jpg" controls playsinline preload="none" aria-label="A scene from Bravo Team">
   <source src="/videos/bravo-team-highlight.mp4" type="video/mp4" />
   <source src="/videos/bravo-team-highlight.webm" type="video/webm" />
 </video>

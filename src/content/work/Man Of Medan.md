@@ -34,7 +34,7 @@ I came back to Supermassive full time for this one, and I was given a lot more r
 
 Between three modes, a branching story and four platforms (one of them brand new), there was a lot to cover. Even with the planning, coordination and test writing on top, I logged well over 100 bugs, more than any other tester on the project.
 
-<video class="centered-image" controls playsinline preload="none" aria-label="A scene from Man of Medan's multiplayer mode">
+<video class="centered-image" poster="/assets/Man Of Medan.jpg" controls playsinline preload="none" aria-label="A scene from Man of Medan's multiplayer mode">
   <source src="/videos/man-of-medan-highlight.mp4" type="video/mp4" />
   <source src="/videos/man-of-medan-highlight.webm" type="video/webm" />
 </video>

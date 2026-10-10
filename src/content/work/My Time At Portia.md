@@ -30,7 +30,7 @@ A lot was new to me on this one: my first Unity game, a new bug tracker (Redmine
 - Helped write playthrough guides in Confluence so the main story events and the golden path got tested consistently.
 - A lot of exploratory testing of the crafting and progression systems.
 
-<video class="centered-image" controls playsinline preload="none" aria-label="A scene from My Time at Portia">
+<video class="centered-image" poster="/assets/my time at portia.png" controls playsinline preload="none" aria-label="A scene from My Time at Portia">
   <source src="/videos/my-time-at-portia-highlight.mp4" type="video/mp4" />
   <source src="/videos/my-time-at-portia-highlight.webm" type="video/webm" />
 </video>

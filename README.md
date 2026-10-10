@@ -20,8 +20,8 @@ so `Skill Check.md` becomes `/work/skill-check`.
 ```yaml
 ---
 title: 'Game Title'
-publishDate: '2026-05-18' # drives the year markers on the portfolio timeline
-featured: true # surfaces it on the home page
+publishDate: '2026-05-18' # groups projects by year; these are not employment dates
+featured: true # gives QA projects a full card on the Portfolio page
 studio: true # only for Ki10 Games titles, which get their own home page section
 img: '/assets/game-title.webp' # card image
 img_alt: 'Describe the image for screen readers'
@@ -31,7 +31,7 @@ tags:
   - 'Game Design'
   - 'Released'
 summary:
-  - 'Bullet points shown when hovering the card on the home page.'
+  - 'Short points shown directly on project cards and credit rows.'
 ---
 Markdown body: the full case study.
 ```
@@ -39,16 +39,15 @@ Markdown body: the full case study.
 `featured` and `studio` are both optional and default to false.
 
 - **`studio: true`** puts the project in the "Games I've Made" section on the home page.
-- **`featured: true`** on a QA credit gives it priority in "Games I've Tested".
+- **`featured: true`** on a QA credit gives it a full card in "Games I’ve tested" on the Portfolio page. Other QA credits remain available in the compact list. The homepage picks are set in `src/pages/index.astro`.
 
 ## Images
 
-Assets live in `public/assets/` and are served as-is, so **Astro does not optimise
-them**. Compress before committing:
+Assets live in `public/assets/`. `ProjectImage.astro` optimises card and header images. Inline Markdown images are served as-is, so compress those before committing:
 
 - **Screenshots and photos:** max 1600px wide, JPEG quality ~82 or WebP ~85.
-- **Gameplay clips:** short looping MP4s in `public/videos/`, embedded with
-  a `<video class="centered-image" autoplay loop muted playsinline>` with an MP4 `<source>` first and a WebM
+- **Gameplay clips:** short MP4s in `public/videos/`, embedded with
+  a `<video class="centered-image" controls playsinline preload="none" poster="/assets/game-title.webp">` with an MP4 `<source>` first and a WebM
   `<source>` second (some browsers can't play MP4). See any case study in `src/content/work/` for the markup.
   An MP4 is a fraction of the size of the same clip as an animated WebP or GIF. To convert one:
   `ffmpeg -i clip.webp -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2,fps=30" -c:v libx264 -crf 30 -pix_fmt yuv420p -movflags +faststart -an clip.mp4`

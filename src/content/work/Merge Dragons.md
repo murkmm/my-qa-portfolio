@@ -30,7 +30,7 @@ With a live game, every update goes out to a lot of players on a lot of differen
 - Ran test sessions focused on how the game actually feels to play, which turned up issues our scripted tests didn't.
 - Mentored junior testers on mobile testing and writing good bug reports.
 
-<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from Merge Dragons!">
+<video class="centered-image" poster="/assets/Merge Dragons.jpg" controls playsinline preload="none" aria-label="Gameplay from Merge Dragons!">
   <source src="/videos/merge-dragons-highlight.mp4" type="video/mp4" />
   <source src="/videos/merge-dragons-highlight.webm" type="video/webm" />
 </video>

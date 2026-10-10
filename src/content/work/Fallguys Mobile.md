@@ -32,7 +32,7 @@ Fall Guys is fast and physics based, and it has to feel fair. On mobile that's h
 - Wrote test cases aimed at mobile performance: memory use, battery drain and how responsive the controls felt.
 - Put together QA reports and dashboards so the wider team could see where each build stood and make go / no-go calls on release candidates.
 
-<video class="centered-image" controls playsinline preload="none" aria-label="Gameplay from Fall Guys on mobile">
+<video class="centered-image" poster="/assets/Fallguys Mobile.png" controls playsinline preload="none" aria-label="Gameplay from Fall Guys on mobile">
   <source src="/videos/fall-guys-mobile.mp4" type="video/mp4" />
   <source src="/videos/fall-guys-mobile.webm" type="video/webm" />
 </video>

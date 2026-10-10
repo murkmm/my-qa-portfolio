@@ -2,12 +2,12 @@
 import Footer from '../components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
-interface Props { title?: string; description?: string; image?: string; }
-const { title, description, image } = Astro.props;
+interface Props { title?: string; description?: string; image?: string; imageAlt?: string; }
+const { title, description, image, imageAlt } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
-  <head><MainHead title={title} description={description} image={image} /></head>
+  <head><MainHead title={title} description={description} image={image} imageAlt={imageAlt} /></head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
