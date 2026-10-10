@@ -11,6 +11,7 @@ export const collections = {
 			publishDate: z.coerce.date(),
 			tags: z.array(z.string()),
 			img: z.string(),
+			hero: z.string().optional(),
 			img_alt: z.string().optional(),
 			summary: z.array(z.string()).optional(),
 			featured: z.boolean().optional(),
@@ -18,7 +19,6 @@ export const collections = {
 			studio: z.boolean().optional(),
 			// Shown as a badge on cards, e.g. Released / In Development / On Hold.
 			status: z.string().optional(),
-
 		}),
 	}),
 };

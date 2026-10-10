@@ -4,40 +4,30 @@ publishDate: '2021-11-01'
 img: '/assets/smalland-survive-the-wilds.webp'
 img_alt: 'A small character riding a grasshopper in the world of Smalland.'
 description: |
-  As a key QA Tester at Merge Games, I was responsible for testing this ambitious open-world survival game and collaborated directly with the marketing team to capture high-quality gameplay assets.
+  I tested Smalland at Merge Games and worked with marketing to capture gameplay for trailers and other promotional material.
 tags:
   - 'Publisher QA'
   - 'Game Testing'
   - 'Marketing Assets'
   - 'Early Access'
 summary:
-  - 'Collaborated with the marketing team to capture high-quality gameplay for trailers.'
-  - 'Performed extensive testing and compliance passes on a large-scale survival game.'
-  - 'Provided crucial feedback to the development partner on game quality and user experience.'
+  - "Captured gameplay used in official trailers and marketing."
+  - "Tested survival mechanics, including crafting, building and combat."
+  - "Wrote test plans and shared feedback with the developer."
 ---
+
 **Company:** Merge Games
 
-### Project Overview
-*Smalland: Survive the Wilds* is an ambitious open-world survival game where players take on the role of a tiny character in a giant world. My role as a QA Tester at Merge Games was not only to ensure the quality of the game itself but also to support the marketing team by capturing high-quality gameplay assets.
+### QA and gameplay capture
 
-### My Role & Responsibilities
-In addition to my core QA duties of functional and compliance testing, a prominent part of my role on this project was to act as a "capture artist." This involved working directly with the marketing team to play the game and capture cinematic, bug-free footage for use in official trailers and other marketing materials.
+My work on Smalland at Merge Games covered functional testing, compliance and test planning. I tested the survival systems, including crafting, building and combat, and reported bugs and feedback to the developer.
 
-### The Challenge
-The main challenge was twofold: testing the vast, systemic open world for bugs, and the unique pressure of capturing perfect gameplay footage. Capturing trailer assets requires not only a high level of skill to perform well on camera but also a deep technical knowledge to use debug tools to set up specific scenarios, all while ensuring no bugs or performance issues appear in the final shot.
+I also worked directly with marketing to capture gameplay. That involved setting up scenes with debug tools and recording the action they needed without bugs or performance problems getting into the shot.
 
-### My Approach & Actions
-* I collaborated closely with the marketing team to understand their vision for trailers and promotional videos.
-* Using my deep knowledge of the game and debug tools, I set up and captured specific, high-action gameplay scenarios.
-* I performed extensive testing of the core survival mechanics, including crafting, building, and combat, to ensure stability.
-* I authored detailed test plans and provided feedback to the development team on bugs and overall user experience.
+The footage was used in official trailers and marketing materials. Knowing the game from testing helped me set up the situations we wanted to show.
 
-### Impact & Results
-* The high-quality gameplay footage I captured was used in **official trailers and marketing materials**, directly contributing to the game's successful promotional campaigns.
-* This role allowed me to showcase a unique blend of QA and creative skills, providing significant value to the publisher beyond traditional testing.
-* My thorough testing of the core game helped prepare it for a successful and stable launch into Early Access on Steam.
+### Tools
 
-### Technologies & Tools Used
 * **Jira** (for bug tracking and reporting)
 * **Confluence** (for test documentation)
 * **Video Capture Software**

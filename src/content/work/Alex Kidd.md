@@ -4,46 +4,32 @@ publishDate: '2021-06-22'
 img: '/assets/Alex Kidd.jpg'
 img_alt: 'Gameplay from the platformer Alex Kidd in Miracle World DX.'
 description: |
-  As a QA Tester for the publisher Merge Games, I was responsible for ensuring this modern remake of a SEGA classic met the highest standards of quality across all major platforms.
+  I tested Alex Kidd in Miracle World DX at Merge Games, covering gameplay, platform compliance and test planning for the console and PC releases.
 tags:
   - 'Publisher QA'
   - 'Game Testing'
   - 'Compliance Testing'
   - 'SEGA'
 summary:
-  - 'Performed full compliance passes on PlayStation, Xbox, and Nintendo platforms.'
-  - 'Created comprehensive test plans and guides for internal and external test teams.'
-  - 'Worked closely with the production team to ensure project deadlines were met.'
+  - "Ran compliance passes on PlayStation, Xbox and Nintendo."
+  - "Wrote test plans for internal and external testers."
+  - "Helped newer testers with functional testing and platform requirements."
 ---
+
 **Company:** Merge Games (Publisher) / Sega (IP Holder)
 
-### Project Overview
-*Alex Kidd in Miracle World DX* is a modern remake of the beloved SEGA Master System classic. As a publisher QA Tester, I was part of a team responsible for managing multiple concurrent projects, ensuring this nostalgic title met the high standards expected by both the IP holder and a new generation of players.
+### Publisher QA at Merge Games
 
-### My Role & Responsibilities
-My role involved a blend of hands-on testing, planning, and mentorship. I performed full compliance passes on all major platforms, created comprehensive test plans and guides for internal and external partners, and mentored colleagues on industry standard testing practices and platform holder requirements.
+I worked on the remake of Alex Kidd as part of the publisher QA team. We had several projects on the go, so planning coverage around submission deadlines was a regular part of the job.
 
-### The Challenge
-The main challenge was balancing the testing needs of multiple concurrent projects while ensuring a title with such a nostalgic legacy was a polished and faithful remake. This required deep research into each project's needs and meticulous planning to meet submission deadlines.
+I tested gameplay and platform requirements, wrote test plans and guides in Confluence, and gave feedback to the development partner. I also helped newer colleagues get to grips with functional and compliance testing. The documentation needed to work for both our own testers and external teams.
 
-### Gameplay Highlights
+### From the game
 
-Here is a highlight from the game that I was responsible for testing.
+<img src="/assets/Alex_Kidd.webp" alt="Gameplay from Alex Kidd DX" class="centered-image" loading="lazy" />
 
-<img src="/assets/Alex_Kidd.webp" alt="Gameplay from Alex Kidd DX" class="centered-image" />
+### Tools
 
-### My Approach & Actions
-* I conducted full compliance testing across PlayStation, Xbox, Nintendo, and PC platforms to ensure the game passed all certification requirements.
-* I authored detailed test plans and guides in Confluence, creating a central knowledge base for all testers.
-* I provided direct feedback to the external development partner on ways to improve game quality and the user experience.
-* I mentored junior colleagues, guiding them on best practices for both functional and compliance testing.
-
-### Impact & Results
-* My thorough compliance testing ensured a smooth and successful submission process across all platforms.
-* The test documentation I created became a key resource, improving the efficiency and consistency of both internal and external test teams.
-* My feedback helped the development partner address key issues, contributing to a higher quality final product that was well received by fans of the original.
-
-### Technologies & Tools Used
 * **Airtable** (for bug tracking and reporting)
 * **Confluence** (for test documentation)
 * **All major console platforms** (PlayStation, Xbox, Nintendo, Stadia, Luna)

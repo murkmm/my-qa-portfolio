@@ -1,161 +1,204 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-
+import ContactCTA from '../components/ContactCTA.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
-
-// Group projects by year with correct TypeScript types
-const groupedProjects = projects.reduce<Record<string, CollectionEntry<'work'>[]>>((acc, project) => {
-	const year = new Date(project.data.publishDate).getFullYear();
-	if (!acc[year]) {
-		acc[year] = [];
-	}
-	acc[year].push(project);
-	return acc;
+const studio = projects.filter((p) => p.data.studio);
+const qa = projects.filter((p) => !p.data.studio);
+const grouped = projects.reduce<Record<string, CollectionEntry<'work'>[]>>((years, project) => {
+	const year = String(project.data.publishDate.getUTCFullYear());
+	(years[year] ||= []).push(project);
+	return years;
 }, {});
-
-// Get the years and sort them correctly as numbers
-const sortedYears = Object.keys(groupedProjects).sort((a, b) => Number(b) - Number(a));
+const years = Object.keys(grouped).sort((a, b) => Number(b) - Number(a));
 ---
 
 <BaseLayout
-	title="Project Case Studies | Mark McManus"
-	description="A timeline of my projects and contributions throughout my career."
+	title="Selected Projects & QA Experience | Mark McManus"
+	description="Explore games I've built at Ki10 Games and professional QA contributions across console, PC and mobile."
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Project Case Studies"
-				tagline="A detailed look at the projects I've worked on. Here you'll find case studies outlining the challenges, my specific contributions, and the impact I had on the final product."
-				align="start"
-			/>
-
-			<div class="timeline-container">
-				{
-					sortedYears.map((year) => (
-						<div class="timeline-item">
-							<div class="timeline-year-marker">
-								<div class="year-text">{year}</div>
-							</div>
-							<ul class="timeline-projects">
-								{groupedProjects[year].map((project) => (
-									<li>
-										<PortfolioPreview project={project} />
-									</li>
-								))}
-							</ul>
-						</div>
-					))
-				}
+	<main id="main-content" tabindex="-1" class="wrapper">
+		<header class="work-intro">
+			<p class="eyebrow">The portfolio</p>
+			<h1>My work so far.</h1>
+			<p>
+				Some of these I’ve made, and others I’ve worked on in QA. Each project has a short summary
+				below, with more detail on its own page.
+			</p>
+			<nav class="work-nav" aria-label="Portfolio sections">
+				<a class="action primary" href="#development"
+					>Games I’ve made <span>{studio.length}</span></a
+				>
+				<a class="action" href="#qa">Games I’ve tested <span>{qa.length}</span></a>
+				<a class="text-link" href="#timeline">Career timeline <span aria-hidden="true">↓</span></a>
+			</nav>
+		</header>
+		<section id="development" class="section" aria-labelledby="development-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Independent development</p><h2 id="development-title">
+						Games I’ve made.
+					</h2>
+				</div><p class="section-note">Design, code and QA at my own studio, Ki10 Games.</p>
 			</div>
-		</main>
-		<ContactCTA />
-	</div>
+			<div class="project-grid">{studio.map((project) => <ProjectCard project={project} />)}</div>
+		</section>
+		<section id="qa" class="section" aria-labelledby="qa-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Professional experience</p><h2 id="qa-title">Games I’ve tested.</h2>
+				</div><p class="section-note">Tools, multiplayer, live services and platform compliance.</p>
+			</div>
+			<div class="project-grid">{qa.map((project) => <ProjectCard project={project} />)}</div>
+		</section>
+		<section class="timeline-section" id="timeline" aria-labelledby="timeline-title">
+			<details>
+				<summary
+					><span
+						><span class="eyebrow">The full picture</span><span
+							class="timeline-title"
+							id="timeline-title">Career timeline</span
+						></span
+					><span class="expand-label">Expand / collapse</span></summary
+				>
+				<div class="timeline">
+					{
+						years.map((year) => (
+							<div class="year">
+								<>
+									<h3>{year}</h3>
+									<ul>
+										{grouped[year].map((project) => (
+											<li>
+												<a href={'/work/' + project.id + '/'}>
+													{project.data.title}
+													<span>
+														{project.data.studio ? 'Development' : 'QA'}{' '}
+														<span aria-hidden="true">↗</span>
+													</span>
+												</a>
+											</li>
+										))}
+									</ul>
+								</>
+							</div>
+						))
+					}
+				</div>
+			</details>
+		</section>
+	</main>
+	<ContactCTA />
 </BaseLayout>
-
 <style>
-	/* --- MOBILE FIRST STYLES --- */
-	.timeline-container {
-		position: relative;
+	.work-intro {
+		padding: 3.5rem 0 1rem;
+	}
+	h1 {
+		font-size: clamp(2.8rem, 6vw, 4.8rem);
+		letter-spacing: -0.055em;
+		margin: 1rem 0;
+	}
+	.work-intro > p:not(.eyebrow) {
+		max-width: 62ch;
+		font-size: 1.12rem;
+		line-height: 1.8;
+	}
+	.work-nav {
 		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-		padding: 2rem 0;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.8rem 1.25rem;
+		margin-top: 1.75rem;
 	}
-
-	.timeline-container::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 2.5rem;
-		transform: translateX(-50%);
-		width: 2px;
-		height: 100%;
-		background-color: var(--gray-800);
+	.work-nav .action span {
+		font-size: 0.72rem;
+		opacity: 0.8;
 	}
-
-	.timeline-item {
-		position: relative;
-		display: grid;
-		grid-template-columns: auto 1fr;
-		align-items: start;
-		gap: 1.5rem;
+	.section + .section {
+		border-top: 1px solid var(--gray-800);
 	}
-
-	.timeline-year-marker {
-		grid-column: 1;
-		padding: 0;
-		z-index: 1;
+	.section-note {
+		max-width: 34ch;
+		font-size: 0.9rem;
+		color: var(--gray-300);
 	}
-	
-	.year-text {
-		background-color: var(--accent-dark);
-		color: var(--gray-999);
-		border-radius: 999px;
-		width: 5rem;
-		height: 5rem;
-		display: grid;
-		place-items: center;
-		font-weight: bold;
-		font-size: 1.25rem;
+	.timeline-section {
+		margin-block: 1rem 4rem;
+		border-block: 1px solid var(--gray-800);
 	}
-
-	.timeline-projects {
-		grid-column: 2;
+	summary {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		cursor: pointer;
+		padding: 1.5rem 0;
 		list-style: none;
-		padding: 0.75rem 0 0 0;
-		margin: 0;
+	}
+	summary::-webkit-details-marker {
+		display: none;
+	}
+	summary > span:first-child {
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: 0.5rem;
 	}
-	
-	/* All card overrides are now removed */
-
-	/* --- DESKTOP TIMELINE STYLES --- */
-	@media (min-width: 50em) {
-		.timeline-container {
-			gap: 4rem;
+	.timeline-title {
+		font-size: 1.7rem;
+		color: var(--gray-0);
+		font-family: var(--font-brand);
+	}
+	.expand-label {
+		font-size: 0.8rem;
+		color: var(--accent-dark);
+	}
+	.year {
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		gap: 2rem;
+		border-top: 1px solid var(--gray-800);
+		padding-block: 1.5rem;
+	}
+	.year h3 {
+		font-size: 1.1rem;
+	}
+	ul {
+		padding: 0;
+		list-style: none;
+	}
+	li + li {
+		margin-top: 1rem;
+	}
+	li a {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		color: var(--gray-0);
+		text-decoration: none;
+	}
+	li a:hover {
+		text-decoration: underline;
+	}
+	li a > span {
+		font-size: 0.8rem;
+		color: var(--gray-300);
+		white-space: nowrap;
+	}
+	@media (max-width: 49.99em) {
+		.work-intro {
+			padding-top: 2.5rem;
 		}
-		
-		.timeline-container::before {
-			left: 50%;
+		.year {
+			grid-template-columns: 1fr;
+			gap: 1rem;
 		}
-
-		.timeline-item {
-			grid-template-columns: 1fr auto 1fr;
-			gap: 2rem;
-		}
-
-		.timeline-year-marker {
-			grid-column: 2;
-			padding: 0.5rem;
-		}
-
-		.timeline-projects {
-			padding-top: 0;
-		}
-
-		.timeline-item:nth-child(odd) .timeline-projects {
-			grid-column: 3;
-		}
-
-		.timeline-item:nth-child(even) .timeline-projects {
-			grid-column: 1;
-		}
-
-		.timeline-item:nth-child(odd)::before,
-		.timeline-item:nth-child(even)::before {
-			content: '';
-			grid-column: 1;
-		}
-		.timeline-item:nth-child(even)::before {
-			grid-column: 3;
+		li a {
+			flex-direction: column;
+			gap: 0.25rem;
 		}
 	}
 </style>

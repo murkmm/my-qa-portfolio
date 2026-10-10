@@ -4,46 +4,34 @@ publishDate: '2023-12-01'
 img: '/assets/Merge Dragons.jpg'
 img_alt: 'Artwork from the mobile game Merge Dragons!'
 description: |
-  As a Senior Mobile QA Tester at Unity, I led QA efforts on this major live service mobile title, ensuring high performance and stability for millions of players on iOS and Android.
+  As a Senior Mobile QA Tester at Unity, I worked on Merge Dragons updates, covering mobile performance, device compatibility and store requirements.
 tags:
   - 'Senior QA'
   - 'Mobile Testing'
   - 'Live Service'
   - 'Unity'
 summary:
-  - 'Led QA efforts for a high profile live service mobile game on iOS and Android.'
-  - 'Ensured compliance with Apple App Store and Google Play requirements.'
-  - 'Mentored junior testers and drove sessions to assess player experience quality.'
+  - "Led QA work on iOS and Android updates."
+  - "Checked Apple App Store and Google Play requirements."
+  - "Mentored junior testers and ran focused testing sessions."
 ---
+
 **Company:** Unity
 
-### Project Overview
-*Merge Dragons!* is a hugely popular, free to play mobile puzzle game with a massive global player base. In my role as a Senior Mobile QA Tester at Unity, I was embedded with the live service team to lead QA efforts, ensuring the ongoing stability and performance of the title through its frequent updates.
+### Testing a game that keeps updating
 
-### My Role & Responsibilities
-I led the QA efforts for the project on both iOS and Android. This involved designing and implementing detailed test plans focused on mobile specific performance metrics like memory usage and battery consumption, ensuring compliance with App Store and Google Play requirements, and mentoring junior QA testers.
+I worked on Merge Dragons as a Senior Mobile QA Tester at Unity. The live game received regular updates, so testing needed to cover new changes as well as checking that existing features still worked.
 
-### The Challenge
-The greatest challenge of working on a major live service title is ensuring that every update is stable and performant for millions of active players across thousands of different devices. This requires an incredibly rigorous and efficient testing process to catch any potential issues before they go live.
+I planned tests for performance, memory use and battery drain, and checked compatibility across devices, screen sizes and operating system versions. I also covered Apple App Store and Google Play requirements.
 
-### Gameplay Highlights
+Alongside the testing, I mentored junior team members and ran focused sessions to investigate problems and look at the experience players were having on their phones.
 
-Here is a highlight from the game that I was responsible for testing.
+### From the game
 
-<img src="/assets/Merge_Dragons_highlight.webp" alt="Gameplay from Legacy" class="centered-image" />
+<img src="/assets/Merge_Dragons_highlight.webp" alt="Gameplay from Merge Dragons!" class="centered-image" loading="lazy" />
 
-### My Approach & Actions
-* I designed and implemented test plans focused on mobile performance, memory usage, and battery drain.
-* I conducted device compatibility testing across a wide range of screen sizes, OS versions, and hardware to ensure a consistent user experience.
-* I drove specific testing sessions to uncover hidden issues and assess the quality of the player experience in real world scenarios.
-* I mentored junior members of the QA team, promoting best practices in mobile testing and bug reporting.
+### Tools
 
-### Impact & Results
-* My focus on performance testing **helped ensure that game updates were stable and optimized** for a wide variety of mobile devices.
-* My thorough compliance testing **ensured that the game consistently met Apple App Store and Google Play requirements**, leading to smooth update releases.
-* The mentorship I provided **improved the skills and standards of the junior members of the team.**
-
-### Technologies & Tools Used
 * **Jira** (for bug tracking and reporting)
 * **Confluence** (for test documentation)
 * **Unity Engine**

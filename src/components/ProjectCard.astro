@@ -1,0 +1,131 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ProjectImage from './ProjectImage.astro';
+interface Props {
+	project: CollectionEntry<'work'>;
+	label?: string;
+	description?: string;
+	eager?: boolean;
+}
+const { project, label, description, eager = false } = Astro.props;
+const { data, id } = project;
+---
+
+<article class="project-card">
+	<a href={`/work/${id}/`} class="project-link">
+		<div class="art">
+			<ProjectImage src={data.img} alt={data.img_alt || ''} eager={eager} />
+			{
+				data.status && (
+					<span class:list={['status', { released: data.status === 'Released' }]}>
+						{data.status}
+					</span>
+				)
+			}
+		</div>
+		<div class="copy">
+			<p class="eyebrow">{label || (data.studio ? 'Design & development' : 'Professional QA')}</p>
+			<h3>{data.title}</h3>
+			{
+				description ? (
+					<p class="summary-text">{description}</p>
+				) : (
+					<ul class="summary">
+						{data.summary?.slice(0, 2).map((point) => (
+							<li>{point}</li>
+						))}
+					</ul>
+				)
+			}
+			<span class="read">View case study <span aria-hidden="true">↗</span></span>
+		</div>
+	</a>
+</article>
+<style>
+	.project-card {
+		height: 100%;
+		min-width: 0;
+	}
+	.project-link {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		text-decoration: none;
+		color: var(--gray-200);
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		overflow: hidden;
+		background: var(--surface);
+		transition:
+			border-color 180ms,
+			transform 180ms;
+	}
+	.project-link:hover {
+		border-color: var(--accent-dark);
+	}
+	.art {
+		aspect-ratio: 16 / 10;
+		position: relative;
+		overflow: hidden;
+		background: #171a24;
+	}
+	.status {
+		position: absolute;
+		left: 1rem;
+		bottom: 1rem;
+		padding: 0.3rem 0.65rem;
+		border: 1px solid #ffffff40;
+		border-radius: 0.3rem;
+		background: #171a24ed;
+		color: #fff;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+	.status.released {
+		background: #125c45;
+	}
+	.copy {
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		gap: 0.85rem;
+	}
+	h3 {
+		font-size: clamp(1.25rem, 2vw, 1.55rem);
+		letter-spacing: -0.03em;
+		line-height: 1.2;
+	}
+	.summary,
+	.summary-text {
+		padding: 0;
+		list-style: none;
+		font-size: 0.94rem;
+		line-height: 1.65;
+		color: var(--gray-300);
+	}
+	.summary li + li {
+		margin-top: 0.6rem;
+	}
+	.read {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-top: auto;
+		padding-top: 1rem;
+		font-weight: 700;
+		font-size: 0.85rem;
+		color: var(--gray-0);
+	}
+	.read span {
+		color: var(--accent-dark);
+		font-size: 1.25rem;
+	}
+	@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+		.project-link:hover {
+			transform: translateY(-2px);
+		}
+	}
+</style>

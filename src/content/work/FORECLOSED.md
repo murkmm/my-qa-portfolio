@@ -4,45 +4,31 @@ publishDate: '2021-08-12'
 img: '/assets/FORECLOSED.jpg'
 img_alt: 'A scene from the cyberpunk action adventure game FORECLOSED.'
 description: |
-  As a QA Tester at Merge Games, I handled the multi platform testing for this narrative driven action adventure with a unique comic book art style, ensuring a high quality release.
+  I worked on functional and compliance testing for FORECLOSED at Merge Games, covering its gameplay, comic book presentation and platform requirements.
 tags:
   - 'Publisher QA'
   - 'Game Testing'
   - 'Compliance Testing'
 summary:
-  - 'Fully tested the title to ensure the highest quality and best user experience.'
-  - 'Mentored colleagues on industry standard testing practices and platform holder requirements.'
-  - 'Provided actionable feedback to the development partner to improve overall game quality.'
+  - "Tested gameplay and the interactive comic book presentation."
+  - "Ran Sony, Microsoft and Nintendo compliance checks."
+  - "Wrote test plans and helped colleagues with platform requirements."
 ---
+
 **Company:** Merge Games (Publisher) / Antab Studio (Developer)
 
-### Project Overview
-*FORECLOSED* is a narrative driven action adventure game set in a cyberpunk world, defined by its unique interactive comic book aesthetic. In my role as a publisher QA Tester, I was responsible for the end to end testing of the title, ensuring its unique visual style and gameplay were polished for release on all major platforms.
+### Testing an interactive comic book
 
-### My Role & Responsibilities
-I was tasked with the full functional and compliance testing of the game, working closely with the production team to meet deadlines. A key part of my role was to provide clear, actionable feedback to the external development partner and to create detailed test plans for the wider test team.
+I was part of the publisher QA team at Merge Games. FORECLOSED’s comic book presentation was part of how the game played, so visual problems needed attention alongside the usual gameplay bugs.
 
-### The Challenge
-The main challenge was thoroughly testing the game's unique visual and gameplay mechanics, which were heavily inspired by graphic novels. This required a keen eye for artistic and stylistic bugs, in addition to standard functional testing, all while managing the strict compliance requirements of multiple platforms.
+I ran functional and compliance passes, wrote test plans around the mechanics, and sent feedback to the external developer. I also helped other testers with platform requirements and worked with production to plan coverage around deadlines.
 
-### Gameplay Highlights
+### From the game
 
-Here is a highlight from the game that I was responsible for testing.
+<img src="/assets/FORECLOSED.webp" alt="Gameplay from FORECLOSED" class="centered-image" loading="lazy" />
 
-<img src="/assets/FORECLOSED.webp" alt="Gameplay from FORECLOSED" class="centered-image" />
+### Tools
 
-### My Approach & Actions
-* I performed comprehensive testing passes on the game to ensure a high quality and bug free user experience.
-* I conducted full compliance checks against Sony, Microsoft, and Nintendo guidelines.
-* I researched the game's mechanics to create targeted test plans and guides for the rest of the team.
-* I mentored other testers, sharing my knowledge of platform specific requirements to improve the team's overall effectiveness.
-
-### Impact & Results
-* My detailed feedback helped the development team refine the game's unique mechanics and visual presentation.
-* My mentorship increased the compliance knowledge of the wider team, leading to more efficient testing cycles on future projects.
-* My work contributed to a successful multi platform launch that was praised for its innovative art style.
-
-### Technologies & Tools Used
 * **Jira** (for bug tracking and reporting)
 * **Confluence** (for test documentation)
 * **All major console platforms** (PlayStation, Xbox, Nintendo, Stadia, Luna)

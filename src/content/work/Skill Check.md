@@ -4,10 +4,11 @@ status: 'Released'
 publishDate: '2026-05-18'
 featured: true
 studio: true
-img: '/assets/skill-check.webp'
+img: '/assets/skillcheck-card.webp'
+hero: '/assets/skillcheck-hero.webp'
 img_alt: 'The Skill Check daily trivia game running on mobile.'
 description: |
-  My first commercially released title as Director at Ki10 Games. A daily gaming trivia game built in Godot, shipped to Google Play and the web, where I owned design, programming, backend, release and QA end to end.
+  My first released game, and the first for Ki10. I built this daily gaming trivia game in Godot and handled everything from the design and backend to QA and getting it onto Google Play and the web.
 tags:
   - 'Director'
   - 'Game Design'
@@ -15,66 +16,47 @@ tags:
   - 'Godot'
   - 'Released'
 summary:
-  - 'Shipped a complete commercial title solo, from first prototype to live on Google Play.'
+  - 'Built and released the game on Google Play and the web.'
   - 'Designed and built the daily content pipeline, progression and a 1,594 card collection.'
-  - 'Owned the full release process including store submission, live ops and crash monitoring.'
+  - 'Handled store submission, updates and crash monitoring after release.'
 ---
 
-**Company:** Ki10 Games · **Platforms:** Android, Web · **Status:** Released
+**Ki10 Games · Android and web · Released**
 
-### Project Overview
+### A game we could actually finish
 
-_Skill Check_ is a daily trivia game about gaming history. Players get one fresh set of questions every day, drawn from franchises, studios and deep cuts across the whole medium, with a collection of nearly 1,600 cartridges to unlock and master along the way.
+Skill Check is a daily trivia game about gaming history. You get a fresh set of questions every day, with nearly 1,600 cartridges to collect along the way. It’s free on Android and in your browser.
 
-It is my first commercially released title, and the first game Ki10 Games has shipped. It is free to play, live on Google Play and playable in any browser.
+KIT was our first project, but it had become a lot for two people with day jobs. I wanted to take something smaller all the way through release. Skill Check was that game, and it became the first one we shipped at Ki10.
 
-- **Play it in your browser:** [skillcheckgame.com](https://skillcheckgame.com/)
-- **Get it on Google Play:** [Skill Check on the Play Store](https://play.google.com/store/apps/details?id=com.ki10games.skillcheck)
+- [Play Skill Check in your browser](https://skillcheckgame.com/)
+- [Get it on Google Play](https://play.google.com/store/apps/details?id=com.ki10games.skillcheck)
 
-### The Challenge
+### What I worked on
 
-The real challenge was not a technical one. It was **scope discipline**.
+I designed and programmed the game in Godot. The cards you draw decide how difficult a run is and how many points you can earn, so choosing harder cards is a bit of a gamble.
 
-Ki10's first project was an ambitious 3D action adventure, and after a year of development it became clear that a two person team with day jobs could not carry something that size to a finish line. I had plenty of experience shipping other studios' games, but none shipping my own, and there is a long list of things you simply cannot learn from the QA side of the fence.
+I also built the daily content pipeline, authentication, cloud saves and leaderboards. The questions need to turn up each day without me manually feeding them in every morning.
 
-So I made a deliberate call: pick something small enough to actually finish, and finish it. The goal was not a prototype or a vertical slice. It was a complete, published, downloadable product, because that is the only thing that proves you can close the gap between "playable" and "released".
+Getting it out meant handling the Google Play submission, store images, builds and web hosting. My QA work covered test plans, device testing and crash reporting, so I could see what was going wrong once people were playing on their own phones.
 
-### My Role & Responsibilities
+### What I learnt
 
-I owned the project end to end as Director, which in practice meant every discipline:
+Having worked in QA for years, I was used to testing games before release. Being responsible for the whole thing myself was different. Store submission, updates and keeping a backend running were all part of the job this time.
 
-- **Game Design:** Designed the core daily run loop, the card based difficulty system where the cards you draw set both the challenge and the score on offer, and the progression and collection systems that give players a reason to return.
-- **Programming:** Built the game in Godot, including the client, the daily content pipeline, and the systems that generate and serve a new set of questions every day.
-- **Backend & Live Ops:** Implemented authentication, cloud save, leaderboards and a daily content service, then kept it running after launch.
-- **Release Management:** Handled Google Play store submission, listing assets, build pipelines and versioning, plus the web build and its hosting.
-- **Quality Assurance:** Wrote and executed the test plans, and set up crash reporting so I could actually see what was failing on real devices in the wild.
+Keeping the scope small enough to finish was the useful lesson. There was still plenty to do after the game itself worked. We now have a release process to build on for the next Ki10 game.
 
-### My Approach & Actions
+### How it looks now
 
-- Scoped the design deliberately around **one strong, repeatable interaction** rather than breadth, so a solo developer could realistically finish and maintain it.
-- Built a **content pipeline** capable of generating and serving daily question sets without manual intervention, so the game keeps running without me feeding it every morning.
-- Designed the **card system** so difficulty is a player choice rather than a fixed curve. Draw harder cards and you risk more for a bigger score.
-- Applied my QA background from day one: **test plans, device coverage and crash reporting were built in from the start**, not bolted on before submission.
-- Shipped to Android first to get real telemetry from a wide range of hardware, then brought the game to the web to remove the install barrier entirely.
+The newer artwork gives the cartridges much more character. These are the current menu, card selection, question and collection screens.
 
-### Impact & Results
+<div class="game-screens">
+<figure><img src="/assets/skillcheck-menu.webp" width="720" height="1278" alt="Skill Check daily run menu with illustrated game cartridges" loading="lazy" decoding="async" /><figcaption>The daily run.</figcaption></figure>
+<figure><img src="/assets/skillcheck-card-select.webp" width="720" height="1294" alt="Choosing a cartridge before a Skill Check question" loading="lazy" decoding="async" /><figcaption>Picking the next cartridge.</figcaption></figure>
+<figure><img src="/assets/skillcheck-question.webp" width="720" height="1272" alt="A trivia question in the updated Skill Check interface" loading="lazy" decoding="async" /><figcaption>A question in play.</figcaption></figure>
+<figure><img src="/assets/skillcheck-collection.webp" width="720" height="1308" alt="The Skill Check collection with the new cartridge artwork" loading="lazy" decoding="async" /><figcaption>The cartridge collection.</figcaption></figure>
+</div>
 
-- **The game shipped.** It is live, playable and downloadable, which is the outcome the whole project was scoped around.
-- Proved out a **full solo release pipeline** for Ki10 Games, covering store submission, backend infrastructure, live content and post launch monitoring. Everything the studio's next title needs is now a known quantity rather than an unknown.
-- Validated the **"finish something small"** strategy. A few months on Skill Check taught me more about shipping than another year of prototyping would have, particularly around store compliance, real device fragmentation and the difference between "works on my machine" and "works on a stranger's four year old Android phone".
-- The **collection system** turned out to be the feature players engaged with most, which directly informed how progression is being designed for our next title.
+### Tools
 
-### Gameplay Highlights
-
-<img src="/assets/skill-check-question.webp" alt="A Skill Check trivia question in play, with a countdown timer" class="centered-image" />
-
-<img src="/assets/skill-check-collection.webp" alt="The Skill Check collection screen showing cartridges to master" class="centered-image" />
-
-### Technologies & Tools Used
-
-- **Godot Engine** (GDScript)
-- **Google Play Console** (store submission, releases, live ops)
-- **Backend services** for auth, cloud save and leaderboards
-- **Crash reporting** and live telemetry
-- **Jira & Confluence** for tracking and documentation
-- **Android & Web** build pipelines
+Godot and GDScript, Google Play Console, backend services for accounts and leaderboards, crash reporting, Jira and Confluence.

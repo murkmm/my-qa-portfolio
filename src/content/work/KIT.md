@@ -1,36 +1,39 @@
 ---
 title: 'KIT - Knight In Training'
-status: 'On Hold'
+status: 'In Development'
 publishDate: '2025-08-29'
 featured: false
 studio: true
-img: '/assets/kit-card.jpg'
-img_alt: 'KIT standing in the grass in Knight In Training.'
+img: '/assets/kit-godot-card.webp'
+img_alt: 'KIT in the Godot rebuild of Knight in Training, using placeholder models.'
 description: |
-  Ki10 Games' first project, a 3D action adventure built in Unity where I led design, programming and QA. Currently on hold, and a formative lesson in scoping a project to the size of the team building it.
+  Ki10 Games' first project, a 3D action adventure where I lead design, programming and QA. Originally built in Unity and now being rebuilt in Godot, with core mechanics taking shape and work underway on the first level.
 tags:
   - 'Director'
   - 'Game Design'
   - 'Programming'
   - 'Unity'
-  - 'On Hold'
+  - 'Godot'
+  - 'In Development'
 summary:
   - 'Led design, programming and QA on Ki10 Games first project.'
-  - 'Built a dynamic camera system blending 3D exploration with 2D side on sections.'
-  - 'Paused deliberately once scope outgrew a two person team, which reshaped how we scope now.'
+  - 'Rebuilding KIT in Godot, refining the core mechanics and starting work on the first level.'
+  - 'Built the original Unity camera system blending 3D exploration with 2D side on sections.'
 ---
 
-**Company:** Ki10 Games · **Platform:** PC · **Status:** On hold
+**Company:** Ki10 Games · **Platform:** PC · **Status:** In development — being rebuilt in Godot
 
-### Project Overview
+### A kitten with a sword
 
 _KIT - Knight in Training_ is a 3D action adventure in the spirit of the mascot platformers I grew up on. A vibrant world, a camera that shifts between 3D exploration and 2D side on sections, and a small cat with a very large sword.
 
-It was Ki10 Games' first project and the subject of our first nine devlogs. **It is currently on hold rather than cancelled.** The work is documented and saved, and I fully intend to return to it once the studio has the capacity to do it properly.
+It was Ki10 Games' first project and the subject of our first nine devlogs. After a deliberate pause to focus on shipping smaller games, **KIT is back in development and being rebuilt in Godot**. The core mechanics are taking shape in the new engine and work has started on the first level, Briarwatch. The current build uses placeholder models while I refine how it feels to play.
 
-### My Role & Responsibilities
+The move brings KIT into the same engine as the other Ki10 projects. The original Unity work below remains an important part of the project's history and the foundation for what I learned about scope.
 
-As Director I owned the full spectrum of the project:
+### What I worked on
+
+As Director I lead the project across design, programming and QA. In the original Unity version, that included:
 
 - **Game Design:** Core gameplay systems, narrative direction, and a map and quest system built around tracking collectibles across a hand built world.
 - **Programming:** Built the game in Unity, including the camera manager, save system, NPC dialogue, content gating and a shop system.
@@ -48,23 +51,28 @@ Before the project was paused, a substantial amount of it worked:
 - **Save system, NPC dialogue, shop and cosmetics**, plus a full music and SFX system.
 - A **creature companion system**, where creatures you meet in the world come home with you.
 
-### The Challenge, and What I Learned From It
+### Getting the scope wrong
 
-The challenge with KIT was not any individual system. It was **scope**.
+KIT got too big for two people with day jobs. Every system we finished seemed to uncover another one we needed. I’d spent years testing games made by much bigger teams, and I underestimated how much work there was to do ourselves.
 
-A 3D action adventure is enormous. Every system we finished uncovered two more we had not started, and it gradually became clear the project was far bigger than two people with day jobs could carry to a finish line. I had spent nearly a decade testing games at studios with the headcount to make projects that size work, and I had underestimated what that headcount was actually doing.
+We paused it and focused on something smaller. That became Skill Check, the first game we released. It also changed how we planned Boop n Burn: we picked a demo date and started deciding what we could realistically get done by then.
 
-Rather than let it drift indefinitely or quietly abandon it, I made a deliberate call to **pause KIT and ship something achievable instead**. That decision led directly to _Skill Check_, which became Ki10 Games' first released title, and to _Boop n Burn_, which has been scoped against a fixed public deadline from the outset.
+KIT is back now, in Godot. I’m working on the mechanics and the first level, Briarwatch, with placeholder models for the moment. The original Unity systems below are part of the earlier version, rather than a list of things already finished in the rebuild.
 
-I consider this the most valuable lesson of my time as a director so far. Recognising that a project has outgrown its team, and acting on it early rather than late, is a judgement call I am far better equipped to make now than I was at the start.
+### The current build and the original
 
-### Gameplay Highlights
+<img src="/assets/kit-godot-vista.webp" alt="Briarwatch in the current Godot rebuild of KIT, with placeholder models" class="centered-image" loading="lazy" />
 
-<img src="/assets/KIT Highlight.webp" alt="Gameplay from KIT - Knight In Training" class="centered-image" />
+*Briarwatch in the Godot rebuild. Models are placeholders while the level and mechanics take shape.*
 
-### Technologies & Tools Used
+<img src="/assets/KIT Highlight.webp" alt="Gameplay from the original Unity version of KIT - Knight In Training" class="centered-image" loading="lazy" />
 
-- **Unity Engine** (C#)
+*Gameplay from the original Unity version.*
+
+### Tools
+
+- **Godot Engine** for the current rebuild
+- **Unity Engine** (C#) for the original version
 - **Jira** for bug and task tracking
 - **Confluence** for design documentation and the QA knowledge base
 - **PC development**

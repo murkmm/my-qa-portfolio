@@ -69,9 +69,9 @@
 
 	/* Fonts */
 	--font-system:
-		system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-		"Open Sans", "Helvetica Neue", sans-serif;
-	--font-body: "Public Sans", var(--font-system);
+		system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-body: 'Public Sans', var(--font-system);
 	--font-brand: Rubik, var(--font-system);
 
 	/* Transitions */
@@ -260,5 +260,146 @@ h5 {
 	}
 	.lg\:gap-48 {
 		gap: 12rem;
+	}
+}
+/* Keep keyboard position visible across cards, links and controls. */
+:focus-visible {
+	outline: 3px solid var(--accent-dark);
+	outline-offset: 4px;
+}
+.skip-link {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	z-index: 10000;
+	padding: 0.75rem 1rem;
+	border-radius: 0.5rem;
+	background: var(--gray-999);
+	color: var(--gray-0);
+	transform: translateY(-200%);
+}
+.skip-link:focus {
+	transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Shared visual language for the portfolio's work-first layout. */
+:root {
+	--gray-0: #20252a;
+	--gray-100: #272d33;
+	--gray-200: #414b54;
+	--gray-300: #56616b;
+	--gray-400: #63717a;
+	--gray-800: #dce0df;
+	--gray-900: #edf0ed;
+	--gray-999: #f7f8f4;
+	--surface: #ffffff;
+	--accent-regular: #b9382d;
+	--accent-dark: #a83229;
+	--accent-text-over: #ffffff;
+}
+:root.theme-dark {
+	--gray-0: #f4f5f0;
+	--gray-100: #e6e9e7;
+	--gray-200: #c2cad0;
+	--gray-300: #bdc7ce;
+	--gray-400: #acb7bf;
+	--gray-800: #303b43;
+	--gray-900: #19232b;
+	--gray-999: #10171d;
+	--surface: #172129;
+	--accent-regular: #b9382d;
+	--accent-dark: #ff9a8c;
+	--accent-text-over: #ffffff;
+}
+.eyebrow {
+	font-family: var(--font-body);
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.13em;
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: var(--accent-dark);
+}
+.section {
+	padding-block: 4rem;
+}
+.section-heading {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+}
+.section-heading h2 {
+	margin-top: 0.75rem;
+	font-size: clamp(1.7rem, 3vw, 2.6rem);
+	letter-spacing: -0.045em;
+}
+.text-link {
+	font-size: 0.88rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--gray-0);
+}
+.text-link:hover {
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+.text-link span {
+	margin-left: 0.5rem;
+	color: var(--accent-dark);
+}
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.5rem;
+}
+.action {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.85rem 1.25rem;
+	min-height: 48px;
+	border: 1px solid var(--gray-800);
+	border-radius: 0.5rem;
+	color: var(--gray-0);
+	font-weight: 700;
+	font-size: 0.9rem;
+	text-decoration: none;
+	background: var(--surface);
+}
+.action:hover {
+	border-color: var(--accent-dark);
+}
+.action.primary {
+	background: var(--accent-regular);
+	border-color: var(--accent-regular);
+	color: #fff;
+}
+.file-type {
+	font-size: 0.7rem;
+	font-weight: 400;
+}
+[id] {
+	scroll-margin-top: 2rem;
+}
+@media (max-width: 49.99em) {
+	.project-grid {
+		grid-template-columns: 1fr;
+	}
+	.section {
+		padding-block: 2.5rem;
 	}
 }
