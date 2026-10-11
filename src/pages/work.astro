@@ -54,15 +54,28 @@ const years = Object.keys(grouped).sort((a, b) => Number(b) - Number(a));
 					<p class="eyebrow">Professional experience</p><h2 id="qa-title">Games I’ve tested.</h2>
 				</div><p class="section-note">Tools, multiplayer, live services and platform compliance.</p>
 			</div>
-			<div class="project-grid">{featuredQa.map((project) => <ProjectCard project={project} />)}</div>
+			<div class="project-grid">
+				{featuredQa.map((project) => <ProjectCard project={project} />)}
+			</div>
 			<div class="more-qa" id="more-qa">
 				<h3>More QA work <span>({moreQa.length})</span></h3>
 				<p class="section-note">The rest of my credits. Each one has its own project notes.</p>
 				<ul class="credit-list">
-					{moreQa.map((project) => <li><a class="credit-link" href={'/work/' + project.id + '/'}>
-						<div><h4>{project.data.title}</h4><p>{project.data.summary?.[0] || project.data.description}</p></div>
-						<span aria-hidden="true">↗</span>
-					</a></li>)}
+					{
+						moreQa.map((project) => (
+							<li>
+								<a class="credit-link" href={'/work/' + project.id + '/'}>
+									<div>
+										<>
+											<h4>{project.data.title}</h4>
+											<p>{project.data.summary?.[0] || project.data.description}</p>
+										</>
+									</div>
+									<span aria-hidden="true">↗</span>
+								</a>
+							</li>
+						))
+					}
 				</ul>
 			</div>
 		</section>
@@ -77,7 +90,9 @@ const years = Object.keys(grouped).sort((a, b) => Number(b) - Number(a));
 					><span class="expand-label">Expand / collapse</span></summary
 				>
 				<div class="timeline">
-					<p class="timeline-note">Grouped by project year. My <a href="/mark-mcmanus-cv.pdf">CV</a> has my employment history.</p>
+					<p class="timeline-note">
+						Grouped by project year. My <a href="/mark-mcmanus-cv.pdf">CV</a> has my employment history.
+					</p>
 					{
 						years.map((year) => (
 							<div class="year">
@@ -107,19 +122,68 @@ const years = Object.keys(grouped).sort((a, b) => Number(b) - Number(a));
 	<ContactCTA />
 </BaseLayout>
 <style>
-	.more-qa { margin-top: 3rem; }
-	.more-qa h3 { font-size: 1.5rem; margin-bottom: .5rem; }
-	.more-qa h3 span { font-size: 1rem; color: var(--gray-300); }
-	.more-qa .section-note { max-width: none; }
-	.credit-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; margin-top: 1.5rem; }
-	.credit-list li { margin: 0; border-top: 1px solid var(--gray-800); }
-	.credit-list .credit-link { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 1rem; min-height: 110px; padding: 1.25rem .25rem; text-decoration: none; }
-	.credit-link h4 { font-size: 1rem; line-height: 1.45; }
-	.credit-link p { font-size: .85rem; color: var(--gray-300); line-height: 1.65; margin-top: .35rem; }
-	.credit-list .credit-link > span { color: var(--accent-dark); font-size: 1.25rem; }
-	.credit-link:hover h4 { text-decoration: underline; text-underline-offset: 4px; }
-	.timeline-note { font-size: .9rem; color: var(--gray-300); padding-bottom: 1.5rem; }
-	@media(max-width: 49.99em) { .credit-list { grid-template-columns: 1fr; } }
+	.more-qa {
+		margin-top: 3rem;
+	}
+	.more-qa h3 {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.more-qa h3 span {
+		font-size: 1rem;
+		color: var(--gray-300);
+	}
+	.more-qa .section-note {
+		max-width: none;
+	}
+	.credit-list {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 2rem;
+		margin-top: 1.5rem;
+	}
+	.credit-list li {
+		margin: 0;
+		border-top: 1px solid var(--gray-800);
+	}
+	.credit-list .credit-link {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		min-height: 110px;
+		padding: 1.25rem 0.25rem;
+		text-decoration: none;
+	}
+	.credit-link h4 {
+		font-size: 1rem;
+		line-height: 1.45;
+	}
+	.credit-link p {
+		font-size: 0.85rem;
+		color: var(--gray-300);
+		line-height: 1.65;
+		margin-top: 0.35rem;
+	}
+	.credit-list .credit-link > span {
+		color: var(--accent-dark);
+		font-size: 1.25rem;
+	}
+	.credit-link:hover h4 {
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
+	.timeline-note {
+		font-size: 0.9rem;
+		color: var(--gray-300);
+		padding-bottom: 1.5rem;
+	}
+	@media (max-width: 49.99em) {
+		.credit-list {
+			grid-template-columns: 1fr;
+		}
+	}
 	.work-intro {
 		padding: 3.5rem 0 1rem;
 	}

@@ -22,7 +22,7 @@ so `Skill Check.md` becomes `/work/skill-check`.
 title: 'Game Title'
 publishDate: '2026-05-18' # groups projects by year; these are not employment dates
 featured: true # gives QA projects a full card on the Portfolio page
-studio: true # only for Ki10 Games titles, which get their own home page section
+studio: true # only for Ki10 Games titles, grouped on the Portfolio page
 img: '/assets/game-title.webp' # card image
 img_alt: 'Describe the image for screen readers'
 description: |
@@ -38,7 +38,7 @@ Markdown body: the full case study.
 
 `featured` and `studio` are both optional and default to false.
 
-- **`studio: true`** puts the project in the "Games I've Made" section on the home page.
+- **`studio: true`** puts the project in the "Games I've made" section on the Portfolio page.
 - **`featured: true`** on a QA credit gives it a full card in "Games I’ve tested" on the Portfolio page. Other QA credits remain available in the compact list. The homepage picks are set in `src/pages/index.astro`.
 
 ## Images
