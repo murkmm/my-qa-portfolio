@@ -57,6 +57,15 @@ A level can be solvable and still not be fun, so the tooling also had to help me
 - Store art, screenshots and trailers captured from the real game.
 - A repeatable level pipeline: generate, solve, review, then publish.
 
+### Play the game
+
+[Download The One Bullet Job free on Google Play](https://play.google.com/store/apps/details?id=com.ki10games.onebulletjob)
+
+### Press coverage
+
+- [Pocket Gamer — The One Bullet Job](https://www.pocketgamer.com/the-one-bullet-job/coming-to-android/)
+- [GamingonPhone — The One Bullet Job launches on Android](https://gamingonphone.com/news/the-one-bullet-job-is-a-turn-based-heist-puzzle-game-launching-on-android-this-october-16/)
+
 ### Screenshots
 
 <div class="screenshot-grid">
