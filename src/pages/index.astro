@@ -9,16 +9,16 @@ import ProjectCard from '../components/ProjectCard.astro';
 const projects = await getCollection('work');
 const picks = [
 	{
+		id: 'save-file-0',
+		label: 'Building Save File 0',
+		description:
+			'First-person survival horror on the Game Boy Color, running at 30fps on real hardware. Design, C and assembly, and the test suites behind it.',
+	},
+	{
 		id: 'the-one-bullet-job',
 		label: 'Shipping The One Bullet Job',
 		description:
 			'My second released game. I handled design, programming and QA, including the solver and level tooling behind 120 heists.',
-	},
-	{
-		id: 'boop-n-burn',
-		label: 'Building Boop n Burn',
-		description:
-			'A sixteen-player party brawler. Building the shove mechanics, game systems and networked physics in Godot.',
 	},
 	{
 		id: 'cloud-imperium-games',
@@ -120,8 +120,8 @@ const selected = picks.map((pick) => ({
 			</div>
 			<p>
 				I started in QA and spent years testing other people’s games. In 2024, Scott and I set up
-				Ki10. We’ve since shipped Skill Check and The One Bullet Job, and I’m now building Boop n Burn
-				and bringing KIT back in Godot alongside my job at CIG.
+				Ki10. We’ve since shipped Skill Check and The One Bullet Job, and I’m now building Save File 0
+				for the Game Boy Color and Boop n Burn, and bringing KIT back in Godot alongside my job at CIG.
 			</p>
 			<a class="text-link" href="/about/"
 				>More about my experience <span aria-hidden="true">↗</span></a
