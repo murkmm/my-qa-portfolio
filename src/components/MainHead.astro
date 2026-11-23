@@ -1,4 +1,7 @@
 ---
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/plus-jakarta-sans';
+import '@fontsource-variable/jetbrains-mono';
 import '../styles/global.css';
 
 interface Props {
@@ -11,7 +14,7 @@ interface Props {
 
 const {
 	title = 'Mark McManus | Senior Games QA & Game Developer',
-	description = "Mark McManus: senior games QA and game developer. Case studies from 10 years of QA, and the games I'm making at Ki10 Games.",
+	description = 'Mark McManus: 10+ years in games QA (Cloud Imperium Games, Unity, Creative Assembly, Supermassive Games) and co-founder of Ki10 Games.',
 	image = '/assets/share-card.jpg',
 	imageAlt = 'Mark McManus — games QA and game development',
 } = Astro.props;
@@ -40,14 +43,8 @@ const imageUrl = new URL(encodeURI(image), Astro.site);
 <title>{title}</title>
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
-	rel="stylesheet"
-/>
 <script is:inline>
-	// This code is inlined in the head to make dark mode instant & blocking.
+	// Instant & blocking dark-mode sync to prevent flash.
 	const getThemePreference = () => {
 		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 			return localStorage.getItem('theme');
@@ -58,7 +55,6 @@ const imageUrl = new URL(encodeURI(image), Astro.site);
 	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
 
 	if (typeof localStorage !== 'undefined') {
-		// Watch the document element and persist user preference when it changes.
 		const observer = new MutationObserver(() => {
 			const isDark = document.documentElement.classList.contains('theme-dark');
 			localStorage.setItem('theme', isDark ? 'dark' : 'light');

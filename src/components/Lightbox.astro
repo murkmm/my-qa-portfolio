@@ -1,0 +1,214 @@
+---
+---
+
+<dialog id="portfolio-lightbox" aria-label="Image viewer" class="lb-dialog">
+	<div class="lb-frame">
+		<div class="lb-top">
+			<span id="lb-counter" class="lb-counter"></span>
+			<button type="button" id="lb-close" class="lb-icon-btn" aria-label="Close viewer">&times;</button>
+		</div>
+		<div class="lb-stage">
+			<button type="button" id="lb-prev" class="lb-nav lb-prev" aria-label="Previous image">&lsaquo;</button>
+			<img id="lb-img" src="" alt="" class="lb-img" />
+			<button type="button" id="lb-next" class="lb-nav lb-next" aria-label="Next image">&rsaquo;</button>
+		</div>
+		<p id="lb-caption" class="lb-caption"></p>
+	</div>
+</dialog>
+
+<script is:inline>
+	(() => {
+		const dialog = document.getElementById('portfolio-lightbox');
+		if (!dialog || dialog.dataset.ready === 'true') return;
+		dialog.dataset.ready = 'true';
+
+		const img = document.getElementById('lb-img');
+		const caption = document.getElementById('lb-caption');
+		const counter = document.getElementById('lb-counter');
+		const closeBtn = document.getElementById('lb-close');
+		const prevBtn = document.getElementById('lb-prev');
+		const nextBtn = document.getElementById('lb-next');
+
+		const imgs = Array.from(document.querySelectorAll('.story img'));
+		if (!imgs.length || !img || !caption || !counter) return;
+
+		let current = 0;
+
+		const show = (index) => {
+			current = (index + imgs.length) % imgs.length;
+			const target = imgs[current];
+			img.src = target.currentSrc || target.src;
+			img.alt = target.alt || '';
+			img.classList.toggle('pixel-art', target.classList.contains('pixel-art') || window.location.pathname.includes('save-file-0'));
+			const fig = target.closest('figure');
+			const figCap = fig?.querySelector('figcaption')?.textContent?.trim();
+			caption.textContent = figCap || target.alt || '';
+			counter.textContent = `${current + 1} / ${imgs.length}`;
+			const multi = imgs.length > 1;
+			if (prevBtn) prevBtn.style.display = multi ? '' : 'none';
+			if (nextBtn) nextBtn.style.display = multi ? '' : 'none';
+		};
+
+		imgs.forEach((el, idx) => {
+			el.style.cursor = 'zoom-in';
+			el.setAttribute('tabindex', '0');
+			el.setAttribute('role', 'button');
+			el.addEventListener('click', () => {
+				show(idx);
+				dialog.showModal();
+			});
+			el.addEventListener('keydown', (e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					show(idx);
+					dialog.showModal();
+				}
+			});
+		});
+
+		closeBtn?.addEventListener('click', () => dialog.close());
+		prevBtn?.addEventListener('click', () => show(current - 1));
+		nextBtn?.addEventListener('click', () => show(current + 1));
+		dialog.addEventListener('click', (e) => {
+			if (e.target === dialog) dialog.close();
+		});
+		dialog.addEventListener('keydown', (e) => {
+			if (e.key === 'ArrowLeft') {
+				e.preventDefault();
+				show(current - 1);
+			} else if (e.key === 'ArrowRight') {
+				e.preventDefault();
+				show(current + 1);
+			}
+		});
+
+		let touchStartX = 0;
+		let touchStartY = 0;
+		dialog.addEventListener(
+			'touchstart',
+			(e) => {
+				if (e.touches.length !== 1) return;
+				touchStartX = e.touches[0].clientX;
+				touchStartY = e.touches[0].clientY;
+			},
+			{ passive: true },
+		);
+		dialog.addEventListener(
+			'touchend',
+			(e) => {
+				if (!e.changedTouches.length || imgs.length < 2) return;
+				const dx = e.changedTouches[0].clientX - touchStartX;
+				const dy = e.changedTouches[0].clientY - touchStartY;
+				if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+					show(dx < 0 ? current + 1 : current - 1);
+				}
+			},
+			{ passive: true },
+		);
+	})();
+</script>
+
+<style>
+	.lb-dialog {
+		margin: auto;
+		max-width: 94vw;
+		max-height: 94vh;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		overflow: visible;
+	}
+	.lb-dialog::backdrop {
+		background: rgba(8, 12, 20, 0.88);
+		backdrop-filter: blur(6px);
+	}
+	.lb-frame {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+		color: #ffffff;
+	}
+	.lb-top {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.lb-counter {
+		font-family: var(--font-mono);
+		font-size: 0.78rem;
+		padding: 0.3rem 0.65rem;
+		border-radius: 0.4rem;
+		background: rgba(255, 255, 255, 0.12);
+	}
+	.lb-icon-btn {
+		width: 40px;
+		height: 40px;
+		border: 0;
+		border-radius: 0.5rem;
+		background: rgba(255, 255, 255, 0.14);
+		color: #ffffff;
+		font-size: 1.5rem;
+		line-height: 1;
+		cursor: pointer;
+	}
+	.lb-icon-btn:hover {
+		background: rgba(255, 255, 255, 0.25);
+	}
+	.lb-stage {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.lb-img {
+		max-height: 76vh;
+		max-width: 84vw;
+		border-radius: 0.75rem;
+		object-fit: contain;
+		box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+	}
+	.lb-nav {
+		position: absolute;
+		width: 44px;
+		height: 44px;
+		border: 1px solid rgba(255, 255, 255, 0.22);
+		border-radius: 0.6rem;
+		background: rgba(11, 15, 23, 0.75);
+		color: #ffffff;
+		font-size: 1.75rem;
+		line-height: 1;
+		cursor: pointer;
+	}
+	.lb-nav:hover {
+		background: rgba(11, 15, 23, 0.95);
+	}
+	.lb-prev {
+		left: -3.25rem;
+	}
+	.lb-next {
+		right: -3.25rem;
+	}
+	.lb-caption {
+		max-width: 60ch;
+		text-align: center;
+		font-size: 0.88rem;
+		color: rgba(255, 255, 255, 0.88);
+	}
+	@media (max-width: 48em) {
+		.lb-dialog {
+			max-width: 96vw;
+		}
+		.lb-img {
+			max-width: 92vw;
+			max-height: 72vh;
+		}
+		.lb-prev {
+			left: 0.5rem;
+		}
+		.lb-next {
+			right: 0.5rem;
+		}
+	}
+</style>

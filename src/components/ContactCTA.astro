@@ -1,35 +1,84 @@
 ---
-
+const email = 'mcmanusmark93@outlook.com';
 ---
 
 <aside class="contact-band">
 	<div class="wrapper contact-inner">
-		<div>
-			<p class="eyebrow">Get in touch</p><h2>Fancy a chat?</h2><p>
-				If you want to ask about my work or talk games, drop me an email.
+		<div class="contact-copy">
+			<p class="mono-label">Get in touch</p>
+			<h2>Want to talk games, QA, or a project?</h2>
+			<p>
+				Whether you want to ask about something in my portfolio, chat about a role, or need an extra pair of eyes
+				on an indie build — drop me a line.
 			</p>
 		</div>
-		<a class="action primary" href="mailto:mcmanusmark93@outlook.com"
-			>Email me <span aria-hidden="true">↗</span></a
-		>
+		<div class="contact-actions">
+			<a class="action primary" href={`mailto:${email}`}>Email me</a>
+			<button type="button" class="action copy-btn" data-copy-email={email}>
+				<span data-copy-label>Copy email</span>
+			</button>
+			<a
+				class="action"
+				href="https://ki10games.com/qa-services"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Indie QA Services <span aria-hidden="true">↗</span>
+			</a>
+		</div>
 	</div>
 </aside>
+
+<script is:inline>
+	(() => {
+		document.querySelectorAll('[data-copy-email]').forEach((btn) => {
+			if (btn.dataset.ready === 'true') return;
+			btn.dataset.ready = 'true';
+			btn.addEventListener('click', async () => {
+				const value = btn.getAttribute('data-copy-email') || '';
+				const label = btn.querySelector('[data-copy-label]');
+				try {
+					await navigator.clipboard.writeText(value);
+					if (label) label.textContent = 'Copied!';
+					window.setTimeout(() => {
+						if (label) label.textContent = 'Copy email';
+					}, 1800);
+				} catch {
+					window.prompt('Copy email address:', value);
+				}
+			});
+		});
+	})();
+</script>
+
 <style>
 	.contact-band {
-		border-block: 1px solid var(--gray-800);
-		background: var(--surface);
+		border-top: 1px solid var(--border);
+		background: var(--surface-subtle);
 	}
 	.contact-inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		gap: 1.5rem;
-		padding-block: 2.5rem;
+		gap: 2rem;
+		padding-block: 3.25rem;
+	}
+	.contact-copy {
+		max-width: 56ch;
 	}
 	h2 {
-		font-size: clamp(1.8rem, 3vw, 2.6rem);
-		margin: 0.7rem 0;
-		letter-spacing: -0.04em;
+		font-size: clamp(1.65rem, 3vw, 2.35rem);
+		margin: 0.55rem 0 0.75rem;
+	}
+	.contact-copy > p:last-child {
+		color: var(--muted);
+		font-size: 0.98rem;
+		line-height: 1.7;
+	}
+	.contact-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
 	}
 </style>

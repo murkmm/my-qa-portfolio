@@ -1,198 +1,299 @@
 ---
 import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const skillGroups = [
+	{
+		title: 'QA & Testing Practice',
+		items: [
+			'Test planning & risk-based release sign-off',
+			'Embedded Engine & Tools QA alongside engineers',
+			'Exploratory, functional, performance & compliance testing',
+			'Bug triage, clear repro reporting & mentoring junior testers',
+			'Automated test suites & hardware-timing checks',
+		],
+	},
+	{
+		title: 'Game Development',
+		items: [
+			'Gameplay systems design & level pacing',
+			'Godot (GDScript), Unity (C#), GBDK-2020 (C & SM83 assembly)',
+			'Solver & procedural level-generation tooling (Python / Godot)',
+			'Networked multiplayer & backend content pipelines',
+			'Store submission, live updates & crash triage',
+		],
+	},
+];
+
+const techStack = [
+	{ label: 'Engines', value: 'CryEngine / StarEngine · Godot · Unity · Unreal Engine 4/5 · GBDK-2020' },
+	{ label: 'Languages', value: 'C# · GDScript · C · SM83 Assembly · Python' },
+	{ label: 'QA & Dev Tools', value: 'Jira · TestRail · Perforce · Git · Jenkins / CI · DevTrack · Redmine' },
+	{ label: 'Debugging', value: 'Log analysis · Profiling · API testing · ADB / Android Studio · Xcode · Charles / Proxyman' },
+	{ label: 'Platforms', value: 'PC · PS3/PS4/PSVR/PS5 · Xbox 360/One/Series · Switch/Wii U · iOS & Android · Game Boy Color' },
+];
 ---
 
-<BaseLayout title="About Me | Mark McManus" description="About Mark McManus: 10 years in games QA, now Embedded QA Specialist at Cloud Imperium Games, co-founder of Ki10 Games and developer of two shipped indie games.">
-	<div class="stack gap-20">
-		<main id="main-content" tabindex="-1" class="wrapper about">
-			<Hero
-				title="A bit about me"
-				tagline="I’m Mark. I test games for a living, and make them at Ki10 with my friend Scott."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/Website about me image.JPG"
-					alt="Mark McManus at work"
-				/>
-			</Hero>
+<BaseLayout
+	title="About Me | Mark McManus"
+	description="About Mark McManus: 10+ years in games QA, Embedded QA Specialist at Cloud Imperium Games, co-founder of Ki10 Games and board member at Humans in Games."
+>
+	<main id="main-content" tabindex="-1" class="wrapper about-page">
+		<header class="about-header">
+			<p class="mono-label">About me</p>
+			<h1>Testing games for 10+ years, and making my own on the side.</h1>
+			<p class="about-lead">
+				I’m Mark — Embedded QA Specialist on the Engine &amp; Tools teams at Cloud Imperium Games, and co-founder
+				of Ki10 Games with my mate Scott.
+			</p>
+			<div class="header-actions">
+				<a href="/mark-mcmanus-cv.pdf" class="action primary" download>
+					Download CV <span class="file-type">PDF</span>
+				</a>
+				<a href="/work/" class="action">Browse portfolio</a>
+			</div>
+		</header>
 
-			<section class="about-section">
-				<h2 class="section-title">How I Got Here</h2>
-				<div class="content">
+		<figure class="about-photo">
+			<img
+				width="1553"
+				height="873"
+				src="/assets/Website about me image.JPG"
+				alt="Mark McManus working at his laptop"
+			/>
+		</figure>
+
+		<section class="about-grid">
+			<h2>How I got here</h2>
+			<div class="prose-col">
+				<p>
+					I’ve been mad about games since I was a kid, and I’ve always wanted to know how they actually work
+					under the hood. That pulled me into games QA, where I’ve spent over 10 years testing titles at
+					studios including TT Games, Supermassive Games, Creative Assembly and Unity.
+				</p>
+				<p>
+					Right now I’m an <strong>Embedded QA Specialist — Tools at Cloud Imperium Games</strong>, working on
+					<em>Star Citizen</em> and <em>Squadron 42</em>. I’m the main embedded QA for the Engine and Tools
+					teams, testing the in-house tools, backend systems and pipelines the rest of the studio relies on
+					every day.
+				</p>
+				<p>
+					I started out on the LEGO games at TT Games and have since worked across all sorts of genres and
+					platforms — from <em>Alex Kidd in Miracle World DX</em> and Supermassive’s horror games like
+					<em>Man of Medan</em> to <em>Fall Guys</em> on mobile. Along the way I moved from hunting bugs into
+					senior roles planning QA coverage, mentoring new testers and signing off multi-platform releases.
+				</p>
+				<p>
+					After a decade of helping make other people’s games as polished as possible, I finally set off to
+					make my own mark on the industry. In 2024 Scott and I started{' '}
+					<a href="https://ki10games.com" target="_blank" rel="noopener noreferrer">Ki10 Games</a>. Since then
+					we’ve released <em>Skill Check</em> (Android &amp; web) and <em>The One Bullet Job</em> (Android),
+					and right now I’m building <em>Save File 0</em> for the Game Boy Color, <em>Boop n Burn</em> for
+					Steam Next Fest, and rebuilding <em>KIT</em> in Godot.
+				</p>
+			</div>
+		</section>
+
+		<section class="about-grid">
+			<h2>Industry involvement</h2>
+			<div class="prose-col">
+				<div class="callout-box">
+					<p class="mono-label">Charity Board Member</p>
+					<h3>Humans in Games</h3>
 					<p>
-						I've loved games for as long as I can remember, and I've always been curious about how they work. That got me into QA, and I've now spent 10 years testing games at studios including T.T. Games, Supermassive Games, Creative Assembly and Unity.
-					</p>
-					<p>
-						Today I'm an <strong>Embedded QA Specialist - Tools at Cloud Imperium Games</strong>, working on <em>Star Citizen</em> and <em>Squadron 42</em>. I'm the main embedded QA for the Engine and Tools teams, working with the engineers to test the in-house tools, backend systems and pipelines the rest of the studio uses to build the games.
-					</p>
-					<p>
-						I started on the LEGO games at T.T. Games and have since tested all sorts of genres and platforms: the <em>Alex Kidd in Miracle World DX</em> remake, horror games like <em>Man of Medan</em>, and <em>Fall Guys</em> on mobile. Along the way I went from a tester hunting bugs to a senior tester planning QA, mentoring new testers and signing off releases on several platforms.
-					</p>
-					<p>
-						After years of testing other people's games, I wanted to make my own. In 2024 I co-founded Ki10 Games, where I do design and programming as well as QA.
-					</p>
-					<p>
-						In 2026 we shipped <em>Skill Check</em>, a daily gaming trivia game on Android and the web. I handled the design, programming, backend, store submission and QA. Later that year we released <em>The One Bullet Job</em>, a turn based heist puzzle for Android. I designed and programmed the game and built the solver and level tooling used to prove all 120 campaign jobs could be beaten.
-					</p>
-					<p>
-						Now I'm leading design and programming on <em>Boop n Burn</em>, a sixteen player party brawler for PC, Switch and Xbox Series, with a demo planned for Steam Next Fest. I'm also making <em>Save File 0</em>, a first-person survival horror game for the Game Boy Color with a raycaster that runs at 30fps on the real hardware, and alongside both I'm rebuilding <em>KIT</em> in Godot.
-					</p>
-					<p>
-						QA showed me what it takes for a game to be ready to ship. Shipping my own games has shown me how much work it takes to get there from the other side as well.
+						I sit on the board at{' '}
+						<a href="https://www.humansingames.world/" target="_blank" rel="noopener noreferrer">
+							Humans in Games
+						</a>
+						, a games industry charity, where I represent the games QA profession.
 					</p>
 				</div>
-			</section>
+			</div>
+		</section>
 
-			<section class="about-section">
-				<h2 class="section-title">Industry Involvement</h2>
-				<div class="content">
-					<p>
-						I'm a board member at <a href="https://www.humansingames.world/" target="_blank" rel="noopener noreferrer">Humans in Games</a>, a games industry charity, where I represent the games QA profession.
-					</p>
+		<section class="about-grid">
+			<h2>Skills &amp; tools</h2>
+			<div class="prose-col">
+				<div class="skills-two-col">
+					{
+						skillGroups.map((group) => (
+							<div class="skill-card">
+								<h3>{group.title}</h3>
+								<ul>
+									{group.items.map((item) => (
+										<li>{item}</li>
+									))}
+								</ul>
+							</div>
+						))
+					}
 				</div>
-			</section>
 
-			<section class="about-section">
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>
-						Here's what I bring. For my full work history, you can download my CV.
-					</p>
-					<br />
-					<h4>What I do</h4>
-					<ul>
-						<li><strong>Test planning:</strong> Writing and running test plans, cases and scripts for gameplay, UI / UX and platform compliance.</li>
-						<li><strong>Embedded and technical QA:</strong> Working alongside engineers and tracking down tricky issues with logs, profiling, API testing, CI and Perforce.</li>
-						<li><strong>Release readiness:</strong> Risk based testing from requirements to sign off, with clear reporting for go / no-go decisions.</li>
-						<li><strong>Manual and exploratory testing:</strong> Functional, usability, performance and regression testing, and a knack for finding the bugs other people miss.</li>
-						<li><strong>Bug management:</strong> Finding, logging, triaging and tracking bugs until they're fixed.</li>
-						<li><strong>Leading and mentoring:</strong> Running QA teams, training new testers and improving how teams write bug reports.</li>
-						<li><strong>Game design:</strong> Designing gameplay systems and story, and shaping them from playtest feedback.</li>
-						<li><strong>Releasing games:</strong> Taking a game from prototype to store, including submission, build pipelines, live updates and crash monitoring.</li>
-					</ul>
-					<br />
-					<h4>Technical skills</h4>
-					<ul>
-						<li><strong>QA and development:</strong> Jira, TestRail, DevTrack, Redmine, Perforce, Git, Jenkins / CI</li>
-						<li><strong>Technical testing:</strong> API testing, profiling, log analysis, ADB / Android Studio, Xcode, Charles / Proxyman</li>
-						<li><strong>Test planning:</strong> TestRail, QTest, Excel</li>
-						<li><strong>Game engines:</strong> CryEngine / StarEngine, Unity, Unreal Engine 4/5, Godot</li>
-						<li><strong>Programming:</strong> C# (Unity), GDScript (Godot), networked multiplayer</li>
-						<li><strong>Platforms:</strong> PC, PlayStation (PS3, PS4, PSVR, PS5), Xbox (360, One, Series), Nintendo (Wii U, Switch), mobile (iOS, Android) and cloud (Stadia, Luna)</li>
-					</ul>
-					<br />
-					<a href="/mark-mcmanus-cv.pdf" class="button" download>Download CV</a>
-				</div>
-			</section>
+				<dl class="tech-table">
+					{
+						techStack.map((row) => (
+							<div class="tech-row">
+								<dt>{row.label}</dt>
+								<dd>{row.value}</dd>
+							</div>
+						))
+					}
+				</dl>
+			</div>
+		</section>
 
-			<section class="about-section">
-				<h2 class="section-title">Outside of Work</h2>
-				<div class="content">
-					<p>
-						When I'm not testing games, I'm usually playing them! I'll play pretty much anything, from huge AAA games to small indie ones. I also love making games in my spare time, which is how Ki10 Games started, and how I ended up shipping games of my own.
-					</p>
-					<p>
-						Away from screens, I'm a lifelong Manchester United fan, and I love a good board game with friends.
-					</p>
-				</div>
-			</section>
-		</main>
+		<section class="about-grid">
+			<h2>Outside of work</h2>
+			<div class="prose-col">
+				<p>
+					When I’m not testing or building games, I’m usually playing them — everything from huge AAA releases
+					to tiny indie experiments. Away from screens, I’m a lifelong Manchester United fan and love getting
+					friends round for a good board game.
+				</p>
+			</div>
+		</section>
+	</main>
 
-		<ContactCTA />
-	</div>
+	<ContactCTA />
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
+	.about-page {
+		padding-block: 3.25rem 4.5rem;
 	}
-
-	img {
+	.about-header {
+		max-width: 48rem;
+	}
+	h1 {
+		font-size: clamp(2.25rem, 4.8vw, 3.6rem);
+		margin: 0.75rem 0 1.15rem;
+	}
+	.about-lead {
+		font-size: 1.1rem;
+		line-height: 1.75;
+		color: var(--muted);
+	}
+	.header-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.75rem;
+	}
+	.about-photo {
+		margin-block: 2.75rem 3.5rem;
+		overflow: hidden;
+		border-radius: 1rem;
+		border: 1px solid var(--border);
+		box-shadow: var(--shadow-card);
+	}
+	.about-photo img {
+		display: block;
+		width: 100%;
+		max-height: 520px;
+		object-fit: cover;
+		object-position: center 22%;
+	}
+	.about-grid {
+		display: grid;
+		grid-template-columns: 240px minmax(0, 1fr);
+		gap: 2rem 3.5rem;
+		padding-block: 2.5rem;
+		border-top: 1px solid var(--border);
+	}
+	.about-grid > h2 {
+		font-size: 1.35rem;
+		color: var(--ink);
+	}
+	.prose-col {
+		max-width: 66ch;
+	}
+	.prose-col > p {
+		font-size: 1.02rem;
+		line-height: 1.82;
+		color: var(--text);
+	}
+	.prose-col > p + p {
+		margin-top: 1.1rem;
+	}
+	.callout-box {
+		padding: 1.4rem 1.6rem;
+		border-radius: 0.85rem;
+		border: 1px solid var(--border);
+		border-left: 3px solid var(--accent);
+		background: var(--surface);
+	}
+	.callout-box h3 {
+		font-size: 1.2rem;
+		margin: 0.45rem 0 0.5rem;
+	}
+	.callout-box p:last-child {
+		font-size: 0.96rem;
+		line-height: 1.7;
+		color: var(--muted);
+	}
+	.skills-two-col {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+	.skill-card {
+		padding: 1.4rem;
+		border-radius: 0.85rem;
+		border: 1px solid var(--border);
+		background: var(--surface);
+	}
+	.skill-card h3 {
+		font-size: 1.1rem;
+		margin-bottom: 0.85rem;
+	}
+	.skill-card ul {
+		padding-left: 1.1rem;
+		font-size: 0.9rem;
+		line-height: 1.68;
+		color: var(--muted);
+	}
+	.skill-card li + li {
+		margin-top: 0.45rem;
+	}
+	.tech-table {
 		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
+		border: 1px solid var(--border);
+		border-radius: 0.85rem;
+		background: var(--surface);
+		overflow: hidden;
 	}
-
-	.about-section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
+	.tech-row {
+		display: grid;
+		grid-template-columns: 140px 1fr;
+		gap: 1rem;
+		padding: 0.95rem 1.25rem;
+		border-top: 1px solid var(--border);
 	}
-
-	.section-title {
-		font-size: var(--text-xl);
-		color: var(--gray-0);
+	.tech-row:first-child {
+		border-top: 0;
 	}
-
-	.content {
-		/* No grid styles needed here by default */
+	.tech-row dt {
+		font-family: var(--font-mono);
+		font-size: 0.76rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: var(--accent-text);
+		padding-top: 0.15rem;
 	}
-	
-	.content > :global(* + *) {
-		margin-top: 1rem;
+	.tech-row dd {
+		font-size: 0.92rem;
+		line-height: 1.6;
+		color: var(--text);
 	}
-
-	.content ul {
-		list-style: disc;
-		padding-left: 1.25rem;
-	}
-
-	.content ul li {
-		margin-bottom: 0.5rem;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	.button {
-		display: inline-block;
-		padding: 0.75rem 1.5rem;
-		background-color: var(--accent-regular);
-		color: var(--accent-text-over);
-		border-radius: 999px;
-		text-decoration: none;
-		font-weight: 500;
-		transition: background-color 0.2s ease-in-out;
-		margin-top: 1rem;
-	}
-	.button:hover {
-		background-color: #922b23;
-		text-decoration: none;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			gap: 5rem;
+	@media (max-width: 54em) {
+		.about-page {
+			padding-top: 2.25rem;
 		}
-
-		.about-section {
-			display: grid;
-			grid-template-columns: 1fr 3fr; /* Title column and Content column */
-			gap: 2rem;
-			font-size: var(--text-lg);
-		}
-
-		.section-title {
-			grid-column: 1 / 2; /* Title takes the first column */
-			text-align: right;
-		}
-
-		.content {
-			grid-column: 2 / 3; /* Content takes the second column */
+		.about-grid,
+		.skills-two-col,
+		.tech-row {
+			grid-template-columns: 1fr;
+			gap: 1rem;
 		}
 	}
 </style>

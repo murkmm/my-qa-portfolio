@@ -1,148 +1,105 @@
-/* Global variables */
+/* ==========================================================================
+   Mark McManus Portfolio — Blueprint Cobalt & QA-Pass Emerald
+   ========================================================================== */
+
 :root {
-	/* Colors */
-	--gray-0: #090b11;
-	--gray-50: #141925;
-	--gray-100: #283044;
-	--gray-200: #3d4663;
-	--gray-300: #505d84;
-	--gray-400: #6474a2;
-	--gray-500: #8490b5;
-	--gray-600: #a3acc8;
-	--gray-700: #c3cadb;
-	--gray-800: #e3e6ee;
-	--gray-900: #f3f4f7;
-	--gray-999-basis: 0, 0%, 100%;
-	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
-	--gray-999: #ffffff;
+	/* Surfaces & Ink (Light: Crisp Porcelain) */
+	--bg: #f6f8fb;
+	--surface: #ffffff;
+	--surface-subtle: #edf1f7;
+	--ink: #0f172a;
+	--text: #334155;
+	--muted: #64748b;
+	--border: rgba(15, 23, 42, 0.11);
+	--border-strong: rgba(15, 23, 42, 0.24);
 
-	/* --- CHANGED: Purple accents are now Red accents --- */
-	--accent-light: #ff4747; /* Lighter Red */
-	--accent-regular: #e60000; /* Main Red */
-	--accent-dark: #990000; /* Darker Red */
-	--accent-overlay: hsla(0, 100%, 50%, 0.33); /* Semi-transparent Red */
-	--accent-subtle-overlay: var(--accent-overlay);
-	--accent-text-over: var(--gray-999);
+	/* Brand Accents */
+	--accent: #1d4ed8; /* Blueprint Cobalt (6.7:1 with white text) */
+	--accent-hover: #1e40af;
+	--accent-text: #1d4ed8;
+	--accent-soft: rgba(29, 78, 216, 0.09);
 
-	--link-color: var(--accent-regular);
+	--emerald: #047857; /* QA-Pass Emerald */
+	--emerald-soft: rgba(5, 150, 105, 0.11);
 
-	/* Gradients */
-	--gradient-stop-1: var(--accent-light);
-	--gradient-stop-2: var(--accent-regular);
-	--gradient-stop-3: var(--accent-dark);
-	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 150%);
-	--gradient-accent: linear-gradient(
-		150deg,
-		var(--gradient-stop-1),
-		var(--gradient-stop-2),
-		var(--gradient-stop-3)
-	);
-	--gradient-accent-orange: linear-gradient(
-		150deg,
-		#ca7879,
-		var(--accent-regular),
-		var(--accent-dark)
-	);
-	--gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
+	/* Legacy variable aliases so existing components stay seamless */
+	--gray-0: var(--ink);
+	--gray-100: var(--ink);
+	--gray-200: var(--text);
+	--gray-300: var(--muted);
+	--gray-400: var(--muted);
+	--gray-800: var(--border);
+	--gray-900: var(--surface-subtle);
+	--gray-999: var(--bg);
+	--accent-regular: var(--accent);
+	--accent-dark: var(--accent-text);
+	--accent-overlay: rgba(29, 78, 216, 0.28);
+	--accent-text-over: #ffffff;
+	--link-color: var(--accent-text);
 
-	/* Shadows */
-	--shadow-sm:
-		0px 6px 3px rgba(9, 11, 17, 0.01), 0px 4px 2px rgba(9, 11, 17, 0.01),
-		0px 2px 2px rgba(9, 11, 17, 0.02), 0px 0px 1px rgba(9, 11, 17, 0.03);
-	--shadow-md:
-		0px 28px 11px rgba(9, 11, 17, 0.01), 0px 16px 10px rgba(9, 11, 17, 0.03),
-		0px 7px 7px rgba(9, 11, 17, 0.05), 0px 2px 4px rgba(9, 11, 17, 0.06);
-	--shadow-lg:
-		0px 62px 25px rgba(9, 11, 17, 0.01), 0px 35px 21px rgba(9, 11, 17, 0.05),
-		0px 16px 16px rgba(9, 11, 17, 0.1), 0px 4px 9px rgba(9, 11, 17, 0.12);
+	/* Typography */
+	--font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--font-brand: 'Space Grotesk Variable', var(--font-system);
+	--font-body: 'Plus Jakarta Sans Variable', var(--font-system);
+	--font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-	/* Text Sizes */
+	/* Scale */
 	--text-sm: 0.875rem;
 	--text-base: 1rem;
 	--text-md: 1.125rem;
 	--text-lg: 1.25rem;
-	--text-xl: 1.625rem;
-	--text-2xl: 2.125rem;
-	--text-3xl: 2.625rem;
-	--text-4xl: 3.5rem;
-	--text-5xl: 4.5rem;
+	--text-xl: 1.5rem;
+	--text-2xl: 2rem;
+	--text-3xl: 2.5rem;
+	--text-4xl: 3.25rem;
+	--text-5xl: 4.25rem;
 
-	/* Fonts */
-	--font-system:
-		system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-		'Open Sans', 'Helvetica Neue', sans-serif;
-	--font-body: 'Public Sans', var(--font-system);
-	--font-brand: Rubik, var(--font-system);
-
-	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
+	--shadow-card: 0 18px 36px -20px rgba(15, 23, 42, 0.22);
 }
 
 :root.theme-dark {
-	--gray-0: #ffffff;
-	--gray-50: #f3f4f7;
-	--gray-100: #e3e6ee;
-	--gray-200: #c3cadb;
-	--gray-300: #a3acc8;
-	--gray-400: #8490b5;
-	--gray-500: #6474a2;
-	--gray-600: #505d84;
-	--gray-700: #3d4663;
-	--gray-800: #283044;
-	--gray-900: #141925;
-	--gray-999-basis: 225, 31%, 5%;
-	--gray-999: #090b11;
+	/* Surfaces & Ink (Dark: Deep Technical Slate) */
+	--bg: #0b0f17;
+	--surface: #121826;
+	--surface-subtle: #182133;
+	--ink: #f1f5f9;
+	--text: #cbd5e1;
+	--muted: #94a3b8;
+	--border: rgba(241, 245, 249, 0.11);
+	--border-strong: rgba(241, 245, 249, 0.24);
 
-	/* --- CHANGED: Dark mode accents are now Red --- */
-	--accent-light: #990000; /* Darker Red */
-	--accent-regular: #e60000; /* Main Red */
-	--accent-dark: #ff4747; /* Lighter, more vibrant Red for links */
-	--accent-overlay: hsla(0, 100%, 50%, 0.33);
-	--accent-subtle-overlay: hsla(0, 100%, 50%, 0.15);
-	--accent-text-over: var(--gray-0);
+	--accent: #2563eb;
+	--accent-hover: #3b82f6;
+	--accent-text: #60a5fa; /* Luminous Signal Blue (7.2:1 on #0b0f17) */
+	--accent-soft: rgba(96, 165, 250, 0.14);
 
-	--link-color: var(--accent-dark);
+	--emerald: #34d399;
+	--emerald-soft: rgba(52, 211, 153, 0.14);
 
-	--gradient-stop-1: #990000; /* Darker Red for gradient start */
-	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
-	--gradient-accent-orange: linear-gradient(
-		150deg,
-		#ca7879,
-		var(--accent-regular),
-		var(--accent-light)
-	);
-	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
+	--accent-overlay: rgba(96, 165, 250, 0.32);
+	--shadow-card: 0 22px 44px -20px rgba(0, 0, 0, 0.65);
+}
 
-	--shadow-sm:
-		0px 6px 3px rgba(255, 255, 255, 0.01), 0px 4px 2px rgba(255, 255, 255, 0.01),
-		0px 2px 2px rgba(255, 255, 255, 0.02), 0px 0px 1px rgba(255, 255, 255, 0.03);
-	--shadow-md:
-		0px 28px 11px rgba(255, 255, 255, 0.01), 0px 16px 10px rgba(255, 255, 255, 0.03),
-		0px 7px 7px rgba(255, 255, 255, 0.05), 0px 2px 4px rgba(255, 255, 255, 0.06);
-	--shadow-lg:
-		0px 62px 25px rgba(255, 255, 255, 0.01), 0px 35px 21px rgba(255, 255, 255, 0.05),
-		0px 16px 16px rgba(255, 255, 255, 0.1), 0px 4px 9px rgba(255, 255, 255, 0.12);
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
 }
 
 html,
 body {
 	min-height: 100%;
-	overflow-x: hidden;
+	overflow-x: clip;
 }
 
 body {
-	background-color: var(--gray-999);
-	color: var(--gray-200);
+	background-color: var(--bg);
+	color: var(--text);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
-	line-height: 1.5;
-}
-
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-	margin: 0;
+	line-height: 1.6;
 }
 
 img {
@@ -151,7 +108,7 @@ img {
 }
 
 a {
-	color: var(--link-color);
+	color: var(--accent-text);
 }
 
 h1,
@@ -159,34 +116,14 @@ h2,
 h3,
 h4,
 h5 {
-	line-height: 1.1;
 	font-family: var(--font-brand);
-	font-weight: 600;
-	color: var(--gray-100);
-}
-
-h1 {
-	font-size: var(--text-5xl);
-}
-
-h2 {
-	font-size: var(--text-4xl);
-}
-
-h3 {
-	font-size: var(--text-3xl);
-}
-
-h4 {
-	font-size: var(--text-2xl);
-}
-
-h5 {
-	font-size: var(--text-xl);
+	font-weight: 700;
+	line-height: 1.12;
+	letter-spacing: -0.03em;
+	color: var(--ink);
 }
 
 /* Utilities */
-
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -201,72 +138,153 @@ h5 {
 
 .wrapper {
 	width: 100%;
-	max-width: 83rem;
+	max-width: 76rem;
 	margin-inline: auto;
 	padding-inline: 1.5rem;
 }
 
-.stack {
+.mono-label {
+	font-family: var(--font-mono);
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--accent-text);
+}
+
+.blueprint-grid {
+	background-image:
+		linear-gradient(to right, rgba(29, 78, 216, 0.045) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(29, 78, 216, 0.045) 1px, transparent 1px);
+	background-size: 48px 48px;
+}
+
+:root.theme-dark .blueprint-grid {
+	background-image:
+		linear-gradient(to right, rgba(96, 165, 250, 0.055) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(96, 165, 250, 0.055) 1px, transparent 1px);
+}
+
+.section {
+	padding-block: 4.25rem;
+}
+
+.section-heading {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1.25rem;
+	margin-bottom: 2.25rem;
 }
 
-.gap-2 {
-	gap: 0.5rem;
-}
-.gap-4 {
-	gap: 1rem;
-}
-.gap-8 {
-	gap: 2rem;
-}
-.gap-10 {
-	gap: 2.5rem;
-}
-.gap-15 {
-	gap: 3.75rem;
-}
-.gap-20 {
-	gap: 5rem;
-}
-.gap-30 {
-	gap: 7.5rem;
-}
-.gap-48 {
-	gap: 12rem;
+.section-heading h2 {
+	margin-top: 0.5rem;
+	font-size: clamp(1.75rem, 3.2vw, 2.5rem);
 }
 
-@media (min-width: 50em) {
-	.lg\:gap-2 {
-		gap: 0.5rem;
-	}
-	.lg\:gap-4 {
-		gap: 1rem;
-	}
-	.lg\:gap-8 {
-		gap: 2rem;
-	}
-	.lg\:gap-10 {
-		gap: 2.5rem;
-	}
-	.lg\:gap-15 {
-		gap: 3.75rem;
-	}
-	.lg\:gap-20 {
-		gap: 5rem;
-	}
-	.lg\:gap-30 {
-		gap: 7.5rem;
-	}
-	.lg\:gap-48 {
-		gap: 12rem;
-	}
+.text-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	font-size: 0.9rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--accent-text);
+	transition: opacity 150ms ease;
 }
-/* Keep keyboard position visible across cards, links and controls. */
+
+.text-link:hover {
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.5rem;
+}
+
+.project-grid.three-col {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.action {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.8rem 1.35rem;
+	min-height: 46px;
+	border: 1px solid var(--border-strong);
+	border-radius: 0.65rem;
+	color: var(--ink);
+	font-family: var(--font-body);
+	font-weight: 700;
+	font-size: 0.92rem;
+	text-decoration: none;
+	background: var(--surface);
+	cursor: pointer;
+	transition:
+		transform 160ms ease,
+		border-color 160ms ease,
+		background-color 160ms ease,
+		color 160ms ease;
+}
+
+.action:hover {
+	border-color: var(--accent-text);
+	background: var(--surface-subtle);
+	transform: translateY(-1px);
+}
+
+.action.primary {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: #ffffff;
+}
+
+.action.primary:hover {
+	background: var(--accent-hover);
+	border-color: var(--accent-hover);
+	color: #ffffff;
+}
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.25rem 0.6rem;
+	border-radius: 0.4rem;
+	font-family: var(--font-mono);
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+	background: var(--accent-soft);
+	color: var(--accent-text);
+}
+
+.badge.emerald {
+	background: var(--emerald-soft);
+	color: var(--emerald);
+}
+
+.pixel-art {
+	image-rendering: pixelated;
+}
+
+.file-type {
+	font-family: var(--font-mono);
+	font-size: 0.72rem;
+	font-weight: 600;
+	opacity: 0.75;
+}
+
 :focus-visible {
-	outline: 3px solid var(--accent-dark);
-	outline-offset: 4px;
+	outline: 3px solid var(--accent-text);
+	outline-offset: 3px;
 }
+
 .skip-link {
 	position: fixed;
 	top: 1rem;
@@ -274,13 +292,38 @@ h5 {
 	z-index: 10000;
 	padding: 0.75rem 1rem;
 	border-radius: 0.5rem;
-	background: var(--gray-999);
-	color: var(--gray-0);
+	background: var(--surface);
+	color: var(--ink);
+	border: 1px solid var(--accent);
 	transform: translateY(-200%);
 }
 .skip-link:focus {
 	transform: translateY(0);
 }
+
+[id] {
+	scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 58em) {
+	.project-grid.three-col {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 49.99em) {
+	.wrapper {
+		padding-inline: 1.15rem;
+	}
+	.project-grid,
+	.project-grid.three-col {
+		grid-template-columns: 1fr;
+	}
+	.section {
+		padding-block: 2.75rem;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	*,
 	*::before,
@@ -289,117 +332,5 @@ h5 {
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
-	}
-}
-
-/* Shared visual language for the portfolio's work-first layout. */
-:root {
-	--gray-0: #20252a;
-	--gray-100: #272d33;
-	--gray-200: #414b54;
-	--gray-300: #56616b;
-	--gray-400: #63717a;
-	--gray-800: #dce0df;
-	--gray-900: #edf0ed;
-	--gray-999: #f7f8f4;
-	--surface: #ffffff;
-	--accent-regular: #b9382d;
-	--accent-dark: #a83229;
-	--accent-text-over: #ffffff;
-}
-:root.theme-dark {
-	--gray-0: #f4f5f0;
-	--gray-100: #e6e9e7;
-	--gray-200: #c2cad0;
-	--gray-300: #bdc7ce;
-	--gray-400: #acb7bf;
-	--gray-800: #303b43;
-	--gray-900: #19232b;
-	--gray-999: #10171d;
-	--surface: #172129;
-	--accent-regular: #b9382d;
-	--accent-dark: #ff9a8c;
-	--accent-text-over: #ffffff;
-}
-.eyebrow {
-	font-family: var(--font-body);
-	font-size: 0.7rem;
-	font-weight: 700;
-	letter-spacing: 0.13em;
-	line-height: 1.5;
-	text-transform: uppercase;
-	color: var(--accent-dark);
-}
-.section {
-	padding-block: 4rem;
-}
-.section-heading {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-end;
-	gap: 1.5rem;
-	margin-bottom: 2rem;
-}
-.section-heading h2 {
-	margin-top: 0.75rem;
-	font-size: clamp(1.7rem, 3vw, 2.6rem);
-	letter-spacing: -0.045em;
-}
-.text-link {
-	font-size: 0.88rem;
-	font-weight: 700;
-	text-decoration: none;
-	color: var(--gray-0);
-}
-.text-link:hover {
-	text-decoration: underline;
-	text-underline-offset: 4px;
-}
-.text-link span {
-	margin-left: 0.5rem;
-	color: var(--accent-dark);
-}
-.project-grid {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 1.5rem;
-}
-.action {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	padding: 0.85rem 1.25rem;
-	min-height: 48px;
-	border: 1px solid var(--gray-800);
-	border-radius: 0.5rem;
-	color: var(--gray-0);
-	font-weight: 700;
-	font-size: 0.9rem;
-	text-decoration: none;
-	background: var(--surface);
-}
-.action:hover {
-	border-color: var(--accent-dark);
-}
-.action.primary {
-	background: var(--accent-regular);
-	border-color: var(--accent-regular);
-	color: #fff;
-}
-.file-type {
-	font-size: 0.7rem;
-	font-weight: 400;
-}
-[id] {
-	scroll-margin-top: 2rem;
-}
-@media (max-width: 49.99em) {
-	.project-grid {
-		grid-template-columns: 1fr;
-	}
-	.section {
-		padding-block: 2.5rem;
 	}
 }
