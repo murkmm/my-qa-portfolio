@@ -34,6 +34,37 @@ It was announced on Halloween 2026. The Floor 3 demo is finished, runs on real h
   <source src="/videos/save-file-0-teaser.mp4" type="video/mp4" />
 </video>
 
+### How I designed it
+
+I wanted horror that works on a 160×144 screen with a handful of buttons, so I gave myself three rules. The fear should come from not knowing where the Occupant is. Every system has to be readable at a glance. And the player should never be stuck because of a mistake they made earlier.
+
+**Two saves, one office.** Every puzzle comes from the differences between the two copies of the building. When you load a save you arrive exactly where you're standing, so:
+
+- Server racks block a room in FILE 0 but aren't there in your save, so you walk to the right spot in your own save and load FILE 0 to end up on the other side.
+- A copier that's dead in one save prints in the other.
+- Information crosses over too. A phone extension is only readable on FILE 0's phone list, which is printed backwards, but the line out only works in your save. You read it in one and dial it in the other.
+
+That gives the game a simple loop: find something you can't do in your save, decide whether it's worth going into FILE 0, get what you need while avoiding the Occupant, then get back to a terminal before it all goes wrong.
+
+**The Occupant's rules.** He can't be killed, so I built him around a few clear rules the player can learn:
+
+- You hear him before you see him, with about two seconds' warning before he comes through a door.
+- Once he's seen you, he'll follow you through up to three doors he didn't see you take, so running on its own rarely loses him.
+- Lockers are your best bet, but if you hide while he's away he knows where people hide and will come and check.
+- A shot staggers him for about four seconds, then he searches where you were standing.
+- In the full game, each floor adds one new thing he does that breaks a habit you've learned, like following you through a load on Floor 2.
+
+**Keeping it fair.**
+
+- Every route can be finished with no ammo at all, and the automated tests check that.
+- If you die, you go back to your last checkpoint with full health and any rounds you used are given back, so one bad attempt never leaves you stuck.
+- A never wastes a round. It only fires at a threat you can see, never at scenery.
+- There's one goal at a time, and if you're stuck the game offers a hint and then the solution.
+
+**Playtesting.** The Floor 3 demo has been through five blind playtests, and fixes from each one went into the next build. One tester said switching back to your own save after escaping the Occupant "immediately made sense and clicked", and another said "I like that you can hear it coming up behind you."
+
+**Planning the full game.** I've written a full game design document covering the story, all four floors, the boss fight, the endings and a milestone plan, along with floor plans so each floor's layout and art are built from the same design.
+
 ### What I do
 
 - Design: the two-save structure, the Occupant's rules, the cross-save puzzles, the story and the full four-floor plan.

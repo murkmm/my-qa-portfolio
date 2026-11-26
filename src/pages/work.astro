@@ -21,6 +21,7 @@ const getCategories = (project: CollectionEntry<'work'>) => {
 	}
 	const blob = `${project.data.title} ${project.data.description} ${project.data.tags.join(' ')}`.toLowerCase();
 	if (/(tool|engine|pipeline|assembly|solver|test tooling|embedded)/.test(blob)) cats.add('tools');
+	if (project.data.tags.some((tag) => /design/i.test(tag))) cats.add('design');
 	if (/(mobile|android|ios)/.test(blob)) cats.add('mobile');
 	if (/(multiplayer|online|co-op|party|live service)/.test(blob)) cats.add('multiplayer');
 
@@ -47,6 +48,7 @@ const filterButtons = [
 	{ key: 'all', label: `All (${projects.length})` },
 	{ key: 'dev', label: `Games I made (${studio.length})` },
 	{ key: 'qa', label: `Professional QA (${qa.length})` },
+	{ key: 'design', label: 'Game Design' },
 	{ key: 'tools', label: 'Tools & Technical' },
 	{ key: 'multiplayer', label: 'Multiplayer' },
 	{ key: 'mobile', label: 'Mobile' },

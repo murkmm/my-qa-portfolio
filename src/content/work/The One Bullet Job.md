@@ -27,6 +27,16 @@ _The One Bullet Job_ is a turn based heist puzzle for phones. Each job is a smal
 
 It shipped with 120 jobs across 20 chapters, each chapter introducing one new mechanic, plus more jobs generated after the campaign and cosmetic masks and outfits earned by playing. It became my second released game at Ki10 Games, built as a side project alongside _Boop n Burn_.
 
+### How I designed it
+
+The whole game is built around one rule: you usually only have one bullet. That turns every job into a question of who gets it, and the guards taking their turn after yours gives you what you need to decide.
+
+- **One new thing per chapter.** Each of the 20 chapters adds one mechanic, from relays and directional guards to turning sentries, laser gates, air vents and keycards, so you're never learning three things at once while a guard's watching.
+- **Every level has to use the new idea.** When I generate candidate rooms, the tool throws out any where the chapter's new mechanic doesn't actually matter, so a laser gate chapter is really about laser gates.
+- **Solvable isn't the same as fun.** A tool can tell me a room is beatable, but not whether it's any good, so nothing goes into the campaign until I've played it myself.
+- **Stars that mean something.** Each job's three star target comes from a solved route, so par is always achievable and never a guess.
+- **Something after the campaign.** From job 121 the game makes new jobs as you go, using the same rules and checks, and masks and outfits give you something to earn.
+
 ### What I did
 
 - Design: the core turn structure, the one bullet rule, the three star goals, and a chapter structure that introduces relays, directional guards, turning sentries, laser gates, air vents and keycards one at a time.
